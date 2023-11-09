@@ -1,7 +1,7 @@
 import { Banner } from "@/src/HomePage/Banner";
 import * as qs from "qs";
 
-export const getData = async () => {
+const getData = async () => {
   const query = qs.stringify(
     {
       populate: ["banner", "banner.foto", "banner.botao"],
@@ -22,8 +22,6 @@ export const getData = async () => {
 
 export default async function Home() {
   const teste = await getData();
-
-  console.log(teste);
 
   return (
     <main>
