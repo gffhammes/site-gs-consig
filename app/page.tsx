@@ -21,11 +21,11 @@ const getData = async () => {
 };
 
 export default async function Home() {
-  const teste = await getData();
+  const data = await getData();
 
   return (
     <main>
-      <Banner banners={teste.banner} />
+      <Banner banners={data.banner} />
     </main>
   );
 }

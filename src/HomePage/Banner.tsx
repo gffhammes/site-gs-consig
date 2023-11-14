@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { IHomeBanner } from "../types/strapi";
 
 export interface IBannerProps {
@@ -17,7 +17,17 @@ export const Banner = ({ banners }: IBannerProps) => {
         backgroundSize: "cover",
       }}
     >
-      <Typography>{banners[0].texto}</Typography>
+      <Container sx={{ height: "100%" }}>
+        <Stack height="100%" width="100%" justifyContent="center">
+          <Typography color="white" variant="h1">
+            {banners[0].texto}
+          </Typography>
+
+          <Button variant="contained" sx={{ width: "fit-content" }}>
+            {banners[0].botao.texto}
+          </Button>
+        </Stack>
+      </Container>
     </Box>
   );
 };

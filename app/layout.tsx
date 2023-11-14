@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import ThemeRegistry from "./ThemeRegistry";
 
-const inter = Inter({ subsets: ["latin"] });
+const nunito = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "GS Consig",
@@ -16,7 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={nunito.className}>
+        <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
+      </body>
     </html>
   );
 }
