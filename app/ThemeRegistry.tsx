@@ -14,8 +14,16 @@ export default function ThemeRegistry(props: any) {
     typography: {
       fontFamily: "inherit",
       h1: {
-        fontSize: 48,
+        fontSize: 24,
         fontWeight: 500,
+
+        "@media (min-width:600px)": {
+          fontSize: 32,
+        },
+
+        "@media (min-width:900px)": {
+          fontSize: 48,
+        },
       },
       button: {
         fontWeight: "bold",
