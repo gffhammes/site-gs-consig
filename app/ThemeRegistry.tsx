@@ -17,6 +17,9 @@ export default function ThemeRegistry(props: any) {
         fontSize: 48,
         fontWeight: 500,
       },
+      button: {
+        fontWeight: "bold",
+      },
     },
   });
 
