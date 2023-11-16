@@ -1,4 +1,6 @@
-import { Banner } from "@/src/HomePage/Banner";
+import { HomePageBanner } from "@/src/HomePage/HomePageBanner";
+import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
+import { getDataFromServer } from "@/src/utils/services";
 import * as qs from "qs";
 
 const getData = async () => {
@@ -11,13 +13,7 @@ const getData = async () => {
     }
   );
 
-  const url = "https://strapi-gs-consig.onrender.com/api/home" + "?" + query;
-
-  const res = await fetch(url);
-
-  const data = await res.json();
-
-  return data.data.attributes;
+  return getDataFromServer("/home", query);
 };
 
 export default async function Home() {
@@ -25,7 +21,9 @@ export default async function Home() {
 
   return (
     <main>
-      <Banner banners={data.banner} />
+      <HomePageBanner banners={data.banner} />
+
+      <HomePageServices />
     </main>
   );
 }

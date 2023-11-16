@@ -25,6 +25,15 @@ export default function ThemeRegistry(props: any) {
           fontSize: 48,
         },
       },
+      h2: {
+        fontSize: 24,
+        fontWeight: 500,
+        lineHeight: 1,
+      },
+      body1: {
+        lineHeight: 1,
+        color: "#666666",
+      },
       button: {
         fontWeight: "bold",
       },

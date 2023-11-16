@@ -12,11 +12,11 @@ import {
 import { IHomeBanner } from "../types/strapi";
 import Color from "color";
 
-export interface IBannerProps {
+export interface IHomePageBannerProps {
   banners: IHomeBanner[];
 }
 
-export const Banner = ({ banners }: IBannerProps) => {
+export const HomePageBanner = ({ banners }: IHomePageBannerProps) => {
   const { palette } = useTheme();
 
   const transparentPrimary = Color(palette.primary.main).alpha(0.5).string();
@@ -62,10 +62,6 @@ export const Banner = ({ banners }: IBannerProps) => {
           position="relative"
           zIndex={999}
         >
-          {/* <Paper
-            elevation={10}
-            sx={{ width: "fit-content", p: 4, borderRadius: 4 }}
-          > */}
           <Stack gap={4}>
             <Typography color="white" variant="h1" maxWidth="16ch">
               {banners[0].texto}
@@ -81,7 +77,6 @@ export const Banner = ({ banners }: IBannerProps) => {
               {banners[0].botao.texto}
             </Button>
           </Stack>
-          {/* </Paper> */}
         </Stack>
       </Container>
     </Box>
