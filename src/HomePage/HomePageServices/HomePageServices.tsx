@@ -8,7 +8,7 @@ export interface IHomePageServicesProps {}
 
 export const HomePageServices = (props: IHomePageServicesProps) => {
   return (
-    <Box sx={{ py: { xs: 8, md: 16 } }}>
+    <Box>
       <Container maxWidth="md">
         <Stack
           gap={8}
