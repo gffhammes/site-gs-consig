@@ -1,5 +1,6 @@
 import { HomePageBanner } from "@/src/HomePage/HomePageBanner";
 import { HomePageBenefits } from "@/src/HomePage/HomePageBenefits/HomePageBenefits";
+import { HomePageEmployees } from "@/src/HomePage/HomePageEmployees/HomePageEmployees";
 import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews";
 import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
@@ -35,6 +36,8 @@ export default async function Home() {
         <HomePageReviews />
 
         <InterestRateSection />
+
+        <HomePageEmployees />
       </Stack>
     </main>
   );
