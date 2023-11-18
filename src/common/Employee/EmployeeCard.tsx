@@ -1,3 +1,5 @@
+"use client";
+
 import { Avatar, Box, Chip, Paper, Stack, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -10,7 +12,15 @@ export const EmployeeCard = ({
   whatsapp,
 }: IEmployeeCardProps) => {
   return (
-    <Paper variant="outlined" sx={{ p: 2, borderRadius: 8, width: "16rem" }}>
+    <Paper
+      variant="outlined"
+      sx={{
+        p: 2,
+        borderRadius: 8,
+        flexBasis: "16rem",
+        flexShrink: 0,
+      }}
+    >
       <Stack gap={4}>
         <Avatar src={avatar} alt={name} />
 
@@ -28,6 +38,9 @@ export const EmployeeCard = ({
           icon={<WhatsAppIcon fontSize="small" />}
           color="primary"
           sx={{ width: "fit-content" }}
+          onClick={() => {
+            console.log("teste");
+          }}
         />
       </Stack>
     </Paper>

@@ -18,7 +18,13 @@ export const HomePageEmployees = (props: IHomePageEmployeesProps) => {
             </strong>
           </Typography>
 
-          <Stack direction="row" gap={2} justifyContent="center">
+          <Stack
+            direction="row"
+            gap={2}
+            width="100%"
+            overflow="hidden"
+            justifyContent={{ xs: "flex-start", md: "center" }}
+          >
             {employees.map((employee, index) => (
               <EmployeeCard
                 key={index}
