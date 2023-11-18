@@ -27,7 +27,11 @@ export const InterestRateChart = (props: IInterestRateChartProps) => {
               >
                 <Typography
                   textAlign="center"
-                  fontSize={chartItem.highlight ? 12 : 10}
+                  fontSize={
+                    chartItem.highlight
+                      ? { xs: 12, sm: 16, md: 20 }
+                      : { xs: 10, sm: 12 }
+                  }
                   fontWeight={chartItem.highlight ? "bold" : "normal"}
                   color={chartItem.highlight ? "primary" : "normal"}
                 >
@@ -49,7 +53,7 @@ export const InterestRateChart = (props: IInterestRateChartProps) => {
 
             <Typography
               textAlign="center"
-              fontSize={8}
+              fontSize={{ xs: 8, sm: 10, md: 12 }}
               fontWeight={chartItem.highlight ? "bold" : "normal"}
               color={chartItem.highlight ? "primary" : "normal"}
               sx={{ gridArea: `label${index}` }}
