@@ -4,6 +4,7 @@ import { HomePageEmployees } from "@/src/HomePage/HomePageEmployees/HomePageEmpl
 import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews";
 import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
 import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
+import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { getDataFromServer } from "@/src/utils/services";
 import { Stack } from "@mui/material";
@@ -42,17 +43,7 @@ export default async function Home() {
 
         <HomePageStepByStep />
 
-        {/* delete */}
-
-        <HomePageServices />
-
-        <HomePageBenefits />
-
-        <HomePageReviews />
-
-        <InterestRateSection />
-
-        <HomePageEmployees />
+        <BanksSection />
       </Stack>
     </main>
   );

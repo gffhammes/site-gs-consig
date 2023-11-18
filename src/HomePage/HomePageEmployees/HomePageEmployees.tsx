@@ -1,3 +1,6 @@
+"use client";
+
+import { CustomCarousel } from "@/src/common/CustomCarousel/CustomCarousel";
 import { EmployeeCard, IEmployee } from "@/src/common/Employee/EmployeeCard";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
@@ -18,23 +21,19 @@ export const HomePageEmployees = (props: IHomePageEmployeesProps) => {
             </strong>
           </Typography>
 
-          <Stack
-            direction="row"
-            gap={2}
-            width="100%"
-            overflow="hidden"
-            justifyContent={{ xs: "flex-start", md: "center" }}
-          >
-            {employees.map((employee, index) => (
+          <CustomCarousel
+            dataSet={employees}
+            slideGap={2}
+            alignSlides="center"
+            getSlide={(employee) => (
               <EmployeeCard
-                key={index}
                 avatar={employee.avatar}
                 name={employee.name}
                 product={employee.product}
                 whatsapp={employee.whatsapp}
               />
-            ))}
-          </Stack>
+            )}
+          />
         </Stack>
       </Container>
     </Box>
