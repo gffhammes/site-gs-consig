@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { HomePageBenefitsList } from "./HomePageBenefitsList";
 
 export interface IHomePageBenefitsProps {}
@@ -7,7 +7,7 @@ export const HomePageBenefits = (props: IHomePageBenefitsProps) => {
   return (
     <Box>
       <Container>
-        <Stack gap={8}>
+        <Stack gap={8} alignItems="center">
           <Stack width="100%" alignItems="center" gap={2}>
             <Typography
               variant="h2"
@@ -25,6 +25,10 @@ export const HomePageBenefits = (props: IHomePageBenefitsProps) => {
           </Stack>
 
           <HomePageBenefitsList />
+
+          <Button sx={{ width: "fit-content" }} variant="contained">
+            Lorem ipsum
+          </Button>
         </Stack>
       </Container>
     </Box>
