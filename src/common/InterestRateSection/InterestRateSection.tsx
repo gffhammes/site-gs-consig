@@ -7,14 +7,19 @@ export const InterestRateSection = (props: IInterestRateSectionProps) => {
   return (
     <Box>
       <Container>
-        <Stack direction={{ xs: "column", md: "row" }} gap={8}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          gap={8}
+          alignItems="center"
+          justifyContent="center"
+        >
           <Stack gap={4}>
             <Stack gap={2}>
               <Typography variant="h2" color="primary" maxWidth="14ch">
                 Lorem ipsum dolor sit amet
               </Typography>
 
-              <Typography maxWidth="33ch">
+              <Typography maxWidth="26rem">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                 varius nulla eleifend.
               </Typography>

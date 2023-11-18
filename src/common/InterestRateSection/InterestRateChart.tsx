@@ -6,9 +6,11 @@ export interface IInterestRateChartProps {}
 export const InterestRateChart = (props: IInterestRateChartProps) => {
   return (
     <Box
+      maxWidth="26rem"
+      width="100%"
       display="grid"
       gridTemplateColumns={`repeat(${interestRateChartItems.length}, 1fr)`}
-      gridTemplateRows="1fr 1fr"
+      gridTemplateRows="1fr min-content"
       gridTemplateAreas={`
       "chart0 chart1 chart2 chart3"
       "label0 label1 label2 label3"
