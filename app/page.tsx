@@ -3,6 +3,7 @@ import { HomePageBenefits } from "@/src/HomePage/HomePageBenefits/HomePageBenefi
 import { HomePageEmployees } from "@/src/HomePage/HomePageEmployees/HomePageEmployees";
 import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews";
 import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
+import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { getDataFromServer } from "@/src/utils/services";
 import { Stack } from "@mui/material";
@@ -29,6 +30,20 @@ export default async function Home() {
       <HomePageBanner banners={data.banner} />
 
       <Stack gap={{ xs: 16, md: 20 }} sx={{ py: 16 }}>
+        <HomePageServices />
+
+        <HomePageBenefits />
+
+        <HomePageReviews />
+
+        <InterestRateSection />
+
+        <HomePageEmployees />
+
+        <HomePageStepByStep />
+
+        {/* delete */}
+
         <HomePageServices />
 
         <HomePageBenefits />
