@@ -1,12 +1,12 @@
 import { SvgIconComponent } from "@mui/icons-material";
-import { Box, IconProps, Stack, Typography } from "@mui/material";
+import { Box, IconProps } from "@mui/material";
 import { JSXElementConstructor } from "react";
 import HourglassDisabledIcon from "@mui/icons-material/HourglassDisabled";
 import { HomePageBenefitsListItem } from "./HomePageBenefitsListItem";
 
 export interface IHomePageBenefitsListProps {}
 
-export const HomePageBenefitsList = (props: IHomePageBenefitsListProps) => {
+export const HomePageBenefitsList = () => {
   return (
     <Box
       display="grid"

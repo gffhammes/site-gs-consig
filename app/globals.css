@@ -11,3 +11,8 @@ body,
 main {
   height: 100%;
 }
+
+a {
+  color: unset;
+  -webkit-tap-highlight-color: transparent;
+}

@@ -41,4 +41,4 @@ export const CustomCarousel = <T,>({
   );
 };
 
-const Embla = styled(Box)({ overflow: "hidden" });
+const Embla = styled(Box)({ overflow: "hidden", maxWidth: "100%" });

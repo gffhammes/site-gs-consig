@@ -5,6 +5,7 @@ import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews"
 import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
 import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
+import { Footer } from "@/src/common/Footer/Footer";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { getDataFromServer } from "@/src/utils/services";
 import { Stack } from "@mui/material";
@@ -45,6 +46,8 @@ export default async function Home() {
 
         <BanksSection />
       </Stack>
+
+      <Footer />
     </main>
   );
 }
