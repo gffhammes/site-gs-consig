@@ -15,4 +15,5 @@ main {
 a {
   color: unset;
   -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
 }

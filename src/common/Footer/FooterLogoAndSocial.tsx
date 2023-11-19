@@ -11,7 +11,7 @@ export interface IFooterLogoAndSocialProps {}
 
 export const FooterLogoAndSocial = () => {
   return (
-    <Stack width="100%" alignItems="center">
+    <Stack width="fit-content" alignItems="center" sx={{ gridArea: "logo" }}>
       <CustomImage src="" alt="GS Consig" height="10rem" width="10rem" />
 
       <Stack direction="row" gap={1}>
