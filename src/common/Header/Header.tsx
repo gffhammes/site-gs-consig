@@ -9,14 +9,16 @@ import {
 } from "@mui/material";
 import { CustomImage } from "../CustomImage";
 import Logo from "../../../public/logo-gs-consig.png";
-import MenuIcon from "@mui/icons-material/Menu";
 import { IMobileSidebarRef, MobileSidebar } from "./MobileSidebar";
 import { useRef } from "react";
+import Link from "next/link";
+import { useBreakpoint } from "@/src/hooks/useBreakpoint";
+import { NavigationMenu } from "./NavigationMenu";
 
 export interface IHeaderProps {}
 
 export const Header = (props: IHeaderProps) => {
-  const mobileSidebarRef = useRef<IMobileSidebarRef>(null);
+  const { md } = useBreakpoint();
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
@@ -43,28 +45,23 @@ export const Header = (props: IHeaderProps) => {
             alignItems="center"
             justifyContent="space-between"
           >
-            <CustomImage
-              src={Logo.src}
-              alt="Logo GS Consig"
-              width={trigger ? "2rem" : "3.5rem"}
-              height={trigger ? "2rem" : "3.5rem"}
-              objectPosition="left"
-              sx={{
-                transition: ".3s ease all",
-              }}
-            />
+            <Link href="/">
+              <CustomImage
+                src={Logo.src}
+                alt="Logo GS Consig"
+                width={trigger ? "2rem" : "3.5rem"}
+                height={trigger ? "2rem" : "3.5rem"}
+                objectPosition="left"
+                sx={{
+                  transition: ".3s ease all",
+                }}
+              />
+            </Link>
 
-            <IconButton
-              color="primary"
-              onClick={() => mobileSidebarRef.current?.handleOpen()}
-            >
-              <MenuIcon />
-            </IconButton>
+            {md ? <NavigationMenu direction="row" /> : <MobileSidebar />}
           </Stack>
         </Container>
       </Box>
-
-      <MobileSidebar ref={mobileSidebarRef} />
     </>
   );
 };

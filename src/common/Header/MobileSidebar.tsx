@@ -1,5 +1,8 @@
-import { Backdrop, Box } from "@mui/material";
-import { forwardRef, useImperativeHandle, useState } from "react";
+import { Backdrop, Box, IconButton, Stack } from "@mui/material";
+import { forwardRef, useImperativeHandle, useRef, useState } from "react";
+import { NavigationMenu } from "./NavigationMenu";
+import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export interface IMobileSidebarProps {}
 
@@ -18,6 +21,10 @@ export const MobileSidebar = forwardRef<IMobileSidebarRef, IMobileSidebarProps>(
 
     return (
       <>
+        <IconButton color="primary" onClick={handleOpen}>
+          <MenuIcon />
+        </IconButton>
+
         <Backdrop
           open={open}
           sx={{ zIndex: 9999 }}
@@ -37,7 +44,15 @@ export const MobileSidebar = forwardRef<IMobileSidebarRef, IMobileSidebarProps>(
             transition: ".3s ease all",
           }}
         >
-          MobileSidebar
+          <Stack alignItems="flex-end" gap={3} sx={{ p: 2 }}>
+            <IconButton onClick={handleClose}>
+              <CloseIcon />
+            </IconButton>
+
+            <Box width="100%">
+              <NavigationMenu onClick={handleClose} />
+            </Box>
+          </Stack>
         </Box>
       </>
     );
