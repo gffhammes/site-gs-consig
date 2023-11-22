@@ -1,6 +1,6 @@
 "use client";
 
-import { Avatar, Box, Chip, Paper, Stack, Typography } from "@mui/material";
+import { Avatar, Chip, Paper, Stack, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
 export interface IEmployeeCardProps extends IEmployee {}

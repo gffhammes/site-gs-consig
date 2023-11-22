@@ -6,7 +6,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 
 export interface IHomePageEmployeesProps {}
 
-export const HomePageEmployees = (props: IHomePageEmployeesProps) => {
+export const HomePageEmployees = () => {
   return (
     <Box>
       <Container>

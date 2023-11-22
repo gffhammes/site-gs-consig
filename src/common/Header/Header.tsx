@@ -1,23 +1,16 @@
 "use client";
 
-import {
-  Box,
-  Container,
-  IconButton,
-  Stack,
-  useScrollTrigger,
-} from "@mui/material";
+import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
 import { CustomImage } from "../CustomImage";
 import Logo from "../../../public/logo-gs-consig.png";
-import { IMobileSidebarRef, MobileSidebar } from "./MobileSidebar";
-import { useRef } from "react";
+import { MobileSidebar } from "./MobileSidebar";
 import Link from "next/link";
 import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { NavigationMenu } from "./NavigationMenu";
 
 export interface IHeaderProps {}
 
-export const Header = (props: IHeaderProps) => {
+export const Header = () => {
   const { md } = useBreakpoint();
 
   const trigger = useScrollTrigger({

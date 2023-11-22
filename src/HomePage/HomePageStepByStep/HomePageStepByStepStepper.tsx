@@ -2,9 +2,7 @@ import { Box, Stack, Typography } from "@mui/material";
 
 export interface IHomePageStepByStepStepperProps {}
 
-export const HomePageStepByStepStepper = (
-  props: IHomePageStepByStepStepperProps
-) => {
+export const HomePageStepByStepStepper = () => {
   return (
     <Stack width="fit-content" sx={{ gridArea: "stepper" }}>
       {steps.map((step, index) => {

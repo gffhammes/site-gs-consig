@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 
 export interface IHomePageServicesImagesProps {}
 
-export const HomePageServicesImages = (props: IHomePageServicesImagesProps) => {
+export const HomePageServicesImages = () => {
   return (
     <Box
       display="grid"

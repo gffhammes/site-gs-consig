@@ -3,7 +3,7 @@ import { Fragment } from "react";
 
 export interface IInterestRateChartProps {}
 
-export const InterestRateChart = (props: IInterestRateChartProps) => {
+export const InterestRateChart = () => {
   return (
     <Box
       maxWidth="26rem"

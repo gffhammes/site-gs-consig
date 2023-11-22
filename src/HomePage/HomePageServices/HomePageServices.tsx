@@ -1,12 +1,10 @@
-import { Box, Chip, Container, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import { CustomImage } from "../../common/CustomImage";
+import { Box, Container, Stack } from "@mui/material";
 import { HomePageServicesImages } from "./HomePageServicesImages";
 import { HomePageServicesTextAndButtons } from "./HomePageServicesTextAndButtons";
 
 export interface IHomePageServicesProps {}
 
-export const HomePageServices = (props: IHomePageServicesProps) => {
+export const HomePageServices = () => {
   return (
     <Box>
       <Container maxWidth="md">

@@ -20,9 +20,7 @@ const services = [
   },
 ];
 
-export const HomePageServicesTextAndButtons = (
-  props: IHomePageServicesTextAndButtonsProps
-) => {
+export const HomePageServicesTextAndButtons = () => {
   return (
     <Stack gap={4}>
       <Stack gap={2}>

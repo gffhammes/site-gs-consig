@@ -3,7 +3,7 @@ import { HomePageBenefitsList } from "./HomePageBenefitsList";
 
 export interface IHomePageBenefitsProps {}
 
-export const HomePageBenefits = (props: IHomePageBenefitsProps) => {
+export const HomePageBenefits = () => {
   return (
     <Box>
       <Container>

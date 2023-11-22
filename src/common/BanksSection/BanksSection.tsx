@@ -6,7 +6,7 @@ import { CustomCarousel } from "../CustomCarousel/CustomCarousel";
 
 export interface IBanksSectionProps {}
 
-export const BanksSection = (props: IBanksSectionProps) => {
+export const BanksSection = () => {
   return (
     <Box>
       <Container>

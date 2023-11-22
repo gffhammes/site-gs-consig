@@ -3,7 +3,7 @@ import { HomePageStepByStepStepper } from "./HomePageStepByStepStepper";
 
 export interface IHomePageStepByStepProps {}
 
-export const HomePageStepByStep = (props: IHomePageStepByStepProps) => {
+export const HomePageStepByStep = () => {
   return (
     <Box>
       <Container>

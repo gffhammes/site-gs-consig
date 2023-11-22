@@ -3,7 +3,7 @@ import { InterestRateChart } from "./InterestRateChart";
 
 export interface IInterestRateSectionProps {}
 
-export const InterestRateSection = (props: IInterestRateSectionProps) => {
+export const InterestRateSection = () => {
   return (
     <Box>
       <Container>
