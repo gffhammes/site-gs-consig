@@ -16,7 +16,7 @@ export const Footer = () => {
             sm: "1fr 1fr",
             md: "auto auto auto",
           }}
-          justifyContent="flex-start"
+          justifyContent={{ xs: "center", sm: "flex-start" }}
           gridTemplateAreas={{
             xs: `
               "logo"
@@ -32,6 +32,8 @@ export const Footer = () => {
             `,
           }}
           gap={{ xs: 8, md: 20 }}
+          width={{ xs: "fit-content", md: "100%" }}
+          marginX={{ xs: "auto", md: "unset" }}
         >
           <FooterLogoAndSocial />
 

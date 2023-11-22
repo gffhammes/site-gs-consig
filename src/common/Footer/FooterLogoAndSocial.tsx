@@ -6,13 +6,24 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Logo from "../../../public/logo-gs-consig.png";
 
 export interface IFooterLogoAndSocialProps {}
 
 export const FooterLogoAndSocial = () => {
   return (
-    <Stack width="fit-content" alignItems="center" sx={{ gridArea: "logo" }}>
-      <CustomImage src="" alt="GS Consig" height="10rem" width="10rem" />
+    <Stack
+      width="fit-content"
+      alignItems="center"
+      gap={4}
+      sx={{ gridArea: "logo", width: "100%" }}
+    >
+      <CustomImage
+        src={Logo.src}
+        alt="Logo GS Consig"
+        width="7rem"
+        height="7rem"
+      />
 
       <Stack direction="row" gap={1}>
         {socials.map((social, index) => (

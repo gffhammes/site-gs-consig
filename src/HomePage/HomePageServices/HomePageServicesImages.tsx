@@ -24,6 +24,7 @@ export const HomePageServicesImages = (props: IHomePageServicesImagesProps) => {
         alt="image"
         width="100%"
         height="100%"
+        objectFit="cover"
         sx={{
           gridColumnStart: "a",
           gridColumnEnd: "b",
@@ -39,6 +40,7 @@ export const HomePageServicesImages = (props: IHomePageServicesImagesProps) => {
         alt="image"
         width="100%"
         height="100%"
+        objectFit="cover"
         sx={{
           gridColumnStart: "e",
           gridColumnEnd: "f",

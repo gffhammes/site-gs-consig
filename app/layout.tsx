@@ -3,6 +3,7 @@ import { Nunito_Sans } from "next/font/google";
 import "./globals.css";
 import ThemeRegistry from "./ThemeRegistry";
 import { Footer } from "@/src/common/Footer/Footer";
+import { Header } from "@/src/common/Header/Header";
 
 const nunito = Nunito_Sans({ subsets: ["latin"] });
 
@@ -19,7 +20,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={nunito.className}>
-        <ThemeRegistry options={{ key: "mui" }}>{children}</ThemeRegistry>
+        <ThemeRegistry options={{ key: "mui" }}>
+          <Header />
+
+          {children}
+        </ThemeRegistry>
       </body>
     </html>
   );

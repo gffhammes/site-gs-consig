@@ -21,6 +21,7 @@ export const FooterContact = () => {
             href={contact.href}
             target="_blank"
             width="fit-content"
+            gap={1}
           >
             <contact.Icon />
 
