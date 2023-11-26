@@ -1,7 +1,8 @@
 "use client";
 
+import { employees } from "@/app/especialistas/page";
 import { CustomCarousel } from "@/src/common/CustomCarousel/CustomCarousel";
-import { EmployeeCard, IEmployee } from "@/src/common/Employee/EmployeeCard";
+import { EmployeeCard } from "@/src/common/Employee/EmployeeCard";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
 export interface IHomePageEmployeesProps {}
@@ -31,6 +32,10 @@ export const HomePageEmployees = () => {
                 name={employee.name}
                 product={employee.product}
                 whatsapp={employee.whatsapp}
+                paperSx={{
+                  flexBasis: "16rem",
+                  flexShrink: 0,
+                }}
               />
             )}
           />
@@ -39,24 +44,3 @@ export const HomePageEmployees = () => {
     </Box>
   );
 };
-
-const employees: IEmployee[] = [
-  {
-    avatar: "https://picsum.photos/1001",
-    name: "João Vitor Silva",
-    product: "portabilidade inss",
-    whatsapp: "",
-  },
-  {
-    avatar: "",
-    name: "João Vitor Silva",
-    product: "portabilidade inss",
-    whatsapp: "",
-  },
-  {
-    avatar: "",
-    name: "João Vitor Silva",
-    product: "portabilidade inss",
-    whatsapp: "",
-  },
-];

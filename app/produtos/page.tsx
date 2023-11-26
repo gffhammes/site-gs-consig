@@ -1,20 +1,23 @@
 import { ServicesPageList } from "@/src/ServicesPage/ServicesPageList";
+import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { Container, Stack, Typography } from "@mui/material";
 
 export default function Produtos() {
   return (
-    <Stack gap={16} py={4}>
-      <Stack gap={10}>
-        <Container>
-          <Typography variant="h1" color="primary">
-            Conheça nossos produtos
-          </Typography>
-        </Container>
+    <Stack sx={{ pt: 4 }}>
+      <Container>
+        <Typography variant="h1" color="primary">
+          Conheça nossos produtos
+        </Typography>
+      </Container>
 
+      <Stack gap={{ xs: 16, md: 20 }} sx={{ py: 16 }}>
         <ServicesPageList />
 
         <InterestRateSection />
+
+        <BanksSection />
       </Stack>
     </Stack>
   );
@@ -35,7 +38,7 @@ export const services: IService[] = [
     slug: "portabilidade-inss",
   },
   {
-    name: "credito novo inss",
+    name: "crédito novo inss",
     description: "Condições especiais que só nós oferecemos",
     thumbUrl: "https://picsum.photos/1000",
     slug: "credito-novo-inss",

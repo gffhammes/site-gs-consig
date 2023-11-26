@@ -14,8 +14,12 @@ export interface IServicesPageListProps {}
 
 export const ServicesPageList = () => {
   return (
-    <Container>
-      <Stack gap={6}>
+    <Container maxWidth="md">
+      <Box
+        display="grid"
+        gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
+        gap={6}
+      >
         {services.map((service, index) => (
           <ListItemButton
             disableGutters
@@ -63,7 +67,7 @@ export const ServicesPageList = () => {
             </Box>
           </ListItemButton>
         ))}
-      </Stack>
+      </Box>
     </Container>
   );
 };

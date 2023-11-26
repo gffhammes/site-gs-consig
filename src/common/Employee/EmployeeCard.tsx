@@ -1,15 +1,18 @@
 "use client";
 
-import { Avatar, Chip, Paper, Stack, Typography } from "@mui/material";
+import { Avatar, Chip, Paper, Stack, SxProps, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
-export interface IEmployeeCardProps extends IEmployee {}
+export interface IEmployeeCardProps extends IEmployee {
+  paperSx?: SxProps;
+}
 
 export const EmployeeCard = ({
   avatar,
   name,
   product,
   whatsapp,
+  paperSx,
 }: IEmployeeCardProps) => {
   return (
     <Paper
@@ -17,8 +20,7 @@ export const EmployeeCard = ({
       sx={{
         p: 2,
         borderRadius: 8,
-        flexBasis: "16rem",
-        flexShrink: 0,
+        ...paperSx,
       }}
     >
       <Stack gap={4}>
