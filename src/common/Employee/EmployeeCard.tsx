@@ -2,6 +2,7 @@
 
 import { Avatar, Chip, Paper, Stack, SxProps, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { IEmployee } from "@/src/types/employees";
 
 export interface IEmployeeCardProps extends IEmployee {
   paperSx?: SxProps;
@@ -48,10 +49,3 @@ export const EmployeeCard = ({
     </Paper>
   );
 };
-
-export interface IEmployee {
-  avatar: string;
-  name: string;
-  product: string;
-  whatsapp: string;
-}

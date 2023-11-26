@@ -1,35 +1,10 @@
 import { Chip, Container, Stack, TextField, Typography } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
-import { EmployeeCard, IEmployee } from "@/src/common/Employee/EmployeeCard";
-
-export const employees: IEmployee[] = [
-  {
-    avatar: "https://picsum.photos/1001",
-    name: "João Vitor Silva",
-    product: "portabilidade inss",
-    whatsapp: "",
-  },
-  {
-    avatar: "",
-    name: "João Vitor Silva",
-    product: "crédito novo inss",
-    whatsapp: "",
-  },
-  {
-    avatar: "",
-    name: "João Vitor Silva",
-    product: "portabilidade inss",
-    whatsapp: "",
-  },
-];
-
-const allAvailableProducts: string[] = [];
-
-employees.forEach((employee) => {
-  if (!allAvailableProducts.includes(employee.product)) {
-    allAvailableProducts.push(employee.product);
-  }
-});
+import { EmployeeCard } from "@/src/common/Employee/EmployeeCard";
+import {
+  allEmployeesAvailableProducts,
+  employees,
+} from "@/src/types/employees";
 
 export default function Especialistas() {
   return (
@@ -71,7 +46,7 @@ export default function Especialistas() {
           }}
         />
 
-        {allAvailableProducts.map((product) => (
+        {allEmployeesAvailableProducts.map((product) => (
           <Chip
             key={product}
             label={product.toUpperCase()}

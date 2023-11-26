@@ -1,8 +1,8 @@
 "use client";
 
-import { employees } from "@/app/especialistas/page";
 import { CustomCarousel } from "@/src/common/CustomCarousel/CustomCarousel";
 import { EmployeeCard } from "@/src/common/Employee/EmployeeCard";
+import { employees } from "@/src/types/employees";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
 export interface IHomePageEmployeesProps {}
