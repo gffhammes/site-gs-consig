@@ -1,6 +1,7 @@
 import { Typography } from "@mui/material";
 import { FooterCustomMenu } from "./FooterCustomMenu";
 import Link from "next/link";
+import { pages } from "../Header/NavigationMenu";
 
 export interface IFooterSiteMapProps {}
 
@@ -9,27 +10,14 @@ export const FooterSiteMap = () => {
     <FooterCustomMenu
       title="Mapa do site"
       sx={{ gridArea: "siteMap" }}
-      itemsData={siteMapItems}
-      getItem={(siteMapItem) => {
+      itemsData={pages}
+      getItem={(page) => {
         return (
-          <Link href={siteMapItem.target} style={{ width: "fit-content" }}>
-            <Typography>{siteMapItem.label}</Typography>
+          <Link href={page.route} style={{ width: "fit-content" }}>
+            <Typography>{page.title}</Typography>
           </Link>
         );
       }}
     />
   );
 };
-
-export interface ISiteMapItem {
-  target: string;
-  label: string;
-}
-
-const siteMapItems: ISiteMapItem[] = [
-  { label: "Home", target: "/" },
-  { label: "Produtos", target: "/" },
-  { label: "Contato", target: "/" },
-  { label: "Nossos especialistas", target: "/" },
-  { label: "Blog", target: "/" },
-];

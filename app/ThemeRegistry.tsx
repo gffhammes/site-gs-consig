@@ -14,7 +14,7 @@ export default function ThemeRegistry(props: any) {
     typography: {
       fontFamily: "inherit",
       h1: {
-        fontSize: 24,
+        fontSize: 32,
         fontWeight: 500,
 
         "@media (min-width:600px)": {
@@ -30,6 +30,12 @@ export default function ThemeRegistry(props: any) {
         fontWeight: 500,
         lineHeight: 1,
       },
+      h3: {
+        fontSize: 16,
+        fontWeight: 800,
+        lineHeight: 1,
+      },
+
       body1: {
         lineHeight: 1,
         color: "#666666",

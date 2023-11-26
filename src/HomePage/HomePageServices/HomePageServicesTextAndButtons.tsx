@@ -1,24 +1,7 @@
+import { services } from "@/app/produtos/page";
 import { Chip, Stack, Typography } from "@mui/material";
 
 export interface IHomePageServicesTextAndButtonsProps {}
-
-const services = [
-  {
-    label: "portabilidade inss",
-  },
-  {
-    label: "credito novo inss",
-  },
-  {
-    label: "consignado inss",
-  },
-  {
-    label: "cartao consignado inss",
-  },
-  {
-    label: "cartao beneficio inss",
-  },
-];
 
 export const HomePageServicesTextAndButtons = () => {
   return (
@@ -37,8 +20,8 @@ export const HomePageServicesTextAndButtons = () => {
       <Stack flexWrap="wrap" direction="row" gap={1}>
         {services.map((service) => (
           <Chip
-            key={service.label}
-            label={service.label.toUpperCase()}
+            key={service.name}
+            label={service.name.toUpperCase()}
             variant="outlined"
             color="primary"
             size="small"

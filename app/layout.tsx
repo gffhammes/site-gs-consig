@@ -4,6 +4,7 @@ import "./globals.css";
 import ThemeRegistry from "./ThemeRegistry";
 import { Header } from "@/src/common/Header/Header";
 import { SplashScreen } from "@/src/common/SplashScreen";
+import { Footer } from "@/src/common/Footer/Footer";
 
 const nunito = Nunito_Sans({ subsets: ["latin"] });
 
@@ -26,6 +27,8 @@ export default function RootLayout({
           <Header />
 
           {children}
+
+          <Footer />
         </ThemeRegistry>
       </body>
     </html>

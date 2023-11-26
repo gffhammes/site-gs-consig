@@ -21,10 +21,10 @@ export const Header = () => {
   return (
     <Box
       sx={{
-        position: "fixed",
+        position: "sticky",
         top: 0,
         width: "100%",
-        backgroundColor: trigger ? "white" : "rgba(255, 255, 255, 0.5)",
+        backgroundColor: "white",
         borderBottom: trigger ? "1px solid #cdcdcd" : "none",
         transition: ".3s ease all",
         zIndex: 9999,

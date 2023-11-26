@@ -10,9 +10,11 @@ export const NavigationMenu = ({
   direction,
   onClick,
 }: INavigationMenuProps) => {
+  const pagesToShow = pages.filter((page) => !page.hideOnHeader);
+
   return (
     <Stack gap={4} direction={direction} component="nav">
-      {pages.map((page, index) => (
+      {pagesToShow.map((page, index) => (
         <Link key={index} href={page.route} onClick={onClick}>
           <Typography>{page.title}</Typography>
         </Link>
@@ -24,9 +26,15 @@ export const NavigationMenu = ({
 export interface IPage {
   route: string;
   title: string;
+  hideOnHeader?: boolean;
 }
 
 export const pages: IPage[] = [
+  {
+    route: "/",
+    title: "Home",
+    hideOnHeader: true,
+  },
   {
     route: "/produtos",
     title: "Produtos",
@@ -35,12 +43,12 @@ export const pages: IPage[] = [
     route: "/especialistas",
     title: "Especialistas",
   },
-  {
-    route: "/blog",
-    title: "Blog",
-  },
-  {
-    route: "/contato",
-    title: "Contato",
-  },
+  // {
+  //   route: "/blog",
+  //   title: "Blog",
+  // },
+  // {
+  //   route: "/contato",
+  //   title: "Contato",
+  // },
 ];

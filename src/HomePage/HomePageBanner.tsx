@@ -23,7 +23,7 @@ export const HomePageBanner = ({ banners }: IHomePageBannerProps) => {
   return (
     <Box
       sx={{
-        height: "100%",
+        height: "80vh",
         width: "100%",
         backgroundImage: `url(${banners[0].foto.data.attributes.formats.large.url})`,
         backgroundRepeat: "no-repeat",
