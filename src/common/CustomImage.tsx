@@ -9,6 +9,7 @@ export interface ICustomImageProps {
   sx?: SxProps;
   objectFit?: "contain" | "cover";
   objectPosition?: string | "left";
+  aspectRatio?: string;
 }
 
 export const CustomImage = ({
@@ -19,10 +20,18 @@ export const CustomImage = ({
   sx,
   objectFit = "contain",
   objectPosition,
+  aspectRatio,
 }: ICustomImageProps) => {
   return (
     <Box
-      sx={{ position: "relative", height, width, overflow: "hidden", ...sx }}
+      sx={{
+        position: "relative",
+        aspectRatio,
+        height,
+        width,
+        overflow: "hidden",
+        ...sx,
+      }}
     >
       <Image src={src} alt={alt} fill style={{ objectFit, objectPosition }} />
     </Box>

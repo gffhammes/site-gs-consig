@@ -2,16 +2,19 @@
 
 import { CustomCarousel } from "@/src/common/CustomCarousel/CustomCarousel";
 import { EmployeeCard } from "@/src/common/Employee/EmployeeCard";
+import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { employees } from "@/src/types/employees";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
 export interface IHomePageEmployeesProps {}
 
 export const HomePageEmployees = () => {
+  const { md } = useBreakpoint();
+
   return (
     <Box>
-      <Container>
-        <Stack gap={8}>
+      <Stack gap={8}>
+        <Container>
           <Typography variant="h2" color="primary" textAlign="center">
             Especialistas
             <br />
@@ -21,12 +24,17 @@ export const HomePageEmployees = () => {
               atender
             </strong>
           </Typography>
+        </Container>
 
+        <Container disableGutters>
           <CustomCarousel
             dataSet={employees}
             slideGap={2}
-            alignSlides="center"
-            getSlide={(employee) => (
+            alignSlides={md ? "center" : "flex-start"}
+            carouselSx={{
+              pl: "1rem",
+            }}
+            getSlide={(employee, index) => (
               <EmployeeCard
                 avatar={employee.avatar}
                 name={employee.name}
@@ -35,12 +43,13 @@ export const HomePageEmployees = () => {
                 paperSx={{
                   flexBasis: "16rem",
                   flexShrink: 0,
+                  marginRight: index === employees.length - 1 ? "1rem" : 0,
                 }}
               />
             )}
           />
-        </Stack>
-      </Container>
+        </Container>
+      </Stack>
     </Box>
   );
 };

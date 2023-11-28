@@ -1,24 +1,33 @@
 import { ServicesPageList } from "@/src/ServicesPage/ServicesPageList";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
-import { Container, Stack, Typography } from "@mui/material";
+import { Container, Divider, Stack, Typography } from "@mui/material";
 
 export default function Produtos() {
   return (
-    <Stack sx={{ pt: 4 }}>
+    <Stack gap={{ xs: 16, md: 20 }} sx={{ py: 16 }}>
       <Container>
-        <Typography variant="h1" color="primary">
-          Conheça nossos produtos
-        </Typography>
+        <Stack alignItems="center" gap={4}>
+          <Typography variant="h1" color="primary" textAlign="center">
+            Conheça nossos produtos
+          </Typography>
+
+          <Typography fontSize={20} textAlign="center" maxWidth="36ch">
+            Trabalhamos com as melhores taxas do mercado e atendimento
+            diferenciado. Selecione um produto e dê mais um passo
+          </Typography>
+        </Stack>
       </Container>
 
-      <Stack gap={{ xs: 16, md: 20 }} sx={{ py: 16 }}>
-        <ServicesPageList />
+      <ServicesPageList />
 
-        <InterestRateSection />
+      <Container maxWidth="sm">
+        <Divider />
+      </Container>
 
-        <BanksSection />
-      </Stack>
+      <InterestRateSection />
+
+      <BanksSection />
     </Stack>
   );
 }

@@ -19,6 +19,8 @@ export const ServicesPageList = () => {
         display="grid"
         gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr" }}
         gap={6}
+        width="100%"
+        justifyItems="center"
       >
         {services.map((service, index) => (
           <ListItemButton
@@ -26,7 +28,15 @@ export const ServicesPageList = () => {
             component={Link}
             href={`/produtos/${service.slug}`}
             key={index}
-            sx={{ px: 1, mx: -1, py: 1, my: -1, borderRadius: 3 }}
+            sx={{
+              px: 1,
+              mx: -1,
+              py: 1,
+              my: -1,
+              borderRadius: 3,
+              width: "100%",
+              maxWidth: "26rem",
+            }}
           >
             <Box
               display="grid"
@@ -34,8 +44,11 @@ export const ServicesPageList = () => {
         'image  content'
         'none   button'
         `}
+              gridTemplateColumns="min-content auto"
+              gridTemplateRows="auto auto"
               alignItems="center"
               columnGap={2}
+              width="100%"
             >
               <CustomImage
                 src={service.thumbUrl}
@@ -49,7 +62,18 @@ export const ServicesPageList = () => {
                 <Typography variant="h3">
                   {service.name.toUpperCase()}
                 </Typography>
-                <Typography>{service.description}</Typography>
+
+                <Typography
+                  sx={{
+                    width: "100%",
+                    WebkitBoxOrient: "vertical",
+                    display: "-webkit-box",
+                    WebkitLineClamp: "2",
+                    overflow: "hidden",
+                  }}
+                >
+                  {service.description}
+                </Typography>
               </Stack>
 
               <Stack

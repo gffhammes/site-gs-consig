@@ -1,5 +1,8 @@
+"use client";
+
 import { services } from "@/app/produtos/page";
 import { Chip, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 
 export interface IHomePageServicesTextAndButtonsProps {}
 
@@ -25,6 +28,9 @@ export const HomePageServicesTextAndButtons = () => {
             variant="outlined"
             color="primary"
             size="small"
+            component={Link}
+            href={`/produtos/${service.slug}`}
+            onClick={() => {}}
           />
         ))}
       </Stack>
