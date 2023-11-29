@@ -1,4 +1,3 @@
-import { services } from "@/app/produtos/page";
 import {
   Box,
   Container,
@@ -9,6 +8,7 @@ import {
 import { CustomImage } from "../common/CustomImage";
 import Link from "next/link";
 import EastIcon from "@mui/icons-material/East";
+import { services } from "./services";
 
 export interface IServicesPageListProps {}
 
