@@ -1,12 +1,53 @@
-import { Chip, Container, Stack, TextField, Typography } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+"use client";
+
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { EmployeeCard } from "@/src/common/Employee/EmployeeCard";
-import {
-  allEmployeesAvailableProducts,
-  employees,
-} from "@/src/types/employees";
+import { IEmployee, employees } from "@/src/types/employees";
+import { EmployessFilters } from "@/src/EmployeesPage/EmployessFilters";
+import { useMemo, useState } from "react";
+import { toNormalForm } from "@/src/utils/helpers";
+
+export interface IEmployeesFilter {
+  search: string;
+  products: string[];
+}
 
 export default function Especialistas() {
+  const [filters, setFilters] = useState<IEmployeesFilter>({
+    search: "",
+    products: [],
+  });
+
+  const handleFilterChange = (newValue: Partial<IEmployeesFilter>) => {
+    setFilters((currentFilters) => ({ ...currentFilters, ...newValue }));
+  };
+
+  const filteredEmployess = useMemo(() => {
+    return employees.filter((employee) => {
+      const normalizedSearch = toNormalForm(filters.search);
+
+      let passSearchFilter = false;
+
+      for (const property in employee) {
+        const normalizedProperty = toNormalForm(
+          employee[property as keyof IEmployee]
+        );
+
+        if (normalizedProperty.includes(normalizedSearch)) {
+          passSearchFilter = true;
+        }
+      }
+
+      let passProductsFilter = true;
+
+      if (filters.products.length > 0) {
+        passProductsFilter = filters.products.includes(employee.product);
+      }
+
+      return passSearchFilter && passProductsFilter;
+    });
+  }, [filters.products, filters.search]);
+
   return (
     <Stack gap={2}>
       <Container>
@@ -15,52 +56,18 @@ export default function Especialistas() {
         </Typography>
       </Container>
 
-      <Stack
-        gap={1}
-        direction="row"
-        sx={{ pl: 2, width: "100%", overflow: "hidden" }}
-      >
-        <TextField
-          placeholder="Pesquisar"
-          size="small"
-          sx={{
-            minWidth: "10rem",
-          }}
-          inputProps={{
-            sx: {
-              py: 0.5,
-            },
-          }}
-          InputProps={{
-            sx: { borderRadius: 100 },
-
-            startAdornment: (
-              <Stack
-                alignItems="center"
-                justifyContent="center"
-                sx={{ color: "#a5a5a5", pr: 1 }}
-              >
-                <SearchIcon color="inherit" fontSize="small" />
-              </Stack>
-            ),
-          }}
-        />
-
-        {allEmployeesAvailableProducts.map((product) => (
-          <Chip
-            key={product}
-            label={product.toUpperCase()}
-            variant="outlined"
-            sx={{
-              color: "#a5a5a5",
-            }}
-          />
-        ))}
-      </Stack>
+      <EmployessFilters
+        filters={filters}
+        handleFilterChange={handleFilterChange}
+      />
 
       <Container>
-        <Stack gap={2}>
-          {employees.map((employee, index) => (
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: "1fr", md: "1fr 1fr", lg: "1fr 1fr 1fr" }}
+          gap={2}
+        >
+          {filteredEmployess.map((employee, index) => (
             <EmployeeCard
               key={index}
               avatar={employee.avatar}
@@ -69,7 +76,7 @@ export default function Especialistas() {
               whatsapp={employee.whatsapp}
             />
           ))}
-        </Stack>
+        </Box>
       </Container>
     </Stack>
   );
