@@ -7,14 +7,32 @@ export const employees: IEmployee[] = [
   },
   {
     avatar: "",
-    name: "João Vitor Silva",
+    name: "Antônio Nunes",
     product: "crédito novo inss",
     whatsapp: "",
   },
   {
     avatar: "",
-    name: "João Vitor Silva",
+    name: "Drauzio Varella",
     product: "portabilidade inss",
+    whatsapp: "",
+  },
+  {
+    avatar: "",
+    name: "Vitor Gomes",
+    product: "consignado inss",
+    whatsapp: "",
+  },
+  {
+    avatar: "",
+    name: "Vitor Gomes",
+    product: "cartão consignado inss",
+    whatsapp: "",
+  },
+  {
+    avatar: "",
+    name: "Vitor Gomes",
+    product: "cartão benefício inss",
     whatsapp: "",
   },
 ];

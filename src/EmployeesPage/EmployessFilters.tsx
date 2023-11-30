@@ -1,9 +1,8 @@
-"use client";
-
-import { Chip, Container, Stack, TextField } from "@mui/material";
+import { Chip, Container, Stack } from "@mui/material";
 import { allEmployeesAvailableProducts } from "../types/employees";
-import SearchIcon from "@mui/icons-material/Search";
-import { IEmployeesFilter } from "@/app/especialistas/page";
+import { IEmployeesFilter } from "./EmployeesFilterAndList";
+import { CustomCarousel } from "../common/CustomCarousel/CustomCarousel";
+import { EmployeesPageSearchBox } from "./EmployeesPageSearchBox";
 
 export interface IEmployessFiltersProps {
   filters: IEmployeesFilter;
@@ -15,59 +14,52 @@ export const EmployessFilters = ({
   handleFilterChange,
 }: IEmployessFiltersProps) => {
   return (
-    <Container sx={{ pr: "0 !important" }}>
-      <Stack gap={1} direction="row" sx={{ width: "100%", overflow: "hidden" }}>
-        <TextField
+    <Stack gap={1}>
+      <Container>
+        <EmployeesPageSearchBox
           value={filters.search}
-          onChange={(e) => {
+          handleChange={(newValue) => {
             handleFilterChange({
-              search: e.target.value,
+              search: newValue,
             });
           }}
-          placeholder="Pesquisar"
-          size="small"
-          sx={{
-            minWidth: "10rem",
-          }}
-          inputProps={{
-            sx: {
-              py: 0.5,
-            },
-          }}
-          InputProps={{
-            sx: { borderRadius: 100 },
-
-            startAdornment: (
-              <Stack
-                alignItems="center"
-                justifyContent="center"
-                sx={{ color: "#a5a5a5", pr: 1 }}
-              >
-                <SearchIcon color="inherit" fontSize="small" />
-              </Stack>
-            ),
-          }}
         />
+      </Container>
 
-        {allEmployeesAvailableProducts.map((product) => (
-          <Chip
-            key={product}
-            label={product.toUpperCase()}
-            variant={filters.products.includes(product) ? "filled" : "outlined"}
-            color={filters.products.includes(product) ? "primary" : "default"}
-            onClick={() => {
-              handleFilterChange({
-                products: [product],
-              });
-            }}
-            sx={
-              {
-                //   color: "#a5a5a5",
+      <CustomCarousel
+        options={{ dragFree: true }}
+        dataSet={allEmployeesAvailableProducts}
+        getSlide={(product, index) => {
+          const isSelected = filters.products.includes(product);
+
+          const isFirstSlide = index === 0;
+          const isLastSlide =
+            index === allEmployeesAvailableProducts.length - 1;
+
+          return (
+            <Chip
+              key={product}
+              label={product.toUpperCase()}
+              variant={isSelected ? "filled" : "outlined"}
+              onClick={() => {
+                handleFilterChange({
+                  products: [product],
+                });
+              }}
+              sx={{ ml: isFirstSlide ? 2 : 0.5, mr: isLastSlide ? 2 : 0 }}
+              onDelete={
+                isSelected
+                  ? () => {
+                      handleFilterChange({
+                        products: [],
+                      });
+                    }
+                  : undefined
               }
-            }
-          />
-        ))}
-      </Stack>
-    </Container>
+            />
+          );
+        }}
+      />
+    </Stack>
   );
 };

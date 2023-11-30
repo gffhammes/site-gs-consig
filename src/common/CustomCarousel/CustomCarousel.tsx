@@ -2,14 +2,30 @@
 
 import { Box, Stack, SxProps, styled } from "@mui/material";
 import useEmblaCarousel from "embla-carousel-react";
-import { ReactElement, cloneElement } from "react";
+import { ReactElement, ReactNode, cloneElement, useMemo } from "react";
+import { EmblaOptionsType } from "embla-carousel";
 
-export interface ICustomCarouselProps<T> {
+interface ICustomCarouselWithDataSet<T> {
   dataSet: T[];
   getSlide: (slideData: T, index: number) => ReactElement;
+  slides?: never;
+}
+
+interface ICustomCarouselWithSlidesNodes {
+  dataSet?: never;
+  getSlide?: never;
+  slides: ReactNode[];
+}
+
+type TCustomCarouselSlideApproach<T> =
+  | ICustomCarouselWithDataSet<T>
+  | ICustomCarouselWithSlidesNodes;
+
+export interface ICustomCarouselProps {
   slideGap?: number;
   alignSlides?: "center" | "flex-start";
   carouselSx?: SxProps;
+  options?: EmblaOptionsType;
 }
 
 export const CustomCarousel = <T,>({
@@ -18,8 +34,26 @@ export const CustomCarousel = <T,>({
   slideGap,
   alignSlides,
   carouselSx,
-}: ICustomCarouselProps<T>) => {
-  const [emblaRef] = useEmblaCarousel();
+  slides,
+  options,
+}: ICustomCarouselProps & TCustomCarouselSlideApproach<T>) => {
+  const [emblaRef] = useEmblaCarousel(options);
+
+  const slidesMemo = useMemo(() => {
+    if (slides) {
+      return slides;
+    }
+
+    return dataSet.map((slide, index) => {
+      const slideElement = getSlide(slide, index);
+
+      const slideElementWithKey = cloneElement(slideElement, {
+        key: index,
+      });
+
+      return slideElementWithKey;
+    });
+  }, [dataSet, getSlide, slides]);
 
   return (
     <Embla className="embla" ref={emblaRef}>
@@ -30,15 +64,7 @@ export const CustomCarousel = <T,>({
         gap={slideGap}
         sx={{ ...carouselSx }}
       >
-        {dataSet.map((slide, index) => {
-          const slideElement = getSlide(slide, index);
-
-          const slideElementWithKey = cloneElement(slideElement, {
-            key: index,
-          });
-
-          return slideElementWithKey;
-        })}
+        {slidesMemo}
       </Stack>
     </Embla>
   );
