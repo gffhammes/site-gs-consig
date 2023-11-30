@@ -46,7 +46,10 @@ export const EmployessFilters = ({
                   products: [product],
                 });
               }}
-              sx={{ ml: isFirstSlide ? 2 : 0.5, mr: isLastSlide ? 2 : 0 }}
+              sx={{
+                ml: isFirstSlide ? { xs: 2, sm: 3 } : 0.5,
+                mr: isLastSlide ? { xs: 2, sm: 3 } : 0,
+              }}
               onDelete={
                 isSelected
                   ? () => {
