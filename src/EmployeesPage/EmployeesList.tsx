@@ -27,7 +27,7 @@ export const EmployeesList = ({ employees }: IEmployeesListProps) => {
             key={index}
             avatar={employee.avatar}
             name={employee.name}
-            product={employee.product}
+            products={employee.products}
             whatsapp={employee.whatsapp}
           />
         ))}

@@ -31,19 +31,29 @@ export const EmployeesFilterAndList = () => {
       let passSearchFilter = false;
 
       for (const property in employee) {
-        const normalizedProperty = toNormalForm(
-          employee[property as keyof IEmployee]
-        );
+        const propertyString = employee[property as keyof IEmployee];
 
-        if (normalizedProperty.includes(normalizedSearch)) {
-          passSearchFilter = true;
+        if (typeof propertyString === "string") {
+          const normalizedProperty = toNormalForm(propertyString);
+
+          if (normalizedProperty.includes(normalizedSearch)) {
+            passSearchFilter = true;
+          }
         }
       }
 
-      let passProductsFilter = true;
+      let passProductsFilter = false;
 
       if (filters.products.length > 0) {
-        passProductsFilter = filters.products.includes(employee.product);
+        employee.products.forEach((product) => {
+          if (filters.products.includes(product)) {
+            passProductsFilter = true;
+
+            return true;
+          }
+        });
+      } else {
+        passProductsFilter = true;
       }
 
       if (normalizedSearch !== "") {

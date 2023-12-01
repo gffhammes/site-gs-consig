@@ -12,7 +12,7 @@ export const HomePageEmployees = () => {
   const { md } = useBreakpoint();
 
   return (
-    <Box>
+    <Box sx={{ backgroundColor: "#f4f4f4", py: 16 }}>
       <Stack gap={8}>
         <Container>
           <Typography variant="h2" color="primary" textAlign="center">
@@ -29,16 +29,19 @@ export const HomePageEmployees = () => {
         <Container disableGutters>
           <CustomCarousel
             dataSet={employees}
-            slideGap={2}
-            alignSlides={md ? "center" : "flex-start"}
-            carouselSx={{
-              pl: "1rem",
+            options={{
+              align: md ? "start" : "center",
+              dragFree: md ? true : false,
+              skipSnaps: true,
+              slidesToScroll: "auto", /// md ? 3 : 1,
             }}
+            slideGap={2}
+            carouselSx={{ pl: 2 }}
             getSlide={(employee, index) => (
               <EmployeeCard
                 avatar={employee.avatar}
                 name={employee.name}
-                product={employee.product}
+                products={employee.products}
                 whatsapp={employee.whatsapp}
                 paperSx={{
                   flexBasis: "16rem",

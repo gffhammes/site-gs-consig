@@ -11,7 +11,7 @@ export interface IEmployeeCardProps extends IEmployee {
 export const EmployeeCard = ({
   avatar,
   name,
-  product,
+  products,
   whatsapp,
   paperSx,
 }: IEmployeeCardProps) => {
@@ -24,15 +24,30 @@ export const EmployeeCard = ({
         ...paperSx,
       }}
     >
-      <Stack gap={4}>
-        <Avatar src={avatar} alt={name} />
+      <Stack gap={4} height="100%" justifyContent="space-between">
+        <Stack gap={2}>
+          <Avatar
+            src={avatar}
+            alt={name}
+            variant="rounded"
+            sx={{ height: "5rem", width: "5rem", borderRadius: "1rem" }}
+          />
 
-        <Stack gap={1}>
-          <Typography fontSize={12} color="#a5a5a5">
-            {product.toUpperCase()}
-          </Typography>
+          <Typography fontSize={20}>{name}</Typography>
 
-          <Typography fontSize={24}>{name}</Typography>
+          <Stack direction="row" flexWrap="wrap" gap={1}>
+            {products.map((product) => (
+              <Chip
+                key={product}
+                label={product.toUpperCase()}
+                size="small"
+                variant="outlined"
+                sx={{
+                  fontSize: 12,
+                }}
+              />
+            ))}
+          </Stack>
         </Stack>
 
         <Chip

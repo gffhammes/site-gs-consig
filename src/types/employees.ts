@@ -1,53 +1,135 @@
+export interface IEmployee {
+  avatar: string;
+  name: string;
+  products: string[];
+  whatsapp: string;
+}
+
+const avatarBasePath = "/fotos-consultores";
+
 export const employees: IEmployee[] = [
   {
-    avatar: "https://picsum.photos/1001",
-    name: "João Vitor Silva",
-    product: "portabilidade inss",
-    whatsapp: "",
+    avatar: `${avatarBasePath}/kaue-pereira.png`,
+    name: "Consultor Kaue Pereira",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47989111841",
   },
   {
-    avatar: "",
-    name: "Antônio Nunes",
-    product: "crédito novo inss",
-    whatsapp: "",
+    avatar: `${avatarBasePath}/virginia-gratao.png`,
+    name: "Consultora Virgínia Gratão",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47989112466",
   },
   {
-    avatar: "",
-    name: "Drauzio Varella",
-    product: "portabilidade inss",
-    whatsapp: "",
+    avatar: `${avatarBasePath}/william-souza.png`,
+    name: "Consultor William Couto",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47984736753",
   },
   {
-    avatar: "",
-    name: "Vitor Gomes",
-    product: "consignado inss",
-    whatsapp: "",
+    avatar: `${avatarBasePath}/alexandra-oliveira.png`,
+    name: "Consultora Alexandra Oliveira",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "11946413323",
   },
   {
-    avatar: "",
-    name: "Vitor Gomes",
-    product: "cartão consignado inss",
-    whatsapp: "",
+    avatar: `${avatarBasePath}/aline-trindade.png`,
+    name: "Consultora Aline Trinidade",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47989247176",
   },
   {
-    avatar: "",
-    name: "Vitor Gomes",
-    product: "cartão benefício inss",
-    whatsapp: "",
+    avatar: `${avatarBasePath}/gustavo-rosati.png`,
+    name: "Consultor Gustavo Rosati",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47997398552",
+  },
+  {
+    avatar: `${avatarBasePath}/emily-garcia.png`,
+    name: "Consultora Emily Garcia",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47992503966",
+  },
+  {
+    avatar: `${avatarBasePath}/luciana-lunkes.png`,
+    name: "Consultora Lunkes",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "11938042327",
+  },
+  {
+    avatar: `${avatarBasePath}/taina-davila.png`,
+    name: "Consultor Tainã D'avila",
+    products: [
+      "PORTABILIDADE",
+      "REFINANCIAMENTO DA PORTABILIDADE",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "47989157996",
+  },
+  {
+    avatar: `${avatarBasePath}/gabriel-rodrigues.png`,
+    name: "Consultor Gabriel Rodrigues",
+    products: ["CARTÃO", "CARTÃO C/ SAQUE", "NOVO", "SAQUE ANIVERSARIO"],
+    whatsapp: "11946397506",
+  },
+  {
+    avatar: `${avatarBasePath}/joao-omizolo.png`,
+    name: "Consultor João Omizolo",
+    products: ["CARTÃO", "CARTÃO C/ SAQUE", "NOVO", "MARGEM AUMENTO"],
+    whatsapp: "11967003274",
+  },
+  {
+    avatar: `${avatarBasePath}/luiz-ilmar.png`,
+    name: "Consultor Luiz Ilmar",
+    products: [
+      "CARTÃO",
+      "CARTÃO C/ SAQUE",
+      "NOVO",
+      "SAQUE ANIVERSARIO",
+      "MARGEM AUMENTO",
+    ],
+    whatsapp: "11962251489",
   },
 ];
 
 export const allEmployeesAvailableProducts: string[] = [];
 
 employees.forEach((employee) => {
-  if (!allEmployeesAvailableProducts.includes(employee.product)) {
-    allEmployeesAvailableProducts.push(employee.product);
-  }
+  employee.products.forEach((product) => {
+    if (!allEmployeesAvailableProducts.includes(product)) {
+      allEmployeesAvailableProducts.push(product);
+    }
+  });
 });
-
-export interface IEmployee {
-  avatar: string;
-  name: string;
-  product: string;
-  whatsapp: string;
-}
