@@ -1,52 +1,45 @@
-import { CustomImage } from "@/src/common/CustomImage";
-import { SvgIconComponent } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Container,
-  IconProps,
-  Stack,
-  Typography,
-} from "@mui/material";
-import { JSXElementConstructor } from "react";
-import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
-import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
-import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { FaqAccordion } from "@/src/common/FaqAccordion/FaqAccordion";
+import { PortabilidadeInssVantagens } from "@/src/Services/PortabilidadeInssVantagens";
+import { PortabilidadeInssH1 } from "@/src/Services/PortabilidadeInssH1";
+import { CustomImage } from "@/src/common/CustomImage";
+import { PortabilidadeInssStepByStep } from "@/src/Services/PortabilidadeInssStepByStep";
 
 export default function Page() {
   return (
     <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: 4, pb: 16 }}>
-      <Container>
-        <Stack gap={4}>
-          <Stack>
-            <Typography variant="caption">PORTABILIDADE INSS</Typography>
+      <Container maxWidth="md">
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr" }}
+          gap={2}
+        >
+          <Box sx={{ py: "1rem" }}>
+            <PortabilidadeInssH1 />
+          </Box>
 
-            <Typography variant="h1" color="primary">
-              Transforme seu consignado em economia!
-            </Typography>
-          </Stack>
-
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            varius nulla eleifend.
-          </Typography>
-
-          <Button
-            variant="contained"
-            size="large"
-            sx={{ width: "fit-content" }}
-          >
-            SIMULE AGORA
-          </Button>
-        </Stack>
+          <CustomImage
+            src="https://picsum.photos/1001"
+            alt="portabilidade-inss"
+            height="100%"
+            width="100%"
+            objectFit="cover"
+            sx={{
+              display: { xs: "none", sm: "block" },
+              borderRadius: "1rem",
+            }}
+          />
+        </Box>
       </Container>
 
       <Stack>
         <Stack
           width="100%"
           alignItems="flex-end"
-          sx={{ background: "linear-gradient(0deg, #f4f4f4 50%, white 50%)" }}
+          sx={{
+            background: "linear-gradient(0deg, #f4f4f4 50%, white 50%)",
+            display: { xs: "flex", sm: "none" },
+          }}
         >
           <CustomImage
             src="https://picsum.photos/1001"
@@ -59,72 +52,27 @@ export default function Page() {
           />
         </Stack>
 
-        <Container
+        <Box
           sx={{
             backgroundColor: "#f4f4f4",
             py: 16,
           }}
         >
-          <Stack gap={8} alignItems="center">
-            <Stack gap={6}>
-              {advantages.map((advantage, index) => (
-                <Box
-                  key={index}
-                  display="grid"
-                  gridTemplateAreas={`
-                    "icon title"
-                    "none text"
-                  `}
-                  gridTemplateColumns="min-content auto"
-                  gridTemplateRows="auto auto"
-                  alignItems="center"
-                  gap={1}
-                >
-                  <advantage.icon
-                    color="primary"
-                    fontSize="large"
-                    sx={{ gridArea: "icon" }}
-                  />
-
-                  <Typography
-                    color="primary"
-                    fontWeight="bold"
-                    fontSize={20}
-                    sx={{ gridArea: "title" }}
-                  >
-                    {advantage.title}
-                  </Typography>
-                  <Typography sx={{ gridArea: "text" }}>
-                    {advantage.text}
-                  </Typography>
-                </Box>
-              ))}
-            </Stack>
-
-            <Button variant="contained" sx={{ width: "fit-content" }}>
-              SIMULE AGORA
-            </Button>
-          </Stack>
-        </Container>
+          <Container>
+            <PortabilidadeInssVantagens />
+          </Container>
+        </Box>
       </Stack>
 
-      <Container>
-        <Stack alignItems="center" gap={4}>
-          <Typography variant="h2" color="primary">
-            Como funciona
-          </Typography>
+      <PortabilidadeInssStepByStep />
 
-          <Button variant="contained" sx={{ width: "fit-content" }}>
-            SIMULE AGORA
-          </Button>
-        </Stack>
-      </Container>
-
-      <Container sx={{ backgroundColor: "#F4F4F4", py: 16 }}>reviews</Container>
+      <Box sx={{ backgroundColor: "#F4F4F4", py: 16 }}>
+        <Container>reviews</Container>
+      </Box>
 
       {/* <Container>simulador</Container> */}
 
-      <Container>
+      <Container maxWidth="sm">
         <Stack gap={4}>
           <Typography variant="h2" color="primary">
             Perguntas frequentes
@@ -154,27 +102,3 @@ export default function Page() {
     </Stack>
   );
 }
-
-interface IAdvantage {
-  icon: JSXElementConstructor<IconProps<SvgIconComponent>>;
-  title: string;
-  text: string;
-}
-
-const advantages: IAdvantage[] = [
-  {
-    icon: SavingsOutlinedIcon,
-    title: "Taxas mais baixas",
-    text: "Reduza os juros do seu empréstimo!",
-  },
-  {
-    icon: TagFacesOutlinedIcon,
-    title: "Facilidade e comodidade",
-    text: "Processo rápido e sem burocracia.",
-  },
-  {
-    icon: SupportAgentIcon,
-    title: "Atendimento personalizado",
-    text: "Equipe especializada para te auxiliar.",
-  },
-];
