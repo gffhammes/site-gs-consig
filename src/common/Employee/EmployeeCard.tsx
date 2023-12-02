@@ -12,7 +12,7 @@ export const EmployeeCard = ({
   avatar,
   name,
   products,
-  whatsapp,
+  // whatsapp,
   paperSx,
 }: IEmployeeCardProps) => {
   return (
@@ -33,7 +33,7 @@ export const EmployeeCard = ({
             sx={{ height: "5rem", width: "5rem", borderRadius: "1rem" }}
           />
 
-          <Typography fontSize={20}>{name}</Typography>
+          <Typography fontSize={24}>{name}</Typography>
 
           <Stack direction="row" flexWrap="wrap" gap={1}>
             {products.map((product) => (
@@ -44,6 +44,7 @@ export const EmployeeCard = ({
                 variant="outlined"
                 sx={{
                   fontSize: 12,
+                  height: 20,
                 }}
               />
             ))}
@@ -52,7 +53,6 @@ export const EmployeeCard = ({
 
         <Chip
           label="FALE COMIGO"
-          size="small"
           icon={<WhatsAppIcon fontSize="small" />}
           color="primary"
           sx={{ width: "fit-content" }}

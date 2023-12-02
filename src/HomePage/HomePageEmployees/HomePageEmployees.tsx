@@ -4,7 +4,8 @@ import { CustomCarousel } from "@/src/common/CustomCarousel/CustomCarousel";
 import { EmployeeCard } from "@/src/common/Employee/EmployeeCard";
 import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { employees } from "@/src/types/employees";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import Link from "next/link";
 
 export interface IHomePageEmployeesProps {}
 
@@ -26,17 +27,17 @@ export const HomePageEmployees = () => {
           </Typography>
         </Container>
 
-        <Container disableGutters>
+        <Container disableGutters={!md} maxWidth="md">
           <CustomCarousel
+            showDots
             dataSet={employees}
             options={{
               align: md ? "start" : "center",
               dragFree: md ? true : false,
               skipSnaps: true,
-              slidesToScroll: "auto", /// md ? 3 : 1,
+              slidesToScroll: "auto",
             }}
             slideGap={2}
-            carouselSx={{ pl: 2 }}
             getSlide={(employee, index) => (
               <EmployeeCard
                 avatar={employee.avatar}
@@ -44,13 +45,26 @@ export const HomePageEmployees = () => {
                 products={employee.products}
                 whatsapp={employee.whatsapp}
                 paperSx={{
-                  flexBasis: "16rem",
+                  flexBasis: {
+                    xs: "21rem",
+                    md: "calc(50% - 8px)",
+                  },
                   flexShrink: 0,
-                  marginRight: index === employees.length - 1 ? "1rem" : 0,
+                  marginLeft: index === 0 ? { xs: 2, sm: 3, md: 0 } : 0,
+                  marginRight:
+                    index === employees.length - 1
+                      ? { xs: 2, sm: 3, md: 0 }
+                      : 0,
                 }}
               />
             )}
           />
+        </Container>
+
+        <Container maxWidth={false} sx={{ mx: "auto", width: "fit-content" }}>
+          <Button variant="outlined" LinkComponent={Link} href="/especialistas">
+            Ver todos
+          </Button>
         </Container>
       </Stack>
     </Box>

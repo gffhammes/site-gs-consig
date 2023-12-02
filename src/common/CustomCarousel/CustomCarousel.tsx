@@ -2,8 +2,17 @@
 
 import { Box, Stack, SxProps, styled } from "@mui/material";
 import useEmblaCarousel from "embla-carousel-react";
-import { ReactElement, ReactNode, cloneElement, useMemo } from "react";
+import {
+  ReactElement,
+  ReactNode,
+  cloneElement,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import { EmblaOptionsType } from "embla-carousel";
+import { CustomCarouselDots } from "./CustomCarouselDots";
 
 interface ICustomCarouselWithDataSet<T> {
   dataSet: T[];
@@ -26,6 +35,7 @@ export interface ICustomCarouselProps {
   alignSlides?: "center" | "flex-start";
   carouselSx?: SxProps;
   options?: EmblaOptionsType;
+  showDots?: boolean;
 }
 
 export const CustomCarousel = <T,>({
@@ -36,8 +46,11 @@ export const CustomCarousel = <T,>({
   carouselSx,
   slides,
   options,
+  showDots,
 }: ICustomCarouselProps & TCustomCarouselSlideApproach<T>) => {
-  const [emblaRef] = useEmblaCarousel(options);
+  const [emblaRef, embla] = useEmblaCarousel(options);
+  const [currentIndex, setCurrentIndex] = useState(options?.startIndex ?? 0);
+  const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
   const slidesMemo = useMemo(() => {
     if (slides) {
@@ -55,18 +68,48 @@ export const CustomCarousel = <T,>({
     });
   }, [dataSet, getSlide, slides]);
 
+  // const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
+  // const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+  const scrollTo = useCallback(
+    (index: number) => embla && embla.scrollTo(index),
+    [embla]
+  );
+  const onSelect = useCallback(() => {
+    if (!embla) return;
+    setCurrentIndex(embla.selectedScrollSnap());
+    // setPrevBtnEnabled(embla.canScrollPrev());
+    // setNextBtnEnabled(embla.canScrollNext());
+  }, [embla]);
+
+  useEffect(() => {
+    if (!embla) return;
+    onSelect();
+    setScrollSnaps(embla.scrollSnapList());
+    embla.on("select", onSelect);
+  }, [embla, setScrollSnaps, onSelect]);
+
   return (
-    <Embla className="embla" ref={emblaRef}>
-      <Stack
-        className="embla__container"
-        direction="row"
-        justifyContent={alignSlides}
-        gap={slideGap}
-        sx={{ ...carouselSx }}
-      >
-        {slidesMemo}
-      </Stack>
-    </Embla>
+    <Stack alignItems="center" gap={4}>
+      <Embla className="embla" ref={emblaRef}>
+        <Stack
+          className="embla__container"
+          direction="row"
+          justifyContent={alignSlides}
+          gap={slideGap}
+          sx={{ ...carouselSx }}
+        >
+          {slidesMemo}
+        </Stack>
+      </Embla>
+
+      {showDots && (
+        <CustomCarouselDots
+          currentIndex={currentIndex}
+          dots={scrollSnaps}
+          handleDotClick={(index) => scrollTo(index)}
+        />
+      )}
+    </Stack>
   );
 };
 

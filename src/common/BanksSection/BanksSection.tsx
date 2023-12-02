@@ -27,8 +27,8 @@ export const BanksSection = () => {
               <CustomImage
                 src={bank.logo}
                 alt={bank.name}
-                height="6rem"
-                width="6rem"
+                height="4rem"
+                width="4rem"
               />
             )}
           />
