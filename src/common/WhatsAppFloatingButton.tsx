@@ -28,6 +28,8 @@ export const WhatsAppFloatingButton = () => {
           fontSize: 40,
         }}
         color="inherit"
+        name="botão whatsapp"
+        aria-label="botão whatsapp"
       >
         <WhatsAppIcon fontSize="inherit" />
       </IconButton>

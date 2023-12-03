@@ -14,7 +14,11 @@ export const MobileSidebar = () => {
 
   return (
     <>
-      <IconButton color="primary" onClick={handleOpen}>
+      <IconButton
+        color="primary"
+        onClick={handleOpen}
+        aria-label="navigation menu"
+      >
         <MenuIcon />
       </IconButton>
 
