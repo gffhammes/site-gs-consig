@@ -1,9 +1,12 @@
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { Box, IconButton } from "@mui/material";
+import { generateMainWhatsappLink } from "../utils/helpers";
 
 export interface IWhatsAppFloatingButtonProps {}
 
-export const WhatsAppFloatingButton = (props: IWhatsAppFloatingButtonProps) => {
+export const WhatsAppFloatingButton = () => {
+  const whatsappLink = generateMainWhatsappLink();
+
   return (
     <Box
       sx={{
@@ -14,6 +17,9 @@ export const WhatsAppFloatingButton = (props: IWhatsAppFloatingButtonProps) => {
         backgroundColor: "#0CC144",
         color: "white",
       }}
+      component="a"
+      href={whatsappLink}
+      target="_blank"
     >
       <IconButton
         sx={{

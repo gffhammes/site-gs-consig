@@ -33,7 +33,6 @@ export const HomePageEmployees = () => {
             dataSet={employees}
             options={{
               align: md ? "start" : "center",
-              dragFree: md ? true : false,
               skipSnaps: true,
               slidesToScroll: "auto",
             }}

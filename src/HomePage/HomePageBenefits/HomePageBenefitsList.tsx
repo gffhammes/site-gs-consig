@@ -3,6 +3,8 @@ import { Box, IconProps } from "@mui/material";
 import { JSXElementConstructor } from "react";
 import HourglassDisabledIcon from "@mui/icons-material/HourglassDisabled";
 import { HomePageBenefitsListItem } from "./HomePageBenefitsListItem";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 
 export interface IHomePageBenefitsListProps {}
 
@@ -18,10 +20,10 @@ export const HomePageBenefitsList = () => {
       gridTemplateColumns={{
         xs: "repeat(1, auto)",
         sm: "repeat(2, auto)",
-        md: "repeat(4, 1fr)",
+        md: "repeat(3, 1fr)",
       }}
       justifyContent="center"
-      gap={4}
+      gap={8}
     >
       {benefits.map((benefit, index) => (
         <HomePageBenefitsListItem key={index} benefit={benefit} />
@@ -39,22 +41,17 @@ export interface IBenefit {
 const benefits: IBenefit[] = [
   {
     Icon: HourglassDisabledIcon,
-    title: "Lorem Ipsum",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    title: "Contratação fácil e sem espera",
+    text: "Nosso processo sem burocracia garante dinheiro na sua mão em até 24h",
   },
   {
-    Icon: HourglassDisabledIcon,
-    title: "Lorem Ipsum",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: SupportAgentIcon,
+    title: "Atendimento personalizado",
+    text: "Cada um de nossos consultores é treinado para te atender de maneira única",
   },
   {
-    Icon: HourglassDisabledIcon,
-    title: "Lorem Ipsum",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    Icon: HourglassDisabledIcon,
-    title: "Lorem Ipsum",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    Icon: SavingsOutlinedIcon,
+    title: "Economia para seus sonhos",
+    text: "Vamos encontrar as melhores condições para você conquistar seus objetivos",
   },
 ];

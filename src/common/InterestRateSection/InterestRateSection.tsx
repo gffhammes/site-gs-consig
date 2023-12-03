@@ -16,17 +16,17 @@ export const InterestRateSection = () => {
           <Stack gap={4}>
             <Stack gap={2}>
               <Typography variant="h2" color="primary" maxWidth="14ch">
-                Lorem ipsum dolor sit amet
+                As melhores taxas do mercado
               </Typography>
 
               <Typography maxWidth="26rem">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                varius nulla eleifend.
+                Nossa equipe de especialistas está sempre em busca dos melhores
+                produtos para te oferecer as menores taxas
               </Typography>
             </Stack>
 
             <Button variant="contained" sx={{ width: "fit-content" }}>
-              lorem ipsum
+              Simular agora
             </Button>
           </Stack>
 

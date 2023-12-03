@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import { IBenefit } from "./HomePageBenefitsList";
 
 export interface IHomePageBenefitsListItemProps {
@@ -10,13 +10,17 @@ export const HomePageBenefitsListItem = ({
 }: IHomePageBenefitsListItemProps) => {
   return (
     <Stack direction={{ xs: "row", md: "column" }} gap={1}>
-      <benefit.Icon fontSize="large" color="primary" />
+      <Box fontSize={64}>
+        <benefit.Icon fontSize="inherit" color="primary" />
+      </Box>
 
-      <Stack
-        gap={0.5}
-        sx={{ maxWidth: { xs: "21ch", sm: "25ch" }, width: "100%" }}
-      >
-        <Typography color="primary" fontWeight="bold" lineHeight={1}>
+      <Stack gap={1} sx={{ width: "100%" }}>
+        <Typography
+          color="primary"
+          fontWeight="bold"
+          fontSize={20}
+          lineHeight={1}
+        >
           {benefit.title}
         </Typography>
 

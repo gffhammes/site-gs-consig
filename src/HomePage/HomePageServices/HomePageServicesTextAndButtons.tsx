@@ -10,13 +10,15 @@ export const HomePageServicesTextAndButtons = () => {
   return (
     <Stack gap={4}>
       <Stack gap={2}>
-        <Typography variant="h2" color="primary" maxWidth="14ch">
-          Lorem ipsum dolor sit amet
+        <Typography variant="h2" color="primary" maxWidth="20ch">
+          Contrate agora mesmo no conforto de sua casa
         </Typography>
 
         <Typography>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius
-          nulla eleifend.
+          Chega de filas e burocracia. <br />
+          <br />
+          Na GS Consig você garante as melhores taxas e o melhor: contrata na
+          hora, pelo celular
         </Typography>
       </Stack>
 

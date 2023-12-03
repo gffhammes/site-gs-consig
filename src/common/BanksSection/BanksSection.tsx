@@ -17,7 +17,7 @@ export const BanksSection = () => {
             maxWidth="13ch"
             textAlign="center"
           >
-            Lorem ipsum dolor sit amet
+            Bancos parceiros
           </Typography>
 
           <CustomCarousel

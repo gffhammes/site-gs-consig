@@ -7,6 +7,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Logo from "../../../public/logo-gs-consig.png";
+import { generateMainWhatsappLink } from "@/src/utils/helpers";
 
 export interface IFooterLogoAndSocialProps {}
 
@@ -56,8 +57,25 @@ export interface ISocial {
 }
 
 const socials: ISocial[] = [
-  { label: "Instagram", targetUrl: "", Icon: InstagramIcon },
-  { label: "Facebook", targetUrl: "", Icon: FacebookIcon },
-  { label: "WhatsApp", targetUrl: "", Icon: WhatsAppIcon },
-  { label: "LinkedIn", targetUrl: "", Icon: LinkedInIcon },
+  {
+    label: "Instagram",
+    targetUrl: "https://www.instagram.com/gsconsig/",
+    Icon: InstagramIcon,
+  },
+  {
+    label: "Facebook",
+    targetUrl:
+      "https://m.facebook.com/p/GS-Consig-Cr%C3%A9dito-Digital-100075539548027/",
+    Icon: FacebookIcon,
+  },
+  {
+    label: "WhatsApp",
+    targetUrl: generateMainWhatsappLink(),
+    Icon: WhatsAppIcon,
+  },
+  {
+    label: "LinkedIn",
+    targetUrl: "https://www.linkedin.com/in/gs-consig-b0aab8231/",
+    Icon: LinkedInIcon,
+  },
 ];

@@ -22,7 +22,7 @@ export const HomePageStepByStep = () => {
             'none stepper'
             `,
           }}
-          gap={4}
+          gap={8}
           width="fit-content"
           marginX="auto"
         >
@@ -36,7 +36,7 @@ export const HomePageStepByStep = () => {
             }}
           >
             <Typography variant="h2" color="primary" maxWidth="13ch">
-              Lorem ipsum dolor sit amet
+              Veja como é facil contratar nossos serviços
             </Typography>
 
             <Button
@@ -45,7 +45,7 @@ export const HomePageStepByStep = () => {
               }}
               variant="contained"
             >
-              Lorem ipsum
+              CONTRATAR AGORA
             </Button>
           </Stack>
 
@@ -58,7 +58,7 @@ export const HomePageStepByStep = () => {
             color="primary"
             maxWidth="13ch"
           >
-            Lorem ipsum dolor sit amet
+            Veja como é facil contratar nossos serviços
           </Typography>
 
           <Button
@@ -69,7 +69,7 @@ export const HomePageStepByStep = () => {
             }}
             variant="contained"
           >
-            Lorem ipsum
+            CONTRATAR AGORA
           </Button>
 
           <HomePageStepByStepStepper />

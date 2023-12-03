@@ -3,6 +3,11 @@ import { FooterCustomMenu } from "./FooterCustomMenu";
 import { IconProps, Stack, Typography } from "@mui/material";
 import { SvgIconComponent } from "@mui/icons-material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import {
+  MAIN_WHATSAPP,
+  formatPhoneNumberString,
+  generateMainWhatsappLink,
+} from "@/src/utils/helpers";
 
 export interface IFooterContactProps {}
 
@@ -42,12 +47,7 @@ export interface IContactItem {
 const contactItems: IContactItem[] = [
   {
     Icon: WhatsAppIcon,
-    text: "(47) 9 9999-9999",
-    href: "(47) 9 9999-9999",
-  },
-  {
-    Icon: WhatsAppIcon,
-    text: "(47) 9 9999-9999",
-    href: "(47) 9 9999-9999",
+    text: formatPhoneNumberString(MAIN_WHATSAPP),
+    href: generateMainWhatsappLink(),
   },
 ];

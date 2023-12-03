@@ -3,6 +3,7 @@
 import { Avatar, Chip, Paper, Stack, SxProps, Typography } from "@mui/material";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { IEmployee } from "@/src/types/employees";
+import { generateWhatsappLink } from "@/src/utils/helpers";
 
 export interface IEmployeeCardProps extends IEmployee {
   paperSx?: SxProps;
@@ -12,9 +13,14 @@ export const EmployeeCard = ({
   avatar,
   name,
   products,
-  // whatsapp,
+  whatsapp,
   paperSx,
 }: IEmployeeCardProps) => {
+  const whatsappLink = generateWhatsappLink(
+    whatsapp,
+    `Olá, ${name}! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!`
+  );
+
   return (
     <Paper
       variant="outlined"
@@ -53,12 +59,13 @@ export const EmployeeCard = ({
 
         <Chip
           label="FALE COMIGO"
+          component="a"
+          href={whatsappLink}
+          target="_blank"
           icon={<WhatsAppIcon fontSize="small" />}
           color="primary"
           sx={{ width: "fit-content" }}
-          onClick={() => {
-            console.log("teste");
-          }}
+          onClick={() => {}}
         />
       </Stack>
     </Paper>

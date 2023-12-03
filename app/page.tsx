@@ -6,29 +6,26 @@ import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServic
 import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
-import { getDataFromServer } from "@/src/utils/services";
 import { Stack } from "@mui/material";
-import * as qs from "qs";
+// import * as qs from "qs";
 
-const getData = async () => {
-  const query = qs.stringify(
-    {
-      populate: ["banner", "banner.foto", "banner.botao"],
-    },
-    {
-      encodeValuesOnly: true,
-    }
-  );
+// const getData = async () => {
+//   const query = qs.stringify(
+//     {
+//       populate: ["banner", "banner.foto", "banner.botao"],
+//     },
+//     {
+//       encodeValuesOnly: true,
+//     }
+//   );
 
-  return getDataFromServer("/home", query);
-};
+//   return getDataFromServer("/home", query);
+// };
 
 export default async function Home() {
-  const data = await getData();
-
   return (
     <main>
-      <HomePageBanner banners={data.banner} />
+      <HomePageBanner />
 
       <Stack gap={{ xs: 16, md: 20 }} sx={{ py: 16 }}>
         <HomePageServices />

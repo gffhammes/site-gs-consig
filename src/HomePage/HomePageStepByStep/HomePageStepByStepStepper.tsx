@@ -1,3 +1,4 @@
+import { generateMainWhatsappLink } from "@/src/utils/helpers";
 import { Box, Stack, Typography } from "@mui/material";
 
 export interface IHomePageStepByStepStepperProps {}
@@ -41,10 +42,17 @@ export const HomePageStepByStepStepper = () => {
 
             <Typography
               maxWidth="30ch"
-              sx={{ gridArea: "description", pt: 1, pb: isLastStep ? 0 : 4 }}
-            >
-              {step.description}
-            </Typography>
+              sx={{
+                gridArea: "description",
+                pt: 1,
+                pb: isLastStep ? 0 : 8,
+                a: {
+                  color: "primary.main",
+                  textDecoration: "underline",
+                },
+              }}
+              dangerouslySetInnerHTML={{ __html: step.description }}
+            />
 
             <Stack
               alignItems="center"
@@ -74,23 +82,22 @@ export interface IStep {
 
 const steps: IStep[] = [
   {
-    title: "Lorem ipsum dolor sit amet",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius nulla eleifend.",
+    title: "Entre em contato ",
+    description: `Chame algum de nossos consultores <a href='${generateMainWhatsappLink()}' target='_blank'>clicando aqui</a>`,
   },
   {
-    title: "Lorem ipsum dolor sit amet",
+    title: "Informe seus dados",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius nulla eleifend.",
+      "Precisamos te conhecer para saber qual a melhor solução para você",
   },
   {
-    title: "Lorem ipsum dolor sit amet",
+    title: "Avalie nossa proposta",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius nulla eleifend.",
+      "Compare nossas condições com a de nossos concorrentes e com a sua situação atual",
   },
   {
-    title: "Lorem ipsum dolor sit amet",
+    title: "Finalize a contratação",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec varius nulla eleifend.",
+      "Agora falta apenas autorizar a operação e pronto! Você já está economizando rumo aos seus objetivos",
   },
 ];

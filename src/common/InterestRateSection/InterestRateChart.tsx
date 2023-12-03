@@ -18,6 +18,8 @@ export const InterestRateChart = () => {
       rowGap={1}
     >
       {interestRateChartItems.map((chartItem, index) => {
+        const barMultiplier = index === 0 ? 0.5 : 1.2;
+
         return (
           <Fragment key={index}>
             <Box sx={{ gridArea: `chart${index}`, alignSelf: "flex-end" }}>
@@ -40,7 +42,7 @@ export const InterestRateChart = () => {
 
                 <Box
                   sx={{
-                    height: `calc(${chartItem.value} * .15rem)`,
+                    height: `calc(${chartItem.value} * ${barMultiplier}rem)`,
                     width: "100%",
                     backgroundColor: chartItem.highlight
                       ? "primary.main"
@@ -76,10 +78,10 @@ export interface IInterestRateChartItem {
 const interestRateChartItems: IInterestRateChartItem[] = [
   {
     label: "GS Consig",
-    value: 20,
+    value: 1.38,
     highlight: true,
   },
-  { label: "Concorrente1", value: 45 },
-  { label: "Concorrente2", value: 50 },
-  { label: "Concorrente3", value: 56 },
+  { label: "Outros consignados", value: 1.84 },
+  { label: "Cheque especial", value: 8 },
+  { label: "Cartão de crédito", value: 12 },
 ];
