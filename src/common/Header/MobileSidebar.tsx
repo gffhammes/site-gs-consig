@@ -17,7 +17,7 @@ export const MobileSidebar = () => {
       <IconButton
         color="primary"
         onClick={handleOpen}
-        aria-label="navigation menu"
+        aria-label="open navigation menu"
       >
         <MenuIcon />
       </IconButton>
@@ -42,7 +42,7 @@ export const MobileSidebar = () => {
         }}
       >
         <Stack alignItems="flex-end" gap={3} sx={{ p: 2 }}>
-          <IconButton onClick={handleClose}>
+          <IconButton onClick={handleClose} aria-label="close navigation menu">
             <CloseIcon />
           </IconButton>
 

@@ -35,6 +35,7 @@ export const FooterLogoAndSocial = () => {
             target="_blank"
             alignItems="center"
             justifyContent="center"
+            aria-label={social.label}
             sx={{
               backgroundColor: "#e5e5e5",
               height: 50,

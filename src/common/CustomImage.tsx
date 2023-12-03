@@ -33,7 +33,13 @@ export const CustomImage = ({
         ...sx,
       }}
     >
-      <Image src={src} alt={alt} fill style={{ objectFit, objectPosition }} />
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        style={{ objectFit, objectPosition }}
+        unoptimized={false}
+      />
     </Box>
   );
 };
