@@ -9,31 +9,43 @@ export interface IBanksSectionProps {}
 export const BanksSection = () => {
   return (
     <Box>
-      <Container>
-        <Stack alignItems="center" gap={4}>
-          <Typography
-            variant="h2"
-            color="primary"
-            maxWidth="13ch"
-            textAlign="center"
-          >
-            Bancos parceiros
-          </Typography>
+      <Stack alignItems="center" gap={4}>
+        <Typography
+          variant="h2"
+          color="primary"
+          maxWidth="13ch"
+          textAlign="center"
+        >
+          Bancos parceiros
+        </Typography>
 
-          <CustomCarousel
-            dataSet={banks}
-            slideGap={2}
-            getSlide={(bank) => (
-              <CustomImage
-                src={bank.logo}
-                alt={bank.name}
-                height="4rem"
-                width="4rem"
-              />
-            )}
-          />
-        </Stack>
-      </Container>
+        <Container>
+          <Box width="100%">
+            <CustomCarousel
+              dataSet={banks}
+              slideGap={2}
+              showDots
+              options={{
+                skipSnaps: true,
+                align: "start",
+              }}
+              getSlide={(bank) => (
+                <CustomImage
+                  src={bank.logo}
+                  alt={bank.name}
+                  height="3rem"
+                  width="5rem"
+                  sx={{
+                    flex: "0 0 100%",
+                    flexBasis: "calc(20% - 1rem)",
+                    filter: "saturate(0)",
+                  }}
+                />
+              )}
+            />
+          </Box>
+        </Container>
+      </Stack>
     </Box>
   );
 };
@@ -43,9 +55,17 @@ export interface IBank {
   name: string;
 }
 
+const banksBasePath = "/bancos";
+
 const banks: IBank[] = [
-  { logo: "https://picsum.photos/1001", name: "" },
-  { logo: "https://picsum.photos/1001", name: "" },
-  { logo: "https://picsum.photos/1001", name: "" },
-  { logo: "https://picsum.photos/1001", name: "" },
+  { logo: `${banksBasePath}/banrisul.png`, name: "Banrisul" },
+  { logo: `${banksBasePath}/bmg.svg`, name: "BMG" },
+  { logo: `${banksBasePath}/crefaz.png`, name: "Crefaz" },
+  { logo: `${banksBasePath}/daycoval.webp`, name: "Daycoval" },
+
+  { logo: `${banksBasePath}/itau.png`, name: "Itaú" },
+  { logo: `${banksBasePath}/Logo_C6_Bank.png`, name: "C6" },
+  { logo: `${banksBasePath}/logo-agibank.svg`, name: "Agibank" },
+  { logo: `${banksBasePath}/ole.png`, name: "Banco Olé" },
+  { logo: `${banksBasePath}/pagbank.png`, name: "Pagbank" },
 ];

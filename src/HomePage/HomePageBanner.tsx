@@ -100,7 +100,7 @@ export const banners: IBannerItem[] = [
   {
     h1: "Diminua o valor da sua parcela e ganhe até R$ 4 mil de volta!",
     buttonText: "Simular agora",
-    image: "https://picsum.photos/2000",
+    image: "/banner-home.jpeg",
     product: "PORTABILIDADE INSS",
   },
 ];

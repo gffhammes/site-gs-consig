@@ -44,14 +44,16 @@ export const ServicesPageList = () => {
                 gridTemplateColumns="min-content auto"
                 gridTemplateRows="auto auto"
                 alignItems="center"
-                columnGap={2}
+                columnGap={3}
+                rowGap={1}
                 width="100%"
               >
                 <CustomImage
                   src={service.thumbUrl}
                   alt={service.name}
-                  height="5rem"
-                  width="5rem"
+                  height="6rem"
+                  width="6rem"
+                  objectFit="cover"
                   sx={{ gridArea: "image", borderRadius: 2 }}
                 />
 

@@ -5,8 +5,8 @@ export interface IHomePageServicesImagesProps {}
 export const HomePageServicesImages = () => {
   return (
     <TwoImagesOverlay
-      image1Src="https://picsum.photos/1001"
-      image2Src="https://picsum.photos/1000"
+      image1Src="/celular-para-idoso.jpg"
+      image2Src="/idoso-celular-jovem.webp"
     />
   );
 };

@@ -10,12 +10,13 @@ import {
 } from "@mui/material";
 import { CustomCarousel } from "../common/CustomCarousel/CustomCarousel";
 import { CustomImage } from "../common/CustomImage";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
 export interface IPortabilidadeInssStepByStepProps {}
 
-export const PortabilidadeInssStepByStep = (
-  props: IPortabilidadeInssStepByStepProps
-) => {
+export const PortabilidadeInssStepByStep = () => {
+  const { md } = useBreakpoint();
+
   return (
     <Container disableGutters>
       <Stack alignItems="center" width="100%" gap={4}>
@@ -50,7 +51,7 @@ export const PortabilidadeInssStepByStep = (
                         PASSO {index + 1}
                       </Typography>
 
-                      <Box>
+                      <Box sx={{ position: "relative" }}>
                         <CustomImage
                           src={slideData.image}
                           alt={slideData.text}
@@ -61,6 +62,19 @@ export const PortabilidadeInssStepByStep = (
                             borderRadius: "10rem",
                           }}
                         />
+
+                        {index < steps.length - 1 && !md && (
+                          <Box
+                            sx={{
+                              position: "absolute",
+                              top: "50%",
+                              right: 0,
+                              width: "100vw",
+                              borderTop: "5px dashed #c6c6c6",
+                              transform: "translateX(100%)",
+                            }}
+                          />
+                        )}
                       </Box>
 
                       <Typography fontSize={20} textAlign="center">
@@ -84,15 +98,16 @@ export const PortabilidadeInssStepByStep = (
 
 const steps = [
   {
-    image: "https://picsum.photos/1001",
+    image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
     text: "Solicite uma simulação gratuita",
   },
   {
-    image: "https://picsum.photos/1001",
+    image: "/size_960_16_9_idosos-aposentadoria1.webp",
     text: "Compare as condições e taxas",
   },
   {
-    image: "https://picsum.photos/1001",
+    image:
+      "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
     text: "Autorize a portabilidade e economize!",
   },
 ];

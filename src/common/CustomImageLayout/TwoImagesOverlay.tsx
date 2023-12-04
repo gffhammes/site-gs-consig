@@ -38,6 +38,7 @@ export const TwoImagesOverlay = ({
           gridRowEnd: "d",
           borderRadius: 2,
           display: "flex",
+          zIndex: 10,
         }}
       />
 

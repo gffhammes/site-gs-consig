@@ -1,9 +1,10 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
 import { FaqAccordion } from "@/src/common/FaqAccordion/FaqAccordion";
 import { PortabilidadeInssVantagens } from "@/src/Services/PortabilidadeInssVantagens";
 import { PortabilidadeInssH1 } from "@/src/Services/PortabilidadeInssH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { PortabilidadeInssStepByStep } from "@/src/Services/PortabilidadeInssStepByStep";
+import { SERVICO_PORTABILIDADE } from "@/src/ServicesPage/services";
 
 export default function Page() {
   return (
@@ -19,7 +20,7 @@ export default function Page() {
           </Box>
 
           <CustomImage
-            src="https://picsum.photos/1001"
+            src={SERVICO_PORTABILIDADE.thumbUrl}
             alt="portabilidade-inss"
             height="100%"
             width="100%"
@@ -42,10 +43,11 @@ export default function Page() {
           }}
         >
           <CustomImage
-            src="https://picsum.photos/1001"
+            src={SERVICO_PORTABILIDADE.thumbUrl}
             alt="portabilidade-inss"
             height="15rem"
             width="15rem"
+            objectFit="cover"
             sx={{
               borderRadius: "1rem 0 0 1rem",
             }}
