@@ -21,6 +21,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/favicon.svg" sizes="any" />
+      </head>
+
       <body className={nunito.className}>
         <ThemeRegistry options={{ key: "mui" }}>
           <SplashScreen />

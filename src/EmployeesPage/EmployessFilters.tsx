@@ -1,4 +1,4 @@
-import { Chip, Container, Stack } from "@mui/material";
+import { Box, Chip, Container, Stack } from "@mui/material";
 import { allEmployeesAvailableProducts } from "../types/employees";
 import { IEmployeesFilter } from "./EmployeesFilterAndList";
 import { CustomCarousel } from "../common/CustomCarousel/CustomCarousel";
@@ -27,7 +27,10 @@ export const EmployessFilters = ({
       </Container>
 
       <CustomCarousel
-        options={{ dragFree: true }}
+        options={{
+          skipSnaps: true,
+          align: 0,
+        }}
         dataSet={allEmployeesAvailableProducts}
         getSlide={(product, index) => {
           const isSelected = filters.products.includes(product);
@@ -37,29 +40,28 @@ export const EmployessFilters = ({
             index === allEmployeesAvailableProducts.length - 1;
 
           return (
-            <Chip
-              key={product}
-              label={product.toUpperCase()}
-              variant={isSelected ? "filled" : "outlined"}
-              onClick={() => {
-                handleFilterChange({
-                  products: [product],
-                });
-              }}
-              sx={{
-                ml: isFirstSlide ? { xs: 2, sm: 3 } : 0.5,
-                mr: isLastSlide ? { xs: 2, sm: 3 } : 0,
-              }}
-              onDelete={
-                isSelected
-                  ? () => {
-                      handleFilterChange({
-                        products: [],
-                      });
-                    }
-                  : undefined
+            <Box
+              sx={
+                {
+                  // pl: {xs:2,},
+                  // ml: isFirstSlide ? { xs: 2, sm: 3 } : 0.5,
+                  // mr: isLastSlide ? { xs: 2, sm: 3 } : 0,
+                }
               }
-            />
+            >
+              <Chip
+                label={product.toUpperCase()}
+                size="small"
+                variant="outlined"
+                // variant={isSelected ? "filled" : "outlined"}
+                color={isSelected ? "primary" : "default"}
+                onClick={() => {
+                  handleFilterChange({
+                    products: isSelected ? [] : [product],
+                  });
+                }}
+              />
+            </Box>
           );
         }}
       />
