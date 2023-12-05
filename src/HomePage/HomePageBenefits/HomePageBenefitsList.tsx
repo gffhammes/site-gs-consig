@@ -13,13 +13,11 @@ export const HomePageBenefitsList = () => {
     <Box
       display="grid"
       gridTemplateRows={{
-        xs: "repeat(4, 1fr)",
-        sm: "repeat(2, 1fr)",
+        xs: "repeat(3, 1fr)",
         md: "repeat(1, 1fr)",
       }}
       gridTemplateColumns={{
         xs: "repeat(1, auto)",
-        sm: "repeat(2, auto)",
         md: "repeat(3, 1fr)",
       }}
       justifyContent="center"

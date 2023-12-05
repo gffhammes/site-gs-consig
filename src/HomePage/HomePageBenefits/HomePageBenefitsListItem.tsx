@@ -9,8 +9,8 @@ export const HomePageBenefitsListItem = ({
   benefit,
 }: IHomePageBenefitsListItemProps) => {
   return (
-    <Stack direction={{ xs: "row", md: "column" }} gap={1}>
-      <Box fontSize={64}>
+    <Stack gap={1} sx={{ maxWidth: "15rem" }}>
+      <Box fontSize={{ xs: 48, md: 64 }}>
         <benefit.Icon fontSize="inherit" color="primary" />
       </Box>
 

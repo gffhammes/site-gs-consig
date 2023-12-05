@@ -1,7 +1,7 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { FaqAccordion } from "@/src/common/FaqAccordion/FaqAccordion";
 import { PortabilidadeInssVantagens } from "@/src/Services/PortabilidadeInssVantagens";
-import { PortabilidadeInssH1 } from "@/src/Services/PortabilidadeInssH1";
+import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { PortabilidadeInssStepByStep } from "@/src/Services/PortabilidadeInssStepByStep";
 import { SERVICO_PORTABILIDADE } from "@/src/ServicesPage/services";
@@ -13,10 +13,16 @@ export default function Page() {
         <Box
           display="grid"
           gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr" }}
-          gap={2}
+          gap={8}
         >
           <Box sx={{ py: "1rem" }}>
-            <PortabilidadeInssH1 />
+            <ProductH1
+              caption="PORTABILIDADE INSS"
+              title="Transforme seu consignado em economia!"
+              subtitle="Diminua o valor da sua parcela e tenha dinheiro para viver! Conheça
+              agora mesmo nossas condições especiais para te dar mais qualidade de
+              vida"
+            />
           </Box>
 
           <CustomImage
@@ -74,7 +80,7 @@ export default function Page() {
 
       {/* <Container>simulador</Container> */}
 
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Stack gap={4}>
           <Typography variant="h2" color="primary">
             Perguntas frequentes

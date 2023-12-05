@@ -1,4 +1,4 @@
-import { Backdrop, Box, IconButton, Stack } from "@mui/material";
+import { Box, Drawer, IconButton, Stack } from "@mui/material";
 import { useState } from "react";
 import { NavigationMenu } from "./NavigationMenu";
 import CloseIcon from "@mui/icons-material/Close";
@@ -22,24 +22,11 @@ export const MobileSidebar = () => {
         <MenuIcon />
       </IconButton>
 
-      <Backdrop
+      <Drawer
+        anchor="right"
         open={open}
-        sx={{ zIndex: 9999 }}
-        onClickCapture={handleClose}
-      />
-
-      <Box
-        sx={{
-          position: "fixed",
-          height: "100%",
-          width: "15rem",
-          backgroundColor: "white",
-          top: 0,
-          right: 0,
-          zIndex: 10000,
-          transform: `translateX(${open ? "0" : "100%"})`,
-          transition: ".3s ease all",
-        }}
+        onClose={handleClose}
+        sx={{ zIndex: 10000 }}
       >
         <Stack alignItems="flex-end" gap={3} sx={{ p: 2 }}>
           <IconButton onClick={handleClose} aria-label="close navigation menu">
@@ -50,7 +37,7 @@ export const MobileSidebar = () => {
             <NavigationMenu onClick={handleClose} />
           </Box>
         </Stack>
-      </Box>
+      </Drawer>
     </>
   );
 };

@@ -24,11 +24,14 @@ export const Header = () => {
         position: "sticky",
         top: 0,
         width: "100%",
-        backgroundColor: "white",
-        borderBottom: trigger ? "1px solid #cdcdcd" : "none",
-        transition: ".3s ease all",
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
+        borderBottom: trigger ? "1px solid #E5EAF2" : "1px solid white",
+        backdropFilter: "blur(8px)",
+        transition: ".5s ease all",
         zIndex: 9999,
-        py: trigger ? 1 : 2,
+        py: 1,
+        overflowX: "hidden",
+        overflowY: "visible",
       }}
     >
       <Container>
@@ -41,8 +44,8 @@ export const Header = () => {
             <CustomImage
               src={Logo.src}
               alt="Logo GS Consig"
-              width={trigger ? "2rem" : "3.5rem"}
-              height={trigger ? "2rem" : "3.5rem"}
+              width="2rem"
+              height="2rem"
               objectPosition="left"
               sx={{
                 transition: ".3s ease all",
