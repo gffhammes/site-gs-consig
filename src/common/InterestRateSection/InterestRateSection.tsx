@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { InterestRateChart } from "./InterestRateChart";
+import { generateMainWhatsappLink } from "@/src/utils/helpers";
 
 export interface IInterestRateSectionProps {}
 
@@ -25,7 +26,13 @@ export const InterestRateSection = () => {
               </Typography>
             </Stack>
 
-            <Button variant="contained" sx={{ width: "fit-content" }}>
+            <Button
+              variant="contained"
+              sx={{ width: "fit-content" }}
+              LinkComponent="a"
+              href={generateMainWhatsappLink()}
+              target="_blank"
+            >
               Simular agora
             </Button>
           </Stack>

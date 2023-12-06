@@ -9,6 +9,7 @@ import {
   useTheme,
 } from "@mui/material";
 import Color from "color";
+import Link from "next/link";
 
 // export interface IHomePageBannerProps {
 //   banners: IHomeBanner[];
@@ -79,6 +80,8 @@ export const HomePageBanner = () =>
                 sx={{
                   width: "fit-content",
                 }}
+                LinkComponent={Link}
+                href={banners[0].targetPage}
               >
                 {banners[0].buttonText}
               </Button>
@@ -94,6 +97,7 @@ export interface IBannerItem {
   h1: string;
   buttonText: string;
   product: string;
+  targetPage: string;
 }
 
 export const banners: IBannerItem[] = [
@@ -102,5 +106,6 @@ export const banners: IBannerItem[] = [
     buttonText: "Simular agora",
     image: "/banner-home.jpeg",
     product: "PORTABILIDADE INSS",
+    targetPage: "produtos/portabilidade-inss",
   },
 ];

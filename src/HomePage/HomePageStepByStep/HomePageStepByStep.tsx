@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { HomePageStepByStepStepper } from "./HomePageStepByStepStepper";
+import { generateMainWhatsappLink } from "@/src/utils/helpers";
 
 export interface IHomePageStepByStepProps {}
 
@@ -44,6 +45,9 @@ export const HomePageStepByStep = () => {
                 width: "fit-content",
               }}
               variant="contained"
+              LinkComponent="a"
+              href={generateMainWhatsappLink()}
+              target="_blank"
             >
               CONTRATAR AGORA
             </Button>
