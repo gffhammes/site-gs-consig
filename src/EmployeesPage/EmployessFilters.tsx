@@ -3,6 +3,7 @@ import { allEmployeesAvailableProducts } from "../types/employees";
 import { IEmployeesFilter } from "./EmployeesFilterAndList";
 import { CustomCarousel } from "../common/CustomCarousel/CustomCarousel";
 import { EmployeesPageSearchBox } from "./EmployeesPageSearchBox";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
 export interface IEmployessFiltersProps {
   filters: IEmployeesFilter;
@@ -13,9 +14,11 @@ export const EmployessFilters = ({
   filters,
   handleFilterChange,
 }: IEmployessFiltersProps) => {
+  const { sm } = useBreakpoint();
+
   return (
-    <Stack gap={1}>
-      <Container>
+    <Stack gap={1} width="100%" overflow="hidden">
+      <Container disableGutters={sm}>
         <EmployeesPageSearchBox
           value={filters.search}
           handleChange={(newValue) => {

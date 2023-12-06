@@ -5,7 +5,8 @@ import { EmployeesList } from "./EmployeesList";
 import { EmployessFilters } from "./EmployessFilters";
 import { IEmployee, employees } from "../types/employees";
 import { toNormalForm } from "../utils/helpers";
-import { Stack } from "@mui/material";
+import { Box, Container, Stack, Typography } from "@mui/material";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
 export interface IEmployeesFilterAndListProps {}
 
@@ -15,6 +16,8 @@ export interface IEmployeesFilter {
 }
 
 export const EmployeesFilterAndList = () => {
+  const { sm } = useBreakpoint();
+
   const [filters, setFilters] = useState<IEmployeesFilter>({
     search: "",
     products: [],
@@ -69,11 +72,28 @@ export const EmployeesFilterAndList = () => {
   }, [filters.products, filters.search]);
 
   return (
-    <Stack gap={2}>
-      <EmployessFilters
-        filters={filters}
-        handleFilterChange={handleFilterChange}
-      />
+    <Stack gap={4}>
+      <Container disableGutters={!sm} maxWidth="md">
+        <Box
+          display="grid"
+          gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr" }}
+          alignItems="center"
+          width="100%"
+          overflow="hidden"
+          gap={2}
+        >
+          <Container disableGutters={sm}>
+            <Typography variant="h1" color="primary">
+              Especialistas prontos para te atender
+            </Typography>
+          </Container>
+
+          <EmployessFilters
+            filters={filters}
+            handleFilterChange={handleFilterChange}
+          />
+        </Box>
+      </Container>
 
       <EmployeesList employees={filteredEmployees} />
     </Stack>

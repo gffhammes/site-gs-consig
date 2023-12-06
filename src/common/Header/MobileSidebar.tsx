@@ -27,8 +27,13 @@ export const MobileSidebar = () => {
         open={open}
         onClose={handleClose}
         sx={{ zIndex: 10000 }}
+        PaperProps={{ sx: { width: "15rem" } }}
       >
-        <Stack alignItems="flex-end" gap={3} sx={{ p: 2 }}>
+        <Stack
+          alignItems="flex-end"
+          gap={3}
+          sx={{ px: { xs: 2, sm: 3 }, pt: 1 }}
+        >
           <IconButton onClick={handleClose} aria-label="close navigation menu">
             <CloseIcon />
           </IconButton>
