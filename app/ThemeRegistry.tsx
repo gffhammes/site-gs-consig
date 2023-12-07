@@ -5,46 +5,50 @@ import { CacheProvider } from "@emotion/react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { useState } from "react";
+import { ptBR } from "@mui/x-date-pickers/locales";
 
 export default function ThemeRegistry(props: any) {
   const { options, children } = props;
 
-  const theme = createTheme({
-    palette: { primary: { main: "#228CC8" } },
-    typography: {
-      fontFamily: "inherit",
-      h1: {
-        fontSize: 32,
-        fontWeight: 500,
-
-        "@media (min-width:600px)": {
+  const theme = createTheme(
+    {
+      palette: { primary: { main: "#228CC8" } },
+      typography: {
+        fontFamily: "inherit",
+        h1: {
           fontSize: 32,
+          fontWeight: 500,
+
+          "@media (min-width:600px)": {
+            fontSize: 32,
+          },
+
+          "@media (min-width:900px)": {
+            fontSize: 48,
+          },
+        },
+        h2: {
+          fontSize: 24,
+          fontWeight: 500,
+          lineHeight: 1,
+        },
+        h3: {
+          fontSize: 16,
+          fontWeight: 800,
+          lineHeight: 1,
         },
 
-        "@media (min-width:900px)": {
-          fontSize: 48,
+        body1: {
+          lineHeight: 1.1,
+          color: "#666666",
         },
-      },
-      h2: {
-        fontSize: 24,
-        fontWeight: 500,
-        lineHeight: 1,
-      },
-      h3: {
-        fontSize: 16,
-        fontWeight: 800,
-        lineHeight: 1,
-      },
-
-      body1: {
-        lineHeight: 1.1,
-        color: "#666666",
-      },
-      button: {
-        fontWeight: "bold",
+        button: {
+          fontWeight: "bold",
+        },
       },
     },
-  });
+    ptBR
+  );
 
   const [{ cache, flush }] = useState(() => {
     const cache = createCache(options);

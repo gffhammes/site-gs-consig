@@ -5,6 +5,7 @@ import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { PortabilidadeInssStepByStep } from "@/src/Services/PortabilidadeInssStepByStep";
 import { SERVICO_PORTABILIDADE } from "@/src/ServicesPage/services";
+import { PortabilidadeInssSimulator } from "@/src/Services/PortabilidadeInssSimulator";
 
 export default function Page() {
   return (
@@ -78,7 +79,7 @@ export default function Page() {
         <Container>reviews</Container>
       </Box>
 
-      {/* <Container>simulador</Container> */}
+      <PortabilidadeInssSimulator />
 
       <Container maxWidth="md">
         <Stack gap={4}>
