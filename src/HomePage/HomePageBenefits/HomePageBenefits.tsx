@@ -6,7 +6,7 @@ export interface IHomePageBenefitsProps {}
 
 export const HomePageBenefits = () => {
   return (
-    <Box>
+    <Box sx={{ backgroundColor: "#f4f4f4", py: 20 }}>
       <Container maxWidth="md">
         <Stack gap={8} alignItems="center">
           {/* <Stack width="100%" alignItems="center" gap={2}>

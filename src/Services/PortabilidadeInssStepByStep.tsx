@@ -88,9 +88,9 @@ export const PortabilidadeInssStepByStep = () => {
           />
         </Box>
 
-        <Button variant="contained" sx={{ width: "fit-content" }}>
+        {/* <Button variant="contained" sx={{ width: "fit-content" }}>
           SIMULE AGORA
-        </Button>
+        </Button> */}
       </Stack>
     </Container>
   );

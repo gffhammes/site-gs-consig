@@ -75,9 +75,9 @@ export default function Page() {
 
       <PortabilidadeInssStepByStep />
 
-      <Box sx={{ backgroundColor: "#F4F4F4", py: 16 }}>
+      {/* <Box sx={{ backgroundColor: "#F4F4F4", py: 16 }}>
         <Container>reviews</Container>
-      </Box>
+      </Box> */}
 
       <PortabilidadeInssSimulator />
 

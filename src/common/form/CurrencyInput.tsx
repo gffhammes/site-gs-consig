@@ -38,7 +38,7 @@ export interface ICurrencyInputProps extends BaseTextFieldProps {
 }
 
 export const CurrencyInput = ({ name, ...props }: ICurrencyInputProps) => {
-  const [input, meta] = useField({ name });
+  const [input, meta, helpers] = useField({ name });
 
   return (
     <TextField
