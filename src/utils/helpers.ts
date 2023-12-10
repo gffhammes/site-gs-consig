@@ -33,3 +33,10 @@ export const generateMainWhatsappLink = () => {
     `Olá! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!`
   );
 };
+
+export const getFormattedCurrency = (value: string) => {
+  return Number(value).toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
+};

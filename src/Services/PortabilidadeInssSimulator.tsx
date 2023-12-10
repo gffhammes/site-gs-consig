@@ -8,15 +8,65 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { Form, Formik } from "formik";
+import { Form, Formik, FormikErrors } from "formik";
 import { CurrencyInput } from "../common/form/CurrencyInput";
 import { FormikDatePicker } from "../common/form/FormikDatePicker";
+import dayjs from "dayjs";
+import {
+  MAIN_WHATSAPP,
+  generateWhatsappLink,
+  getFormattedCurrency,
+} from "../utils/helpers";
 
 export interface IPortabilidadeInssSimulatorProps {}
 
 export const PortabilidadeInssSimulator = () => {
+  const sendSimulationMessage = (values: IPortabilidadeInssSimulatorValues) => {
+    const message = `Olá, vim pelo site e gostaria de fazer uma simulação de portabilidade INSS! 
+
+    O valor atual do meu empréstimo é de *${getFormattedCurrency(
+      values.valorTotal
+    )}*.
+
+    O valor das minhas parcelas é de *${getFormattedCurrency(
+      values.valorParcela
+    )}*.
+
+    O vencimento é em *${values.vencimento?.toLocaleDateString("pt-BR")}*
+    `;
+
+    const whatsappLink = generateWhatsappLink(MAIN_WHATSAPP, message);
+
+    window.open(whatsappLink, "_blank");
+  };
+
+  const validate = (values: IPortabilidadeInssSimulatorValues) => {
+    const errors: FormikErrors<IPortabilidadeInssSimulatorValues> = {};
+
+    if (values.vencimento === null) {
+      errors.vencimento = "Campo obrigatório";
+    }
+
+    if (values.valorParcela === "") {
+      errors.valorParcela = "Campo obrigatório";
+    }
+
+    if (values.valorTotal === "") {
+      errors.valorTotal = "Campo obrigatório";
+    }
+
+    return errors;
+  };
+
   return (
-    <Container maxWidth="md" disableGutters>
+    <Container
+      maxWidth="md"
+      disableGutters
+      sx={{
+        pt: { xs: 0, sm: 8 },
+        pb: 8,
+      }}
+    >
       <Box
         sx={{
           backgroundColor: "primary.main",
@@ -59,18 +109,31 @@ export const PortabilidadeInssSimulator = () => {
                   valorTotal: "",
                   vencimento: null,
                 }}
+                validate={validate}
                 onSubmit={(values) => {
-                  console.log(values);
+                  sendSimulationMessage(values);
                 }}
+                validateOnBlur={false}
+                validateOnChange={false}
               >
-                <Form id="simulador">
+                <Form id="simulador" noValidate>
                   <Stack gap={2}>
                     <CurrencyInput
                       name="valorParcela"
                       label="Valor da parcela"
+                      required
                     />
-                    <FormikDatePicker name="vencimento" label="Vencimento" />
-                    <CurrencyInput name="valorTotal" label="Valor total" />
+                    <FormikDatePicker
+                      name="vencimento"
+                      label="Vencimento"
+                      required
+                      minDate={dayjs()}
+                    />
+                    <CurrencyInput
+                      name="valorTotal"
+                      label="Valor total"
+                      required
+                    />
                   </Stack>
                 </Form>
               </Formik>

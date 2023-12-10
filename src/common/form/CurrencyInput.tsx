@@ -1,3 +1,5 @@
+"use client";
+
 import { BaseTextFieldProps, TextField } from "@mui/material";
 import { useField } from "formik";
 import { forwardRef } from "react";
@@ -38,7 +40,7 @@ export interface ICurrencyInputProps extends BaseTextFieldProps {
 }
 
 export const CurrencyInput = ({ name, ...props }: ICurrencyInputProps) => {
-  const [input, meta, helpers] = useField({ name });
+  const [input, meta] = useField({ name });
 
   return (
     <TextField
@@ -49,6 +51,8 @@ export const CurrencyInput = ({ name, ...props }: ICurrencyInputProps) => {
         inputComponent: NumericFormatCustom as any,
       }}
       variant="outlined"
+      error={!!meta.error}
+      helperText={meta.error}
     />
   );
 };

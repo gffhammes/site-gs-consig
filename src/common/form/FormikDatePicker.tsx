@@ -8,10 +8,17 @@ import { useField } from "formik";
 export interface IFormikDatePickerProps {
   name: string;
   label: string;
+  required?: boolean;
+  minDate?: any;
 }
 
-export const FormikDatePicker = ({ label, name }: IFormikDatePickerProps) => {
-  const [input, , helpers] = useField({ name });
+export const FormikDatePicker = ({
+  label,
+  name,
+  required,
+  minDate,
+}: IFormikDatePickerProps) => {
+  const [input, meta, helpers] = useField({ name });
 
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -20,6 +27,14 @@ export const FormikDatePicker = ({ label, name }: IFormikDatePickerProps) => {
         onChange={(value) => helpers.setValue(value.$d)}
         label={label}
         format="DD/MM/YYYY"
+        slotProps={{
+          textField: {
+            required: required,
+            error: !!meta.error,
+            helperText: meta.error,
+          },
+        }}
+        minDate={minDate}
       />
     </LocalizationProvider>
   );

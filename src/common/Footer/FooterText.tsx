@@ -3,6 +3,8 @@ import { Typography } from "@mui/material";
 export interface IFooterTextProps {}
 
 export const FooterText = () => {
+  return null;
+
   return <Typography whiteSpace="pre-wrap">{text}</Typography>;
 };
 
