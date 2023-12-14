@@ -23,6 +23,11 @@ export default function RootLayout({
     <html lang="pt-BR">
       <head>
         <link rel="icon" href="/favicon.svg" sizes="any" />
+
+        <meta
+          name="google-site-verification"
+          content="MiwgkR2Wdy0GS0qpeZE11KUmGPhWXH5EFwlXb8L4kxg"
+        />
       </head>
 
       <body className={nunito.className}>
