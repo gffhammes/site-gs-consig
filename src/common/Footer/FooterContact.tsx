@@ -8,6 +8,7 @@ import {
   formatPhoneNumberString,
   generateMainWhatsappLink,
 } from "@/src/utils/helpers";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 export interface IFooterContactProps {}
 
@@ -49,5 +50,10 @@ const contactItems: IContactItem[] = [
     Icon: WhatsAppIcon,
     text: formatPhoneNumberString(MAIN_WHATSAPP),
     href: generateMainWhatsappLink(),
+  },
+  {
+    Icon: LocalPhoneIcon,
+    text: "0800 080 0556",
+    href: "tel: 0800 080 0556",
   },
 ];
