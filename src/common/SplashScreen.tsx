@@ -8,11 +8,13 @@ export interface ISplashScreenProps {}
 export const SplashScreen = () => {
   const splashRef = useRef<any>();
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (splashRef.current) splashRef.current.style.display = "none";
-    }, 500);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (splashRef.current) splashRef.current.style.display = "none";
+  //   }, 500);
+  // }, []);
+
+  return null;
 
   return (
     <Stack
