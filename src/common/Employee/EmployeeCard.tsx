@@ -62,9 +62,13 @@ export const EmployeeCard = ({
           component="a"
           href={whatsappLink}
           target="_blank"
-          icon={<WhatsAppIcon fontSize="small" />}
+          icon={
+            <Stack sx={{ fontSize: 18, pl: 0.5 }}>
+              <WhatsAppIcon fontSize="inherit" />
+            </Stack>
+          }
           color="primary"
-          sx={{ width: "fit-content" }}
+          sx={{ width: "fit-content", fontWeight: "bold" }}
           onClick={() => {}}
         />
       </Stack>

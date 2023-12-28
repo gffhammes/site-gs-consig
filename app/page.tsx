@@ -7,27 +7,13 @@ import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageSt
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { Stack } from "@mui/material";
-// import * as qs from "qs";
-
-// const getData = async () => {
-//   const query = qs.stringify(
-//     {
-//       populate: ["banner", "banner.foto", "banner.botao"],
-//     },
-//     {
-//       encodeValuesOnly: true,
-//     }
-//   );
-
-//   return getDataFromServer("/home", query);
-// };
 
 export default async function Home() {
   return (
     <main>
-      <HomePageBanner />
+      <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: { xs: 4, sm: 8 }, pb: 16 }}>
+        <HomePageBanner />
 
-      <Stack gap={{ xs: 16, md: 20 }} sx={{ py: 16 }}>
         <HomePageServices />
 
         <HomePageBenefits />

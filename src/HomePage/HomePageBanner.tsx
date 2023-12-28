@@ -4,72 +4,28 @@ import {
   Box,
   Button,
   Container,
+  Paper,
   Stack,
   Typography,
-  useTheme,
 } from "@mui/material";
-import Color from "color";
 import Link from "next/link";
+import { CustomImage } from "../common/CustomImage";
+import { GoogleReviewsRating } from "../common/GoogleReviews/GoogleReviewsRating";
+import { useBreakpoint } from "../hooks/useBreakpoint";
 
-// export interface IHomePageBannerProps {
-//   banners: IHomeBanner[];
-// }
+export const HomePageBanner = () => {
+  const { sm } = useBreakpoint();
 
-export const HomePageBanner = () =>
-  // { banners }: IHomePageBannerProps
-  {
-    const { palette } = useTheme();
-
-    const transparentPrimary = Color(palette.primary.main).alpha(0.5).string();
-
+  if (sm) {
     return (
-      <Box
-        sx={{
-          height: "80vh",
-          width: "100%",
-          backgroundImage: `url(${banners[0].image})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          position: "relative",
+      <Box sx={{ overflow: "hidden" }}>
+        <Container>
+          <Stack direction="row" alignItems="center">
+            <Stack alignItems="flex-start" gap={4} sx={{ flex: "0 0 50%" }}>
+              <Stack alignItems="flex-start">
+                <Typography variant="caption">{banners[0].product}</Typography>
 
-          ":before": {
-            content: "''",
-            height: "100%",
-            width: "100%",
-            top: 0,
-            position: "absolute",
-            background: `linear-gradient(90deg, ${transparentPrimary}, ${transparentPrimary} 50%, rgba(0, 0, 0, 0))`,
-            mixBlendMode: "multiply",
-          },
-
-          ":after": {
-            content: "''",
-            height: "100%",
-            width: "100%",
-            top: 0,
-            position: "absolute",
-            background: `linear-gradient(90deg, ${transparentPrimary}, ${transparentPrimary} 50%, rgba(0, 0, 0, 0))`,
-            mixBlendMode: "overlay",
-          },
-        }}
-      >
-        <Container sx={{ height: "100%" }}>
-          <Stack
-            height="100%"
-            width="100%"
-            justifyContent="center"
-            gap={4}
-            position="relative"
-            zIndex={999}
-          >
-            <Stack gap={4}>
-              <Stack>
-                <Typography color="white" variant="caption">
-                  {banners[0].product}
-                </Typography>
-
-                <Typography color="white" variant="h1" maxWidth="16ch">
+                <Typography variant="h1" color="primary" maxWidth="17ch">
                   {banners[0].h1}
                 </Typography>
               </Stack>
@@ -86,14 +42,112 @@ export const HomePageBanner = () =>
                 {banners[0].buttonText}
               </Button>
             </Stack>
+
+            <Box sx={{ width: "100%", overflow: "visible", pl: 4 }}>
+              <Box
+                display="grid"
+                gridTemplateAreas={`
+                "image1 image2"
+                "image1 image3"
+                "rating image3"
+              `}
+                gridTemplateColumns="300px 300px"
+                gridTemplateRows="150px 150px auto"
+                gap={1}
+                sx={{ overflow: "visible" }}
+              >
+                <Paper
+                  variant="outlined"
+                  sx={{ gridArea: "rating", p: 2, borderRadius: 4 }}
+                >
+                  <GoogleReviewsRating />
+                </Paper>
+
+                <CustomImage
+                  src={banners[0].image1}
+                  alt="GS Consig"
+                  height="100%"
+                  width="100%"
+                  objectFit="cover"
+                  objectPosition="right"
+                  sx={{ borderRadius: 4, gridArea: "image1" }}
+                />
+
+                <CustomImage
+                  src={banners[0].image2}
+                  alt="GS Consig"
+                  height="100%"
+                  width="100%"
+                  objectFit="cover"
+                  sx={{ borderRadius: 4, gridArea: "image2" }}
+                />
+
+                <CustomImage
+                  src={banners[0].image3}
+                  alt="GS Consig"
+                  height="100%"
+                  width="100%"
+                  objectFit="cover"
+                  sx={{ borderRadius: 4, gridArea: "image3" }}
+                />
+              </Box>
+            </Box>
           </Stack>
         </Container>
       </Box>
     );
-  };
+  }
+
+  return (
+    <Box>
+      <Container>
+        <Stack alignItems="center" gap={4}>
+          <Stack alignItems="center">
+            <Typography variant="caption" textAlign="center">
+              {banners[0].product}
+            </Typography>
+
+            <Typography
+              variant="h1"
+              color="primary"
+              maxWidth="16ch"
+              textAlign="center"
+            >
+              {banners[0].h1}
+            </Typography>
+          </Stack>
+
+          <Button
+            variant="contained"
+            sx={{
+              width: "fit-content",
+            }}
+            LinkComponent={Link}
+            href={banners[0].targetPage}
+          >
+            {banners[0].buttonText}
+          </Button>
+
+          <CustomImage
+            src={banners[0].image1}
+            alt="GS Consig"
+            aspectRatio="1.5 / 1"
+            width="100%"
+            objectFit="cover"
+            sx={{ borderRadius: 2 }}
+          />
+
+          <GoogleReviewsRating />
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
 
 export interface IBannerItem {
-  image: string;
+  image1: string;
+  image2: string;
+  image3: string;
   h1: string;
   buttonText: string;
   product: string;
@@ -102,9 +156,11 @@ export interface IBannerItem {
 
 export const banners: IBannerItem[] = [
   {
-    h1: "Diminua o valor da sua parcela e ganhe até R$ 4 mil de volta!",
+    h1: "Diminua o valor da sua parcela e ganhe dinheiro de volta!",
     buttonText: "Simular agora",
-    image: "/banner-home.jpeg",
+    image1: "/banner-home1.jpg",
+    image2: "/banner-home.jpeg",
+    image3: "/banner-home2.jpg",
     product: "PORTABILIDADE INSS",
     targetPage: "produtos/portabilidade-inss",
   },
