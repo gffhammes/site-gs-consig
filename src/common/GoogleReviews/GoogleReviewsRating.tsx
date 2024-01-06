@@ -2,7 +2,7 @@ import { Box, Rating, Stack, Typography } from "@mui/material";
 import { CustomImage } from "../CustomImage";
 
 export const GOOGLE_RATING = 5;
-export const GOOGLE_REVIEWS_QUANTITY = 1115;
+export const GOOGLE_REVIEWS_QUANTITY = 1145;
 export const GOOGLE_REVIEWS_URL =
   "https://www.google.com/search?q=gs+consig&oq=gs+consig&gs_lcrp=EgZjaHJvbWUqDAgAECMYJxiABBiKBTIMCAAQIxgnGIAEGIoFMg0IARAuGK8BGMcBGIAEMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgYIBRBFGEEyBggGEEUYPDIGCAcQRRg80gEIMjEzMmowajeoAgCwAgA&sourceid=chrome&ie=UTF-8#lrd=0x94d8cb129b349e6d:0xaa85615d9f9be56b,1,,,,";
 
