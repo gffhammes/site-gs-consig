@@ -37,25 +37,15 @@ export const EmployessFilters = ({
         carouselSx={{ mx: { xs: 2, sm: 0 } }}
         slideGap={1}
         dataSet={allEmployeesAvailableProducts}
-        getSlide={(product, index) => {
+        getSlide={(product) => {
           const isSelected = filters.products.includes(product);
 
-          const isFirstSlide = index === 0;
-          const isLastSlide =
-            index === allEmployeesAvailableProducts.length - 1;
-
           return (
-            <Box
-            // sx={{
-            //   ml: isFirstSlide ? { xs: 2, sm: 3 } : 0.5,
-            //   mr: isLastSlide ? { xs: 2, sm: 3 } : 0,
-            // }}
-            >
+            <Box>
               <Chip
                 label={product.toUpperCase()}
                 size="small"
                 variant="outlined"
-                // variant={isSelected ? "filled" : "outlined"}
                 color={isSelected ? "primary" : "default"}
                 onClick={() => {
                   handleFilterChange({
