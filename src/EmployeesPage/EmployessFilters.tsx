@@ -34,6 +34,8 @@ export const EmployessFilters = ({
           skipSnaps: true,
           align: 0,
         }}
+        carouselSx={{ mx: { xs: 2, sm: 0 } }}
+        slideGap={1}
         dataSet={allEmployeesAvailableProducts}
         getSlide={(product, index) => {
           const isSelected = filters.products.includes(product);
@@ -44,13 +46,10 @@ export const EmployessFilters = ({
 
           return (
             <Box
-              sx={
-                {
-                  // pl: {xs:2,},
-                  // ml: isFirstSlide ? { xs: 2, sm: 3 } : 0.5,
-                  // mr: isLastSlide ? { xs: 2, sm: 3 } : 0,
-                }
-              }
+            // sx={{
+            //   ml: isFirstSlide ? { xs: 2, sm: 3 } : 0.5,
+            //   mr: isLastSlide ? { xs: 2, sm: 3 } : 0,
+            // }}
             >
               <Chip
                 label={product.toUpperCase()}

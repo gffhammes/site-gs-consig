@@ -36,6 +36,7 @@ export interface ICustomCarouselProps {
   carouselSx?: SxProps;
   options?: EmblaOptionsType;
   showDots?: boolean;
+  sx?: SxProps;
 }
 
 export const CustomCarousel = <T,>({
@@ -47,6 +48,7 @@ export const CustomCarousel = <T,>({
   slides,
   options,
   showDots,
+  sx,
 }: ICustomCarouselProps & TCustomCarouselSlideApproach<T>) => {
   const [emblaRef, embla] = useEmblaCarousel(options);
   const [currentIndex, setCurrentIndex] = useState(options?.startIndex ?? 0);
@@ -89,7 +91,7 @@ export const CustomCarousel = <T,>({
   }, [embla, setScrollSnaps, onSelect]);
 
   return (
-    <Stack alignItems="center" gap={4}>
+    <Stack alignItems="center" gap={4} sx={{ ...sx }}>
       <Embla className="embla" ref={emblaRef}>
         <Stack
           className="embla__container"
