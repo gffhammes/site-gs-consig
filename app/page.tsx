@@ -18,7 +18,7 @@ export default async function Home() {
 
         <HomePageBenefits />
 
-        {/* <HomePageReviews /> */}
+        <HomePageReviews />
 
         <InterestRateSection />
 

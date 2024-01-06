@@ -43,7 +43,17 @@ export const HomePageBanner = () => {
               </Button>
             </Stack>
 
-            <Box sx={{ width: "100%", overflow: "visible", pl: 4 }}>
+            <Box
+              sx={{
+                width: "100%",
+                overflow: "visible",
+                p: 2,
+                ml: 4,
+                backgroundColor: "#f4f4f4",
+                borderRadius: 8,
+                minWidth: "100vw",
+              }}
+            >
               <Box
                 display="grid"
                 gridTemplateAreas={`
@@ -158,9 +168,9 @@ export const banners: IBannerItem[] = [
   {
     h1: "Diminua o valor da sua parcela e ganhe dinheiro de volta!",
     buttonText: "Simular agora",
-    image1: "/banner-home1.jpg",
-    image2: "/banner-home.jpeg",
-    image3: "/banner-home2.jpg",
+    image1: "/banner-home1.webp",
+    image2: "/banner-home.webp",
+    image3: "/banner-home2.webp",
     product: "PORTABILIDADE INSS",
     targetPage: "produtos/portabilidade-inss",
   },

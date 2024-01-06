@@ -6,25 +6,9 @@ export interface IHomePageBenefitsProps {}
 
 export const HomePageBenefits = () => {
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 20 }}>
+    <Box>
       <Container maxWidth="md">
         <Stack gap={8} alignItems="center">
-          {/* <Stack width="100%" alignItems="center" gap={2}>
-            <Typography
-              variant="h2"
-              color="primary"
-              maxWidth="25ch"
-              textAlign="center"
-            >
-              Conheça nossos diferenciais
-            </Typography>
-
-            <Typography textAlign="center" maxWidth="33ch">
-              Nossa missão é fazer com que você tenha mais dinheiro para
-              realizar seus sonhos
-            </Typography>
-          </Stack> */}
-
           <HomePageBenefitsList />
 
           <Button

@@ -40,7 +40,7 @@ export default function ThemeRegistry(props: any) {
         },
 
         body1: {
-          lineHeight: 1.1,
+          lineHeight: 1.25,
           color: "#666666",
         },
         button: {
