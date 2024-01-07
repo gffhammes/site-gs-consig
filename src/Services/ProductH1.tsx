@@ -1,16 +1,28 @@
 import { Button, Stack, Typography } from "@mui/material";
+import Link from "next/link";
+import { HTMLAttributeAnchorTarget } from "react";
 
 export interface IProductH1Props {
   caption: string;
   title: string;
   subtitle: string;
+  buttonLink: string;
+  target?: HTMLAttributeAnchorTarget;
 }
 
-export const ProductH1 = ({ title, subtitle, caption }: IProductH1Props) => {
+export const ProductH1 = ({
+  title,
+  subtitle,
+  caption,
+  buttonLink,
+  target,
+}: IProductH1Props) => {
   return (
     <Stack gap={4}>
       <Stack>
-        <Typography variant="caption">{caption}</Typography>
+        <Typography variant="caption" textTransform="uppercase">
+          {caption}
+        </Typography>
 
         <Typography variant="h1" color="primary">
           {title}
@@ -19,7 +31,14 @@ export const ProductH1 = ({ title, subtitle, caption }: IProductH1Props) => {
 
       <Typography whiteSpace="pre-wrap">{subtitle}</Typography>
 
-      <Button variant="contained" size="large" sx={{ width: "fit-content" }}>
+      <Button
+        LinkComponent={Link}
+        href={buttonLink}
+        target={target}
+        variant="contained"
+        size="large"
+        sx={{ width: "fit-content" }}
+      >
         SIMULE AGORA
       </Button>
     </Stack>

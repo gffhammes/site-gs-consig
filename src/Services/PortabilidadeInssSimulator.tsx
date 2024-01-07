@@ -62,7 +62,6 @@ export const PortabilidadeInssSimulator = () => {
     <Container
       maxWidth="md"
       disableGutters
-      id="simulador"
       sx={{
         pt: { xs: 0, sm: 8 },
         pb: 8,

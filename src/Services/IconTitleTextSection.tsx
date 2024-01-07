@@ -7,13 +7,20 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { JSXElementConstructor } from "react";
+import Link from "next/link";
+import { HTMLAttributeAnchorTarget, JSXElementConstructor } from "react";
 
 export interface IIconTitleTextSectionProps {
   items: IIconTitleText[];
+  buttonLink: string;
+  target?: HTMLAttributeAnchorTarget;
 }
 
-export const IconTitleTextSection = ({ items }: IIconTitleTextSectionProps) => {
+export const IconTitleTextSection = ({
+  items,
+  buttonLink,
+  target,
+}: IIconTitleTextSectionProps) => {
   return (
     <Container maxWidth="xs">
       <Stack gap={8} alignItems="center">
@@ -50,7 +57,13 @@ export const IconTitleTextSection = ({ items }: IIconTitleTextSectionProps) => {
           ))}
         </Stack>
 
-        <Button variant="contained" sx={{ width: "fit-content" }}>
+        <Button
+          LinkComponent={Link}
+          href={buttonLink}
+          target={target}
+          variant="contained"
+          sx={{ width: "fit-content" }}
+        >
           SIMULE AGORA
         </Button>
       </Stack>

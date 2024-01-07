@@ -8,8 +8,14 @@ import { SERVICO_CREDITO_NOVO } from "@/src/ServicesPage/services";
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
+import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 
 export default function Page() {
+  const whatsappLink = generateWhatsappLink(
+    MAIN_WHATSAPP,
+    `Olá, vim pelo site e gostaria de uma simulação de ${SERVICO_CREDITO_NOVO.name}`
+  );
+
   return (
     <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: 4, pb: 16 }}>
       <Container maxWidth="md">
@@ -20,11 +26,13 @@ export default function Page() {
         >
           <Box sx={{ py: "1rem" }}>
             <ProductH1
-              caption="CRÉDITO NOVO INSS"
+              caption={SERVICO_CREDITO_NOVO.name}
               title="Você merece uma vida financeira mais tranquila!"
               subtitle={`O Crédito Novo INSS é a sua porta de entrada para um mundo de possibilidades financeiras.
               
 Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado, estamos aqui para atender às suas necessidades financeiras.`}
+              buttonLink={whatsappLink}
+              target="_blank"
             />
           </Box>
 
@@ -69,27 +77,27 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
             py: 16,
           }}
         >
-          <Container>
-            <IconTitleTextSection
-              items={[
-                {
-                  icon: ThumbUpAltOutlinedIcon,
-                  title: "Dinheiro Rápido e Sem Complicações",
-                  text: "Descomplicamos o processo. Conseguir crédito é fácil e rápido, sem papelada complicada.",
-                },
-                {
-                  icon: SavingsOutlinedIcon,
-                  title: "Juros Baixos e Tudo às Claras",
-                  text: "Mantemos as coisas simples e justas. Oferecemos taxas de juros baixas e sem surpresas escondidas.",
-                },
-                {
-                  icon: TagFacesOutlinedIcon,
-                  title: "Você é Único, Assim Como Nosso Atendimento",
-                  text: "Entendemos você. Nossa equipe está pronta para ajudar de forma personalizada, tornando o processo amigável e tranquilo.",
-                },
-              ]}
-            />
-          </Container>
+          <IconTitleTextSection
+            buttonLink={whatsappLink}
+            target="_blank"
+            items={[
+              {
+                icon: ThumbUpAltOutlinedIcon,
+                title: "Dinheiro Rápido e Sem Complicações",
+                text: "Descomplicamos o processo. Conseguir crédito é fácil e rápido, sem papelada complicada.",
+              },
+              {
+                icon: SavingsOutlinedIcon,
+                title: "Juros Baixos e Tudo às Claras",
+                text: "Mantemos as coisas simples e justas. Oferecemos taxas de juros baixas e sem surpresas escondidas.",
+              },
+              {
+                icon: TagFacesOutlinedIcon,
+                title: "Você é Único, Assim Como Nosso Atendimento",
+                text: "Entendemos você. Nossa equipe está pronta para ajudar de forma personalizada, tornando o processo amigável e tranquilo.",
+              },
+            ]}
+          />
         </Box>
       </Stack>
 
@@ -110,8 +118,6 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
           },
         ]}
       />
-
-      {/* <Container>simulador</Container> */}
 
       <Container maxWidth="md">
         <Stack gap={4}>
