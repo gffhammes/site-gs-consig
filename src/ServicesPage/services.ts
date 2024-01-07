@@ -19,9 +19,17 @@ export const SERVICO_CREDITO_NOVO: IService = {
   slug: "credito-novo-inss",
 };
 
+export const CONSIGNADO_INSS: IService = {
+  name: "consignado inss",
+  description: "Desconto em folha: Prático e sem estresse.",
+  thumbUrl: "/formularios-de-preenchimento-de-homem-senior_236854-20110.jpg",
+  slug: "consignado-inss",
+};
+
 export const services: IService[] = [
   SERVICO_PORTABILIDADE,
   SERVICO_CREDITO_NOVO,
+  CONSIGNADO_INSS,
   // {
   //   name: "consignado inss",
   // },
