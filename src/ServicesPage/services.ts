@@ -21,7 +21,7 @@ export const SERVICO_CREDITO_NOVO: IService = {
 
 export const services: IService[] = [
   SERVICO_PORTABILIDADE,
-  // SERVICO_CREDITO_NOVO,
+  SERVICO_CREDITO_NOVO,
   // {
   //   name: "consignado inss",
   // },

@@ -1,10 +1,13 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { FaqAccordion } from "@/src/common/FaqAccordion/FaqAccordion";
-import { PortabilidadeInssVantagens } from "@/src/Services/PortabilidadeInssVantagens";
+import { IconTitleTextSection } from "@/src/Services/IconTitleTextSection";
 import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
-import { PortabilidadeInssStepByStep } from "@/src/Services/PortabilidadeInssStepByStep";
+import { StepByStepSection } from "@/src/Services/StepByStepSection";
 import { SERVICO_CREDITO_NOVO } from "@/src/ServicesPage/services";
+import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
+import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
+import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 
 export default function Page() {
   return (
@@ -50,7 +53,7 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
         >
           <CustomImage
             src={SERVICO_CREDITO_NOVO.thumbUrl}
-            alt="portabilidade-inss"
+            alt={SERVICO_CREDITO_NOVO.name}
             height="15rem"
             width="15rem"
             objectFit="cover"
@@ -67,16 +70,46 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
           }}
         >
           <Container>
-            <PortabilidadeInssVantagens />
+            <IconTitleTextSection
+              items={[
+                {
+                  icon: ThumbUpAltOutlinedIcon,
+                  title: "Dinheiro Rápido e Sem Complicações",
+                  text: "Descomplicamos o processo. Conseguir crédito é fácil e rápido, sem papelada complicada.",
+                },
+                {
+                  icon: SavingsOutlinedIcon,
+                  title: "Juros Baixos e Tudo às Claras",
+                  text: "Mantemos as coisas simples e justas. Oferecemos taxas de juros baixas e sem surpresas escondidas.",
+                },
+                {
+                  icon: TagFacesOutlinedIcon,
+                  title: "Você é Único, Assim Como Nosso Atendimento",
+                  text: "Entendemos você. Nossa equipe está pronta para ajudar de forma personalizada, tornando o processo amigável e tranquilo.",
+                },
+              ]}
+            />
           </Container>
         </Box>
       </Stack>
 
-      <PortabilidadeInssStepByStep />
-
-      <Box sx={{ backgroundColor: "#F4F4F4", py: 16 }}>
-        <Container>reviews</Container>
-      </Box>
+      <StepByStepSection
+        steps={[
+          {
+            image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
+            text: "Solicite uma simulação gratuita",
+          },
+          {
+            image: "/size_960_16_9_idosos-aposentadoria1.webp",
+            text: "Envie a documentação necessária",
+          },
+          {
+            image:
+              "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
+            text: "Receba o dinheiro na sua conta!",
+          },
+        ]}
+      />
 
       {/* <Container>simulador</Container> */}
 
@@ -89,19 +122,22 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
           <FaqAccordion
             items={[
               {
-                question: "O que é portabilidade de crédito consignado?",
+                question:
+                  "Quais documentos são necessários para solicitar o empréstimo?",
                 answer:
-                  "A portabilidade de crédito consignado é quando você transfere seu empréstimo de um banco ou instituição financeira para outro, mantendo as mesmas condições, como taxa de juros e prazo de pagamento. É uma maneira de buscar melhores opções sem precisar pagar mais.",
+                  "Você precisará apenas de documentos simples, como RG, CPF e comprovante de residência. Não se preocupe, nossa equipe está pronta para te ajudar durante todo o processo.",
               },
               {
-                question: "Quais os benefícios de fazer a portabilidade?",
+                question:
+                  "Quanto tempo leva para o dinheiro ser depositado na minha conta?",
                 answer:
-                  "Os benefícios da portabilidade incluem a possibilidade de economizar dinheiro com taxas de juros mais baixas, reduzir o valor das parcelas mensais e melhorar suas finanças pessoais. Você pode encontrar ofertas mais vantajosas e flexíveis em outro lugar.",
+                  "Após a aprovação, o dinheiro é depositado rapidinho na sua conta. Fazemos o máximo para tornar esse processo o mais ágil possível. Estamos sempre aqui para te manter informado!",
               },
               {
-                question: "Como saber se é vantajoso fazer a portabilidade?",
+                question:
+                  "Quem está elegível para contratar o Crédito Novo INSS e como posso usar o dinheiro?",
                 answer:
-                  "Para saber se a portabilidade é vantajosa, compare as condições do seu empréstimo atual com as ofertas de outras instituições. Se a nova oferta tiver taxas de juros mais baixas e melhores condições de pagamento, provavelmente é vantajoso fazer a portabilidade. Lembre-se de considerar as taxas e os custos envolvidos na transferência.",
+                  "Todas as pessoas aposentadas pelo INSS estão elegíveis para contratar. Quanto ao uso do dinheiro, a escolha é sua! Pode ser usado para realizar sonhos, quitar dívidas, fazer melhorias em casa ou até mesmo para emergências. Estamos aqui para ajudar você a conquistar seus objetivos!",
               },
             ]}
           />
