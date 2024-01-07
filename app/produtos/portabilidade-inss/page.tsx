@@ -111,10 +111,6 @@ export default function Page() {
         ]}
       />
 
-      {/* <Box sx={{ backgroundColor: "#F4F4F4", py: 16 }}>
-        <Container>reviews</Container>
-      </Box> */}
-
       <PortabilidadeInssSimulator />
 
       <Container maxWidth="md">
