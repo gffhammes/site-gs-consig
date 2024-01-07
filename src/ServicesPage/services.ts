@@ -26,13 +26,18 @@ export const CONSIGNADO_INSS: IService = {
   slug: "consignado-inss",
 };
 
+export const CARTAO_CONSIGNADO_INSS: IService = {
+  name: "cartão consignado inss",
+  description: "Praticidade e segurança para seu dia-a-dia",
+  thumbUrl: "/Old-man-online-banking.png",
+  slug: "cartao-consignado-inss",
+};
+
 export const services: IService[] = [
   SERVICO_PORTABILIDADE,
   SERVICO_CREDITO_NOVO,
   CONSIGNADO_INSS,
-  // {
-  //   name: "consignado inss",
-  // },
+  CARTAO_CONSIGNADO_INSS,
   // {
   //   name: "cartao consignado inss",
   // },
