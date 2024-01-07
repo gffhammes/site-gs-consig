@@ -33,15 +33,18 @@ export const CARTAO_CONSIGNADO_INSS: IService = {
   slug: "cartao-consignado-inss",
 };
 
+export const CARTAO_BENEFICIO_INSS: IService = {
+  name: "cartão benefício inss",
+  description: "Tenha liberdade e descomplique seus benefícios",
+  thumbUrl:
+    "/mulher-idosa-sorrindo-para-a-camera-com-um-telefone-segurando-uma-oferta-de-cartao-de-credito-e-debito-comprando-online_146482-2722.avif",
+  slug: "cartao-beneficio-inss",
+};
+
 export const services: IService[] = [
   SERVICO_PORTABILIDADE,
   SERVICO_CREDITO_NOVO,
   CONSIGNADO_INSS,
   CARTAO_CONSIGNADO_INSS,
-  // {
-  //   name: "cartao consignado inss",
-  // },
-  // {
-  //   name: "cartao beneficio inss",
-  // },
+  CARTAO_BENEFICIO_INSS,
 ];
