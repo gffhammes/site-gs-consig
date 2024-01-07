@@ -1,11 +1,15 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { FaqAccordion } from "@/src/common/FaqAccordion/FaqAccordion";
-import { PortabilidadeInssVantagens } from "@/src/Services/PortabilidadeInssVantagens";
+import { IconTitleTextSection } from "@/src/Services/IconTitleTextSection";
 import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
-import { PortabilidadeInssStepByStep } from "@/src/Services/PortabilidadeInssStepByStep";
+import { StepByStepSection } from "@/src/Services/StepByStepSection";
 import { SERVICO_PORTABILIDADE } from "@/src/ServicesPage/services";
 import { PortabilidadeInssSimulator } from "@/src/Services/PortabilidadeInssSimulator";
+
+import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
+import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 export default function Page() {
   return (
@@ -18,11 +22,12 @@ export default function Page() {
         >
           <Box sx={{ py: "1rem" }}>
             <ProductH1
-              caption="PORTABILIDADE INSS"
+              caption={SERVICO_PORTABILIDADE.name}
               title="Transforme seu consignado em economia!"
               subtitle="Diminua o valor da sua parcela e tenha dinheiro para viver! Conheça
               agora mesmo nossas condições especiais para te dar mais qualidade de
               vida"
+              buttonLink="#simulador"
             />
           </Box>
 
@@ -67,17 +72,46 @@ export default function Page() {
             py: 16,
           }}
         >
-          <Container>
-            <PortabilidadeInssVantagens />
-          </Container>
+          <IconTitleTextSection
+            buttonLink="#simulador"
+            items={[
+              {
+                icon: SavingsOutlinedIcon,
+                title: "Taxas mais baixas",
+                text: "Reduza os juros do seu empréstimo!",
+              },
+              {
+                icon: TagFacesOutlinedIcon,
+                title: "Facilidade e comodidade",
+                text: "Processo rápido e sem burocracia.",
+              },
+              {
+                icon: SupportAgentIcon,
+                title: "Atendimento personalizado",
+                text: "Equipe especializada para te auxiliar.",
+              },
+            ]}
+          />
         </Box>
       </Stack>
 
-      <PortabilidadeInssStepByStep />
-
-      {/* <Box sx={{ backgroundColor: "#F4F4F4", py: 16 }}>
-        <Container>reviews</Container>
-      </Box> */}
+      <StepByStepSection
+        steps={[
+          {
+            image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
+            text: "Solicite uma simulação gratuita",
+          },
+          {
+            image: "/size_960_16_9_idosos-aposentadoria1.webp",
+            text: "Compare as condições e taxas",
+          },
+          {
+            image:
+              "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
+            text: "Autorize a portabilidade e economize!",
+          },
+        ]}
+      />
 
       <PortabilidadeInssSimulator />
 

@@ -1,20 +1,20 @@
 "use client";
 
-import {
-  Box,
-  Button,
-  Container,
-  Paper,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Container, Paper, Stack, Typography } from "@mui/material";
 import { CustomCarousel } from "../common/CustomCarousel/CustomCarousel";
 import { CustomImage } from "../common/CustomImage";
 import { useBreakpoint } from "../hooks/useBreakpoint";
 
-export interface IPortabilidadeInssStepByStepProps {}
+export interface IStep {
+  text: string;
+  image: string;
+}
 
-export const PortabilidadeInssStepByStep = () => {
+export interface IStepByStepSectionProps {
+  steps: IStep[];
+}
+
+export const StepByStepSection = ({ steps }: IStepByStepSectionProps) => {
   const { md } = useBreakpoint();
 
   return (
@@ -95,19 +95,3 @@ export const PortabilidadeInssStepByStep = () => {
     </Container>
   );
 };
-
-const steps = [
-  {
-    image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
-    text: "Solicite uma simulação gratuita",
-  },
-  {
-    image: "/size_960_16_9_idosos-aposentadoria1.webp",
-    text: "Compare as condições e taxas",
-  },
-  {
-    image:
-      "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
-    text: "Autorize a portabilidade e economize!",
-  },
-];
