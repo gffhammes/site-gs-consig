@@ -34,7 +34,7 @@ export default function ThemeRegistry(props: any) {
           lineHeight: 1,
         },
         h3: {
-          fontSize: 16,
+          fontSize: 20,
           fontWeight: 800,
           lineHeight: 1,
         },

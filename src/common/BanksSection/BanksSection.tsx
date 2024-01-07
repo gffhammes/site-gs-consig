@@ -23,7 +23,7 @@ export const BanksSection = () => {
           <Box width="100%">
             <CustomCarousel
               dataSet={banks}
-              slideGap={2}
+              slideGap={4}
               showDots
               options={{
                 skipSnaps: true,
@@ -33,12 +33,16 @@ export const BanksSection = () => {
                 <CustomImage
                   src={bank.logo}
                   alt={bank.name}
-                  height="3rem"
+                  height="4.5rem"
                   width="5rem"
                   sx={{
-                    flex: "0 0 100%",
-                    flexBasis: "calc(20% - 1rem)",
-                    filter: "saturate(0)",
+                    flex: "0 0 10rem",
+                    // flexBasis: "calc(20% - 1rem)",
+                    filter: "saturate(0) opacity(.75)",
+                    transition: ".3s ease filter",
+                    "&:hover": {
+                      filter: "saturate(1) opacity(1)",
+                    },
                   }}
                 />
               )}
@@ -62,10 +66,8 @@ const banks: IBank[] = [
   { logo: `${banksBasePath}/bmg.svg`, name: "BMG" },
   { logo: `${banksBasePath}/crefaz.png`, name: "Crefaz" },
   { logo: `${banksBasePath}/daycoval.webp`, name: "Daycoval" },
-
   { logo: `${banksBasePath}/itau.png`, name: "Itaú" },
   { logo: `${banksBasePath}/Logo_C6_Bank.png`, name: "C6" },
-  { logo: `${banksBasePath}/logo-agibank.svg`, name: "Agibank" },
   { logo: `${banksBasePath}/ole.png`, name: "Banco Olé" },
   { logo: `${banksBasePath}/pagbank.png`, name: "Pagbank" },
 ];
