@@ -9,30 +9,24 @@ import {
   Typography,
 } from "@mui/material";
 import { Form, Formik, FormikErrors } from "formik";
-import { CurrencyInput } from "../common/form/CurrencyInput";
-import { FormikDatePicker } from "../common/form/FormikDatePicker";
-import dayjs from "dayjs";
-import {
-  MAIN_WHATSAPP,
-  generateWhatsappLink,
-  getFormattedCurrency,
-} from "../utils/helpers";
+import { MAIN_WHATSAPP, generateWhatsappLink } from "../utils/helpers";
+import { FormikTextField } from "../common/form/FormikTextField";
+import { CPFInput } from "../common/form/CPFInput";
+import { PhoneInput } from "../common/form/PhoneInput";
 
-export interface IPortabilidadeInssSimulatorProps {}
+export interface IServiceSimulatorProps {
+  product: string;
+}
 
-export const PortabilidadeInssSimulator = () => {
-  const sendSimulationMessage = (values: IPortabilidadeInssSimulatorValues) => {
-    const message = `Olá, vim pelo site e gostaria de fazer uma simulação de portabilidade INSS! 
+export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
+  const sendSimulationMessage = (values: IServiceSimulatorValues) => {
+    const message = `Olá, vim pelo site e gostaria de fazer uma simulação de ${product}! 
 
-    O valor atual do meu empréstimo é de *${getFormattedCurrency(
-      values.valorTotal
-    )}*.
+    Meu nome é *${values.nome}*.
 
-    O valor das minhas parcelas é de *${getFormattedCurrency(
-      values.valorParcela
-    )}*.
+    ${values.cpf !== "" ? `Meu CPF é *${values.cpf}*.` : ""}
 
-    O vencimento é em *${values.vencimento?.toLocaleDateString("pt-BR")}*
+    ${values.contato !== "" ? `Meu contato é *${values.contato}*.` : ""}
     `;
 
     const whatsappLink = generateWhatsappLink(MAIN_WHATSAPP, message);
@@ -40,19 +34,11 @@ export const PortabilidadeInssSimulator = () => {
     window.open(whatsappLink, "_blank");
   };
 
-  const validate = (values: IPortabilidadeInssSimulatorValues) => {
-    const errors: FormikErrors<IPortabilidadeInssSimulatorValues> = {};
+  const validate = (values: IServiceSimulatorValues) => {
+    const errors: FormikErrors<IServiceSimulatorValues> = {};
 
-    if (values.vencimento === null) {
-      errors.vencimento = "Campo obrigatório";
-    }
-
-    if (values.valorParcela === "") {
-      errors.valorParcela = "Campo obrigatório";
-    }
-
-    if (values.valorTotal === "") {
-      errors.valorTotal = "Campo obrigatório";
+    if (values.nome === "") {
+      errors.nome = "Campo obrigatório";
     }
 
     return errors;
@@ -99,15 +85,16 @@ export const PortabilidadeInssSimulator = () => {
               borderRadius: 2,
               mt: { xs: 0, sm: -8 },
               mb: { xs: -16, sm: -8 },
-              width: "fit-content",
+              width: "20rem",
+              maxWidth: "100%",
             }}
           >
             <Stack gap={2} sx={{ p: 4 }}>
-              <Formik<IPortabilidadeInssSimulatorValues>
+              <Formik<IServiceSimulatorValues>
                 initialValues={{
-                  valorParcela: "",
-                  valorTotal: "",
-                  vencimento: null,
+                  nome: "",
+                  cpf: "",
+                  contato: "",
                 }}
                 validate={validate}
                 onSubmit={(values) => {
@@ -118,25 +105,18 @@ export const PortabilidadeInssSimulator = () => {
               >
                 <Form id="simulador" noValidate>
                   <Stack gap={2}>
-                    <CurrencyInput
-                      name="valorParcela"
-                      label="Valor da parcela"
-                      required
-                    />
-                    <FormikDatePicker
-                      name="vencimento"
-                      label="Vencimento"
-                      required
-                      minDate={dayjs()}
-                    />
-                    <CurrencyInput
-                      name="valorTotal"
-                      label="Valor total"
-                      required
-                    />
+                    <FormikTextField name="nome" label="Seu nome" required />
+
+                    <CPFInput name="cpf" label="Seu CPF" />
+
+                    <PhoneInput name="contato" label="Seu telefone (com DDD)" />
                   </Stack>
                 </Form>
               </Formik>
+
+              <Typography variant="caption">
+                Não armazenamos nenhum dado
+              </Typography>
 
               <Box>
                 <Button
@@ -156,8 +136,8 @@ export const PortabilidadeInssSimulator = () => {
   );
 };
 
-export interface IPortabilidadeInssSimulatorValues {
-  valorParcela: string;
-  valorTotal: string;
-  vencimento: Date | null;
+export interface IServiceSimulatorValues {
+  nome: string;
+  cpf: string;
+  contato: string;
 }

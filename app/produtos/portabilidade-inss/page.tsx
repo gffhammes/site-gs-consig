@@ -5,11 +5,11 @@ import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { StepByStepSection } from "@/src/Services/StepByStepSection";
 import { SERVICO_PORTABILIDADE } from "@/src/ServicesPage/services";
-import { PortabilidadeInssSimulator } from "@/src/Services/PortabilidadeInssSimulator";
 
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 
 export default function Page() {
   return (
@@ -113,7 +113,7 @@ export default function Page() {
         ]}
       />
 
-      <PortabilidadeInssSimulator />
+      <ServiceSimulator product={SERVICO_PORTABILIDADE.name} />
 
       <Container maxWidth="md">
         <Stack gap={4}>

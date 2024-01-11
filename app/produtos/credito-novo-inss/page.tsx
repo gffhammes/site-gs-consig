@@ -9,6 +9,7 @@ import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
+import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(
@@ -118,6 +119,8 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
           },
         ]}
       />
+
+      <ServiceSimulator />
 
       <Container maxWidth="md">
         <Stack gap={4}>

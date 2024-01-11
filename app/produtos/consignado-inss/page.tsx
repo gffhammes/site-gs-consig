@@ -9,6 +9,7 @@ import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import ReceiptLongOutlinedIcon from "@mui/icons-material/ReceiptLongOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
+import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(
@@ -116,6 +117,8 @@ export default function Page() {
           },
         ]}
       />
+
+      <ServiceSimulator product={CONSIGNADO_INSS.name} />
 
       <Container maxWidth="md">
         <Stack gap={4}>

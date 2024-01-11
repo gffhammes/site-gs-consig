@@ -9,6 +9,7 @@ import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
 import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
+import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(
@@ -47,7 +48,6 @@ export default function Page() {
           />
         </Box>
       </Container>
-
       <Stack>
         <Stack
           width="100%"
@@ -98,7 +98,6 @@ export default function Page() {
           />
         </Box>
       </Stack>
-
       <StepByStepSection
         steps={[
           {
@@ -117,6 +116,8 @@ export default function Page() {
           },
         ]}
       />
+
+      <ServiceSimulator product={CARTAO_CONSIGNADO_INSS.name} />
 
       <Container maxWidth="md">
         <Stack gap={4}>

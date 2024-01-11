@@ -9,6 +9,7 @@ import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import ShareLocationOutlinedIcon from "@mui/icons-material/ShareLocationOutlined";
 import PhonelinkSetupOutlinedIcon from "@mui/icons-material/PhonelinkSetupOutlined";
+import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(
@@ -117,6 +118,8 @@ export default function Page() {
           },
         ]}
       />
+
+      <ServiceSimulator product={CARTAO_BENEFICIO_INSS.name} />
 
       <Container maxWidth="md">
         <Stack gap={4}>
