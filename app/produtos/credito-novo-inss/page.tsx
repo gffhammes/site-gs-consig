@@ -120,7 +120,7 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
         ]}
       />
 
-      <ServiceSimulator />
+      <ServiceSimulator product={SERVICO_CREDITO_NOVO.name} />
 
       <Container maxWidth="md">
         <Stack gap={4}>
