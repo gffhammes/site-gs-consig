@@ -6,6 +6,7 @@ import { Header } from "@/src/common/Header/Header";
 import { SplashScreen } from "@/src/common/SplashScreen";
 import { Footer } from "@/src/common/Footer/Footer";
 import { WhatsAppFloatingButton } from "@/src/common/WhatsAppFloatingButton";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 const nunito = Nunito_Sans({ subsets: ["latin"] });
 
@@ -31,6 +32,8 @@ export default function RootLayout({
       </head>
 
       <body className={nunito.className}>
+        <GoogleAnalytics trackPageViews />
+
         <ThemeRegistry options={{ key: "mui" }}>
           <SplashScreen />
 
