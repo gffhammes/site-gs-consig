@@ -10,6 +10,13 @@ import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
 import CreditCardOutlinedIcon from "@mui/icons-material/CreditCardOutlined";
 import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cartão Consignado INSS | GS Consig",
+  description:
+    "Tenha controle total das suas finanças com nosso Cartão Consignado INSS em Balneário Camboriú. Aproveite os benefícios exclusivos e a praticidade de descontos automáticos em sua folha de pagamento. Com taxas competitivas e aprovação rápida, nosso cartão oferece soluções financeiras sob medida para aposentados e pensionistas do INSS. Solicite seu Cartão Consignado agora e simplifique seu dia a dia!",
+};
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(

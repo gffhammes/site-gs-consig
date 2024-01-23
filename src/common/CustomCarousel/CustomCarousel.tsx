@@ -13,6 +13,7 @@ import {
 } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { CustomCarouselDots } from "./CustomCarouselDots";
+import Autoplay from "embla-carousel-autoplay";
 
 interface ICustomCarouselWithDataSet<T> {
   dataSet: T[];
@@ -50,7 +51,7 @@ export const CustomCarousel = <T,>({
   showDots,
   sx,
 }: ICustomCarouselProps & TCustomCarouselSlideApproach<T>) => {
-  const [emblaRef, embla] = useEmblaCarousel(options);
+  const [emblaRef, embla] = useEmblaCarousel(options, [Autoplay()]);
   const [currentIndex, setCurrentIndex] = useState(options?.startIndex ?? 0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 

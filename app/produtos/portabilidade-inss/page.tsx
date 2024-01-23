@@ -10,6 +10,13 @@ import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portabilidade INSS | GS Consig",
+  description:
+    "Faça a portabilidade do seu benefício INSS com facilidade e segurança em Balneário Camboriú. Com nossa solução especializada, você pode transferir seu crédito de forma descomplicada. Aproveite condições exclusivas e benefícios feitos sob medida para a sua aposentadoria. Descubra como simplificar sua vida financeira agora!",
+};
 
 export default function Page() {
   return (

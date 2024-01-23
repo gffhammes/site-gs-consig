@@ -10,6 +10,13 @@ import ReceiptLongOutlinedIcon from "@mui/icons-material/ReceiptLongOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 import TaskAltOutlinedIcon from "@mui/icons-material/TaskAltOutlined";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Consignado INSS | GS Consig",
+  description:
+    "Descubra as vantagens do empréstimo consignado INSS em Balneário Camboriú. Oferecemos condições especiais e facilidades exclusivas para aposentados e pensionistas. Conte com uma aprovação rápida e sem complicações. Garanta um empréstimo seguro e sob medida para suas necessidades - conheça nossas opções de consignado INSS agora!",
+};
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(

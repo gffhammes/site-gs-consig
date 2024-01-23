@@ -12,7 +12,8 @@ const nunito = Nunito_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "GS Consig",
-  description: "Promotora de crédito mais bem avaliada de Balneário Camboriú",
+  description:
+    "Descubra a melhor promotora de crédito em Balneário Camboriú! Conosco, você encontra soluções financeiras feitas sob medida para você. Confie em nossa avaliação positiva e tenha acesso fácil e rápido ao crédito que você precisa. Simples, rápido e confiável - sua busca por crédito perfeito começa aqui!",
 };
 
 export default function RootLayout({

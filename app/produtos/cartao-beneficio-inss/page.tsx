@@ -10,6 +10,13 @@ import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlin
 import ShareLocationOutlinedIcon from "@mui/icons-material/ShareLocationOutlined";
 import PhonelinkSetupOutlinedIcon from "@mui/icons-material/PhonelinkSetupOutlined";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Cartão Benefício INSS | GS Consig",
+  description:
+    "Otimize seu acesso aos benefícios do INSS com nosso Cartão Benefício em Balneário Camboriú. Desfrute da praticidade de um cartão com descontos diretos em sua folha de pagamento. Com taxas competitivas e aprovação rápida, nosso cartão oferece soluções financeiras sob medida para aposentados e pensionistas. Solicite seu Cartão Benefício INSS agora e simplifique sua vida financeira!",
+};
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(

@@ -10,6 +10,13 @@ import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";
 import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Crédito Novo INSS | GS Consig",
+  description:
+    "Obtenha seu crédito novo INSS com facilidade em Balneário Camboriú. Conosco, você tem acesso a soluções financeiras personalizadas, especialmente criadas para beneficiários do INSS. Simplificamos o processo para garantir que você tenha uma experiência tranquila. Descubra como iniciar uma nova fase financeira conosco - solicite seu crédito novo INSS hoje!",
+};
 
 export default function Page() {
   const whatsappLink = generateWhatsappLink(
