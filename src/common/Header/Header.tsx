@@ -2,7 +2,7 @@
 
 import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
 import { CustomImage } from "../CustomImage";
-import Logo from "../../../public/logo-gs-consig.png";
+import Logo from "../../../public/logo-gsconsig-horizontal.png";
 import { MobileSidebar } from "./MobileSidebar";
 import Link from "next/link";
 import { useBreakpoint } from "@/src/hooks/useBreakpoint";
@@ -44,8 +44,8 @@ export const Header = () => {
             <CustomImage
               src={Logo.src}
               alt="Logo GS Consig"
-              width="2rem"
-              height="2rem"
+              width={md ? "14rem" : "10rem"}
+              height={md ? "4rem" : "2rem"}
               objectPosition="left"
               sx={{
                 transition: ".3s ease all",
