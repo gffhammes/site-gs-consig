@@ -4,10 +4,11 @@
   "parserOptions": {
     "project": "tsconfig.json"
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "unused-imports"],
   "rules": {
     "no-console": "warn",
     "no-unused-vars": "warn",
+    "unused-imports/no-unused-imports": "warn",
     "@typescript-eslint/no-unused-vars": "warn"
   }
 }
