@@ -6,6 +6,7 @@ import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServic
 import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
+import { CTABanner } from "@/src/common/CTABanner/CTABanner";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { Stack } from "@mui/material";
 
@@ -17,7 +18,11 @@ export default async function Home() {
 
         <HomePageEmployees />
 
-        <HomePageBenefits />
+        <Stack>
+          <HomePageBenefits />
+
+          <CTABanner />
+        </Stack>
 
         <HomePageReviews />
 
