@@ -47,6 +47,7 @@ export default function ThemeRegistry(props: any) {
           fontWeight: "bold",
         },
       },
+      components: { MuiButton: { defaultProps: { sx: { borderRadius: 3 } } } },
     },
     ptBR
   );

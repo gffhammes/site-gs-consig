@@ -15,15 +15,13 @@ export default async function Home() {
       <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
         <HomePageBanner2 />
 
-        <HomePageServices />
+        <HomePageEmployees />
 
         <HomePageBenefits />
 
         <HomePageReviews />
 
         <InterestRateSection />
-
-        <HomePageEmployees />
 
         <HomePageStepByStep />
 

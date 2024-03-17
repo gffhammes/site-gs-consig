@@ -13,16 +13,15 @@ export const HomePageEmployees = () => {
   const { md } = useBreakpoint();
 
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 16 }}>
+    <Box>
       <Stack gap={8}>
         <Container>
           <Typography variant="h2" color="primary" textAlign="center">
-            Especialistas
-            <br />
+            Especialistas{" "}
             <strong>
-              prontos para te
+              prontos
               <br />
-              atender
+              para te atender
             </strong>
           </Typography>
         </Container>
