@@ -1,4 +1,4 @@
-import { HomePageBanner } from "@/src/HomePage/HomePageBanner";
+import { HomePageBanner2 } from "@/src/HomePage/HomePageBanner2";
 import { HomePageBenefits } from "@/src/HomePage/HomePageBenefits/HomePageBenefits";
 import { HomePageEmployees } from "@/src/HomePage/HomePageEmployees/HomePageEmployees";
 import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews";
@@ -12,8 +12,8 @@ import { Stack } from "@mui/material";
 export default async function Home() {
   return (
     <main>
-      <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: { xs: 4, sm: 8 }, pb: 16 }}>
-        <HomePageBanner />
+      <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
+        <HomePageBanner2 />
 
         <HomePageServices />
 

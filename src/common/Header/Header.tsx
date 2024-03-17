@@ -16,46 +16,51 @@ export const Header = () => {
   const whatsappLink = generateMainWhatsappLink();
 
   return (
-    <Container sx={{ position: "sticky", top: 0, zIndex: 9999, pt: 2 }}>
-      <Box
-        sx={{
-          backgroundColor: "rgb(80 80 80 / 50%)",
-          borderRadius: 999,
-          backdropFilter: "blur(10px)",
-        }}
-      >
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
-          sx={{ py: 1, px: 2 }}
+    <Box
+      sx={{ width: "100%", position: "fixed", top: 0, zIndex: 9999 }}
+      component="header"
+    >
+      <Container sx={{ pt: 2 }}>
+        <Box
+          sx={{
+            backgroundColor: "rgb(80 80 80 / 50%)",
+            borderRadius: 999,
+            backdropFilter: "blur(10px)",
+          }}
         >
-          <Link href="/">
-            <CustomImage
-              src={Logo.src}
-              alt="Logo GS Consig"
-              width={md ? "14rem" : "10rem"}
-              height={md ? "3rem" : "2rem"}
-              objectPosition="left"
-              sx={{
-                transition: ".3s ease all",
-              }}
-            />
-          </Link>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            sx={{ py: 1, px: 2 }}
+          >
+            <Link href="/">
+              <CustomImage
+                src={Logo.src}
+                alt="Logo GS Consig"
+                width={md ? "14rem" : "10rem"}
+                height={md ? "3rem" : "2rem"}
+                objectPosition="left"
+                sx={{
+                  transition: ".3s ease all",
+                }}
+              />
+            </Link>
 
-          <Stack direction="row" alignItems="center" gap={2}>
-            <NavigationMenu direction="row" color="white" />
+            <Stack direction="row" alignItems="center" gap={2}>
+              <NavigationMenu direction="row" color="white" />
 
-            <CircularButton
-              variant="contained"
-              LinkComponent="a"
-              href={whatsappLink}
-            >
-              Entre em contato
-            </CircularButton>
+              <CircularButton
+                variant="contained"
+                LinkComponent="a"
+                href={whatsappLink}
+              >
+                Entre em contato
+              </CircularButton>
+            </Stack>
           </Stack>
-        </Stack>
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+    </Box>
   );
 };
