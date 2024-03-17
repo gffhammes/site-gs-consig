@@ -1,8 +1,8 @@
 "use client";
 
-import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
+import { Box, Button, Container, Stack, useScrollTrigger } from "@mui/material";
 import { CustomImage } from "../CustomImage";
-import Logo from "../../../public/logo-gsconsig-horizontal.png";
+import Logo from "../../../public/logo-gsconsig-branca.webp";
 import { MobileSidebar } from "./MobileSidebar";
 import Link from "next/link";
 import { useBreakpoint } from "@/src/hooks/useBreakpoint";
@@ -17,6 +17,44 @@ export const Header = () => {
     disableHysteresis: true,
     threshold: 0,
   });
+
+  return (
+    <Container sx={{ position: "sticky", top: 0, zIndex: 9999, pt: 2 }}>
+      <Box
+        sx={{
+          backgroundColor: "rgb(80 80 80 / 50%)",
+          borderRadius: 999,
+          backdropFilter: "blur(10px)",
+        }}
+      >
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          sx={{ py: 1, px: 2 }}
+        >
+          <Link href="/">
+            <CustomImage
+              src={Logo.src}
+              alt="Logo GS Consig"
+              width={md ? "14rem" : "10rem"}
+              height={md ? "3rem" : "2rem"}
+              objectPosition="left"
+              sx={{
+                transition: ".3s ease all",
+              }}
+            />
+          </Link>
+
+          <Stack direction="row" alignItems="center" gap={2}>
+            <NavigationMenu direction="row" color="white" />
+
+            <Button variant="contained">Entre em contato</Button>
+          </Stack>
+        </Stack>
+      </Box>
+    </Container>
+  );
 
   return (
     <Box
