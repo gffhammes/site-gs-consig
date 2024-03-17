@@ -6,7 +6,7 @@ import { Header } from "@/src/common/Header/Header";
 import { SplashScreen } from "@/src/common/SplashScreen";
 import { Footer } from "@/src/common/Footer/Footer";
 import { WhatsAppFloatingButton } from "@/src/common/WhatsAppFloatingButton";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const nunito = Nunito_Sans({ subsets: ["latin"] });
 
@@ -30,22 +30,6 @@ export default function RootLayout({
           name="google-site-verification"
           content="MiwgkR2Wdy0GS0qpeZE11KUmGPhWXH5EFwlXb8L4kxg"
         />
-
-        <Script
-          strategy="lazyOnload"
-          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-        />
-
-        <Script strategy="lazyOnload" id="google-analytics">
-          {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){dataLayer.push(arguments);}
-                    gtag('js', new Date());
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
-                    page_path: window.location.pathname,
-                    });
-                `}
-        </Script>
       </head>
 
       <body className={nunito.className}>
@@ -61,6 +45,8 @@ export default function RootLayout({
           <Footer />
         </ThemeRegistry>
       </body>
+
+      <GoogleAnalytics gaId="G-VCNV518NYK" />
     </html>
   );
 }
