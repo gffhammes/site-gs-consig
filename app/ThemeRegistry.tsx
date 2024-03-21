@@ -29,7 +29,7 @@ export default function ThemeRegistry(props: any) {
           },
         },
         h2: {
-          fontSize: 24,
+          fontSize: 32,
           fontWeight: 500,
           lineHeight: 1,
         },

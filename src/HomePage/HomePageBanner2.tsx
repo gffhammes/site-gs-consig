@@ -30,6 +30,7 @@ export const HomePageBanner2 = (props: IHomePageBanner2Props) => {
               Diminua o valor da sua parcela e ganhe dinheiro de volta!
             </Typography>
           </Stack>
+
           <Button variant="contained" endIcon={<EastIcon />}>
             SIMULAR AGORA
           </Button>

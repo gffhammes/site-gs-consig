@@ -45,6 +45,88 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
   };
 
   return (
+    <Box sx={{ backgroundColor: "#363636" }}>
+      <Container>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="space-between"
+          gap={4}
+          sx={{ py: 8 }}
+        >
+          <Typography
+            variant="h2"
+            color="white"
+            fontSize={48}
+            sx={{
+              "& > strong": {
+                color: "primary.main",
+              },
+            }}
+          >
+            Preencha o formulário
+            <br /> e faça uma{" "}
+            <strong>
+              simulaçao
+              <br /> sem compromisso
+            </strong>
+          </Typography>
+
+          <Paper
+            elevation={5}
+            sx={{
+              borderRadius: 8,
+              width: "30rem",
+              maxWidth: "100%",
+            }}
+          >
+            <Stack gap={2} sx={{ p: 4 }}>
+              <Formik<IServiceSimulatorValues>
+                initialValues={{
+                  nome: "",
+                  cpf: "",
+                  contato: "",
+                }}
+                validate={validate}
+                onSubmit={(values) => {
+                  sendSimulationMessage(values);
+                }}
+                validateOnBlur={false}
+                validateOnChange={false}
+              >
+                <Form id="simulador" noValidate>
+                  <Stack gap={2}>
+                    <FormikTextField name="nome" label="Seu nome" required />
+
+                    <CPFInput name="cpf" label="Seu CPF" />
+
+                    <PhoneInput name="contato" label="Seu telefone (com DDD)" />
+                  </Stack>
+                </Form>
+              </Formik>
+
+              <Typography variant="caption">
+                Não armazenamos nenhum dado
+              </Typography>
+
+              <Box>
+                <Button
+                  type="submit"
+                  form="simulador"
+                  variant="contained"
+                  fullWidth
+                >
+                  Simular
+                </Button>
+              </Box>
+            </Stack>
+          </Paper>
+        </Stack>
+      </Container>
+    </Box>
+  );
+
+  return (
     <Container
       maxWidth="md"
       disableGutters

@@ -1,6 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { InterestRateChart } from "./InterestRateChart";
 import { generateMainWhatsappLink } from "@/src/utils/helpers";
+import EastIcon from "@mui/icons-material/East";
 
 export interface IInterestRateSectionProps {}
 
@@ -14,9 +15,11 @@ export const InterestRateSection = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <Stack gap={4}>
+          <InterestRateChart />
+
+          <Stack gap={4} alignItems="flex-start">
             <Stack gap={2}>
-              <Typography variant="h2" color="primary" maxWidth="14ch">
+              <Typography variant="h2" color="primary">
                 As melhores taxas do mercado
               </Typography>
 
@@ -28,16 +31,13 @@ export const InterestRateSection = () => {
 
             <Button
               variant="contained"
-              sx={{ width: "fit-content" }}
+              endIcon={<EastIcon />}
               LinkComponent="a"
               href={generateMainWhatsappLink()}
-              target="_blank"
             >
-              Simular agora
+              SIMULAR AGORA
             </Button>
           </Stack>
-
-          <InterestRateChart />
         </Stack>
       </Container>
     </Box>

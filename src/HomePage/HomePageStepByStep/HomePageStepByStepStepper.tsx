@@ -80,7 +80,7 @@ export interface IStep {
   description: string;
 }
 
-const steps: IStep[] = [
+export const steps: IStep[] = [
   {
     title: "Entre em contato ",
     description: `Chame algum de nossos consultores <a href='${generateMainWhatsappLink()}' target='_blank'>clicando aqui</a>`,

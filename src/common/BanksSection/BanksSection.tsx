@@ -8,15 +8,12 @@ export interface IBanksSectionProps {}
 
 export const BanksSection = () => {
   return (
-    <Box>
-      <Stack alignItems="center" gap={4}>
-        <Typography
-          variant="h2"
-          color="primary"
-          maxWidth="13ch"
-          textAlign="center"
-        >
-          Bancos parceiros
+    <Container>
+      <Stack alignItems="center" direction="row" gap={8}>
+        <Typography variant="h2" fontSize={64} color="primary">
+          Bancos
+          <br />
+          parceiros
         </Typography>
 
         <Container>
@@ -37,7 +34,6 @@ export const BanksSection = () => {
                   width="5rem"
                   sx={{
                     flex: "0 0 10rem",
-                    // flexBasis: "calc(20% - 1rem)",
                     filter: "saturate(0) opacity(.75)",
                     transition: ".3s ease filter",
                     "&:hover": {
@@ -50,7 +46,7 @@ export const BanksSection = () => {
           </Box>
         </Container>
       </Stack>
-    </Box>
+    </Container>
   );
 };
 
