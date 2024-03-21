@@ -28,9 +28,11 @@ export default async function Home() {
 
         <InterestRateSection />
 
-        <HomePageStepByStep />
+        <Stack>
+          <HomePageStepByStep />
 
-        <ServiceSimulator product="serviço" />
+          <ServiceSimulator product="serviço" />
+        </Stack>
 
         <BanksSection />
       </Stack>
