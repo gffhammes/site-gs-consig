@@ -11,7 +11,7 @@ export interface IHomePageReviewsProps {}
 export const HomePageReviews = () => {
   const { md } = useBreakpoint();
 
-  const reviewsToShow = reviews.slice(0, md ? 2 : 3);
+  const reviewsToShow = reviews.slice(0, md ? 4 : 3);
 
   return (
     <Box sx={{ py: 16 }}>
