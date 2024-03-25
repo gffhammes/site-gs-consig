@@ -1,6 +1,7 @@
 import { Avatar, Box, Paper, Rating, Stack, Typography } from "@mui/material";
 import { IReview } from "./HomePageReviews";
 import { useState } from "react";
+import { CustomImage } from "@/src/common/CustomImage";
 
 export interface IReviewCardProps {
   review: IReview;
@@ -14,9 +15,7 @@ export const ReviewCard = ({ review }: IReviewCardProps) => {
   return (
     <Paper variant="outlined" sx={{ p: 2, width: "20rem" }}>
       <Stack>
-        <Typography fontSize={64} color="primary">
-          "
-        </Typography>
+        <CustomImage src="/aspas.png" alt="aspas" height="2rem" width="2rem" />
 
         <Typography>{review.text}</Typography>
 
