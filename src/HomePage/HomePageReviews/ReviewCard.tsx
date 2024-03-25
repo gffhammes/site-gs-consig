@@ -1,4 +1,4 @@
-import { Avatar, Box, Rating, Typography } from "@mui/material";
+import { Avatar, Box, Paper, Rating, Stack, Typography } from "@mui/material";
 import { IReview } from "./HomePageReviews";
 import { useState } from "react";
 
@@ -10,6 +10,28 @@ export const ReviewCard = ({ review }: IReviewCardProps) => {
   const [showFullText, setShowFullText] = useState(false);
 
   const handleShowFullText = () => setShowFullText(true);
+
+  return (
+    <Paper variant="outlined" sx={{ p: 2, width: "20rem" }}>
+      <Stack>
+        <Typography fontSize={64} color="primary">
+          "
+        </Typography>
+
+        <Typography>{review.text}</Typography>
+
+        <Stack direction="row">
+          <Avatar src={review.avatar}>{review.name.slice(0, 1)}</Avatar>
+
+          <Stack>
+            <Typography fontWeight="bold">{review.name}</Typography>
+
+            <Rating value={review.stars} readOnly />
+          </Stack>
+        </Stack>
+      </Stack>
+    </Paper>
+  );
 
   return (
     <Box

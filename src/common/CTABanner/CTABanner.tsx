@@ -11,7 +11,7 @@ export const CTABanner = (props: ICTABannerProps) => {
     <Box sx={{ background: "linear-gradient(#f4f4f4 50%,#fff 50%)" }}>
       <Container maxWidth="md">
         <a href={whatsappLink}>
-          <Box sx={{ backgroundColor: "#202020", borderRadius: 4 }}>
+          <Box sx={{ backgroundColor: "#202020", borderRadius: 8 }}>
             <Stack
               direction="row"
               width="100%"

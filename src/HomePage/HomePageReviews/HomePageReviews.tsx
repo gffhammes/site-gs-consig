@@ -14,8 +14,28 @@ export const HomePageReviews = () => {
   const reviewsToShow = reviews.slice(0, md ? 2 : 3);
 
   return (
-    <Box sx={{ backgroundColor: "#f4f4f4", py: 16 }}>
-      <Container maxWidth={md ? "md" : "xs"}>
+    <Box sx={{ py: 16 }}>
+      <Stack>
+        <Container>
+          <Stack>
+            <Typography variant="overline" color="primary">
+              Clientes felizes, avaliações reais:
+            </Typography>
+
+            <Typography variant="h2">
+              Descubra o que <strong>estão dizendo sobre nós</strong> no Google!
+            </Typography>
+          </Stack>
+        </Container>
+
+        <Stack direction="row">
+          {reviewsToShow.map((review) => (
+            <ReviewCard key={review.name} review={review} />
+          ))}
+        </Stack>
+      </Stack>
+
+      {/* <Container maxWidth={md ? "md" : "xs"}>
         <Box
           rowGap={4}
           columnGap={8}
@@ -68,7 +88,7 @@ export const HomePageReviews = () => {
             </Button>
           </Stack>
         </Box>
-      </Container>
+      </Container> */}
     </Box>
   );
 };
