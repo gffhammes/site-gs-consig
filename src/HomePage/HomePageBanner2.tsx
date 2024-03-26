@@ -43,8 +43,6 @@ export const HomePageBanner2 = (props: IHomePageBanner2Props) => {
           </Button>
         </Stack>
       </Container>
-
-      <ServicesButtons />
     </Box>
   );
 };

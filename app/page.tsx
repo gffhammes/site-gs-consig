@@ -4,6 +4,7 @@ import { HomePageEmployees } from "@/src/HomePage/HomePageEmployees/HomePageEmpl
 import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews";
 import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
 import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
+import { ServicesButtons } from "@/src/HomePage/ServicesButtons";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { CTABanner } from "@/src/common/CTABanner/CTABanner";
@@ -14,9 +15,15 @@ export default async function Home() {
   return (
     <main>
       <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
-        <HomePageBanner2 />
+        <Stack>
+          <HomePageBanner2 />
 
-        <HomePageEmployees />
+          <Stack gap={8}>
+            <ServicesButtons />
+
+            <HomePageEmployees />
+          </Stack>
+        </Stack>
 
         <Stack>
           <HomePageBenefits />
