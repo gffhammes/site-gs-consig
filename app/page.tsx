@@ -22,9 +22,9 @@ export default async function Home() {
           <HomePageBenefits />
 
           <CTABanner />
-
-          <HomePageReviews />
         </Stack>
+
+        <HomePageReviews />
 
         <InterestRateSection />
 

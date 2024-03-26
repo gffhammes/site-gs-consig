@@ -14,7 +14,7 @@ export const FooterSiteMap = () => {
       getItem={(page) => {
         return (
           <Link href={page.route} style={{ width: "fit-content" }}>
-            <Typography>{page.title}</Typography>
+            <Typography color="white">{page.title}</Typography>
           </Link>
         );
       }}

@@ -16,7 +16,9 @@ export const FooterCustomMenu = <T,>({
 }: IFooterCustomMenuProps<T>) => {
   return (
     <Stack gap={3} sx={sx}>
-      <Typography fontWeight="bold">{title}</Typography>
+      <Typography color="white" fontSize={20} textTransform="uppercase">
+        {title}
+      </Typography>
 
       <Stack gap={2}>
         {itemsData.map((item, index) => {

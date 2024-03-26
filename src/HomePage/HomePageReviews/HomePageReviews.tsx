@@ -1,21 +1,17 @@
 "use client";
 
 import { GOOGLE_REVIEWS_URL } from "@/src/common/GoogleReviews/GoogleReviewsRating";
-import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { generateMainWhatsappLink } from "@/src/utils/helpers";
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { ReviewCard } from "./ReviewCard";
+import { CustomCarousel } from "@/src/common/CustomCarousel/CustomCarousel";
 
 export interface IHomePageReviewsProps {}
 
 export const HomePageReviews = () => {
-  const { md } = useBreakpoint();
-
-  const reviewsToShow = reviews.slice(0, md ? 4 : 3);
-
   return (
-    <Box sx={{ py: 16 }}>
-      <Stack>
+    <Box>
+      <Stack gap={8}>
         <Container>
           <Stack>
             <Typography variant="overline" color="primary">
@@ -28,67 +24,33 @@ export const HomePageReviews = () => {
           </Stack>
         </Container>
 
-        <Stack direction="row">
-          {reviewsToShow.map((review) => (
-            <ReviewCard key={review.name} review={review} />
-          ))}
-        </Stack>
-      </Stack>
+        <Container>
+          <CustomCarousel
+            dataSet={reviews}
+            getSlide={(data) => <ReviewCard review={data} />}
+            slideGap={2}
+          />
+        </Container>
 
-      {/* <Container maxWidth={md ? "md" : "xs"}>
-        <Box
-          rowGap={4}
-          columnGap={8}
-          display="grid"
-          gridTemplateAreas={{
-            xs: `
-            "title"
-            "reviews"
-            "buttons"
-            `,
-            md: `
-            "nothing    reviews"
-            "title    reviews"
-            "buttons  reviews"
-            "none     reviews"
-          `,
-          }}
-          gridTemplateRows={{
-            xs: "auto auto auto",
-            md: "auto min-content auto auto",
-          }}
-          gridTemplateColumns={{ xs: "1fr", md: "23rem auto" }}
-        >
-          <Typography variant="h2" color="primary" sx={{ gridArea: "title" }}>
-            Clientes Felizes, Avaliações Reais: Descubra o que estão dizendo
-            sobre nós no Google!
-          </Typography>
-
-          <Stack gap={4} gridArea="reviews">
-            {reviewsToShow.map((review) => {
-              return <ReviewCard key={review.name} review={review} />;
-            })}
-          </Stack>
-
-          <Stack direction="row" gap={1} gridArea="buttons">
+        <Container>
+          <Stack direction="row" alignItems="center" gap={1}>
             <Button
               variant="contained"
               LinkComponent="a"
               href={generateMainWhatsappLink()}
-              target="_blank"
             >
-              CONTRATE AGORA
+              Contrate agora
             </Button>
 
             <Button
-              onClick={() => window.open(GOOGLE_REVIEWS_URL, "_blank")}
               variant="outlined"
+              onClick={() => window.open(GOOGLE_REVIEWS_URL, "_blank")}
             >
-              ver mais
+              Ver mais
             </Button>
           </Stack>
-        </Box>
-      </Container> */}
+        </Container>
+      </Stack>
     </Box>
   );
 };

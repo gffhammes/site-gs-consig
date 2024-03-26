@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
+import { generateMainWhatsappLink } from "../utils/helpers";
 
 export interface IHomePageBanner2Props {}
 
@@ -31,7 +32,12 @@ export const HomePageBanner2 = (props: IHomePageBanner2Props) => {
             </Typography>
           </Stack>
 
-          <Button variant="contained" endIcon={<EastIcon />}>
+          <Button
+            variant="contained"
+            endIcon={<EastIcon />}
+            LinkComponent="a"
+            href={generateMainWhatsappLink()}
+          >
             SIMULAR AGORA
           </Button>
         </Stack>
