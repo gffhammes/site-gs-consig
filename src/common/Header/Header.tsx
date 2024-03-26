@@ -2,7 +2,7 @@
 
 import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
 import { CustomImage } from "../CustomImage";
-import Logo from "../../../public/logo-gsconsig-branca.webp";
+import Logo from "../../../public/logo-gsconsig-horizontal.png";
 import Link from "next/link";
 import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { NavigationMenu } from "./NavigationMenu";
