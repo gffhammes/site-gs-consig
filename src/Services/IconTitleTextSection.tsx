@@ -9,9 +9,10 @@ import {
 } from "@mui/material";
 import Link from "next/link";
 import { HTMLAttributeAnchorTarget, JSXElementConstructor } from "react";
+import { IServiceIconTextItem } from "../PagesComponents/ProductsPage/services";
 
 export interface IIconTitleTextSectionProps {
-  items: IIconTitleText[];
+  items: IServiceIconTextItem[];
   buttonLink: string;
   target?: HTMLAttributeAnchorTarget;
 }
@@ -70,9 +71,3 @@ export const IconTitleTextSection = ({
     </Container>
   );
 };
-
-export interface IIconTitleText {
-  icon: JSXElementConstructor<IconProps<SvgIconComponent>>;
-  title: string;
-  text: string;
-}

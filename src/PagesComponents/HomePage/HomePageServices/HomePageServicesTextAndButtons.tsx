@@ -1,6 +1,6 @@
 "use client";
 
-import { services } from "@/src/pages/ProductsPage/services";
+import { services } from "@/src/PagesComponents/ProductsPage/services";
 import { Chip, Stack, Typography } from "@mui/material";
 import Link from "next/link";
 

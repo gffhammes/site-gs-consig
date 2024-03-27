@@ -4,7 +4,7 @@ import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
 import { Stack } from "@mui/material";
 import { Metadata } from "next";
 import Image from "../../public/imagem10.jpeg";
-import { ProductsPageGrid } from "@/src/pages/ProductsPage/ProductsPageGrid";
+import { ProductsPageGrid } from "@/src/PagesComponents/ProductsPage/ProductsPageGrid";
 
 export const metadata: Metadata = {
   title: "Produtos | GS Consig",

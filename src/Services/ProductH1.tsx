@@ -18,7 +18,7 @@ export const ProductH1 = ({
   target,
 }: IProductH1Props) => {
   return (
-    <Stack gap={4}>
+    <Stack gap={4} alignItems="flex-start">
       <Stack>
         <Typography variant="caption" textTransform="uppercase">
           {caption}
@@ -37,7 +37,6 @@ export const ProductH1 = ({
         target={target}
         variant="contained"
         size="large"
-        sx={{ width: "fit-content" }}
       >
         SIMULE AGORA
       </Button>
