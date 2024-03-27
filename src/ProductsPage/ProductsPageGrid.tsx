@@ -1,6 +1,6 @@
 import { Box, Container, Stack } from "@mui/material";
 import { ProductsPageTitle } from "./ProductsPageTitle";
-import { services } from "../ServicesPage/services";
+import { services } from "./services";
 import { ProductsPageProductCard } from "./ProductsPageProductCard";
 
 export interface IProductsPageGridProps {}

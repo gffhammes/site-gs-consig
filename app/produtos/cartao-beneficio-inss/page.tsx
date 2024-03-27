@@ -4,7 +4,7 @@ import { IconTitleTextSection } from "@/src/Services/IconTitleTextSection";
 import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { StepByStepSection } from "@/src/Services/StepByStepSection";
-import { CARTAO_BENEFICIO_INSS } from "@/src/ServicesPage/services";
+import { CARTAO_BENEFICIO_INSS } from "@/src/ProductsPage/services";
 import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import ShareLocationOutlinedIcon from "@mui/icons-material/ShareLocationOutlined";

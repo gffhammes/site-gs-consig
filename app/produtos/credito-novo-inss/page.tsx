@@ -4,7 +4,7 @@ import { IconTitleTextSection } from "@/src/Services/IconTitleTextSection";
 import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { StepByStepSection } from "@/src/Services/StepByStepSection";
-import { SERVICO_CREDITO_NOVO } from "@/src/ServicesPage/services";
+import { SERVICO_CREDITO_NOVO } from "@/src/ProductsPage/services";
 import ThumbUpAltOutlinedIcon from "@mui/icons-material/ThumbUpAltOutlined";
 import SavingsOutlinedIcon from "@mui/icons-material/SavingsOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";

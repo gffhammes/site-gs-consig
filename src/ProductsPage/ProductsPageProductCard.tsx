@@ -1,5 +1,5 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
-import { IService } from "../ServicesPage/services";
+import { IService } from "./services";
 import { ArrowButton } from "../common/ArrowButton/ArrowButton";
 import Link from "next/link";
 

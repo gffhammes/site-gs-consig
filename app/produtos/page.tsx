@@ -1,5 +1,3 @@
-import { ServicesPageList } from "@/src/ServicesPage/ServicesPageList";
-import { ServicesPageTitle } from "@/src/ServicesPage/ServicesPageTitle";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
 import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
@@ -22,20 +20,6 @@ export default function Produtos() {
       <ProductsPageGrid />
 
       <InterestRateSection wrapperSx={{ backgroundColor: "#f4f4f4", py: 16 }} />
-
-      <BanksSection />
-    </Stack>
-  );
-
-  return (
-    <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: 4, pb: 16 }}>
-      <Stack gap={{ xs: 8, sm: 16 }}>
-        <ServicesPageTitle />
-
-        <ServicesPageList />
-      </Stack>
-
-      <InterestRateSection />
 
       <BanksSection />
     </Stack>

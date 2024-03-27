@@ -4,7 +4,7 @@ import { IconTitleTextSection } from "@/src/Services/IconTitleTextSection";
 import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { StepByStepSection } from "@/src/Services/StepByStepSection";
-import { CONSIGNADO_INSS } from "@/src/ServicesPage/services";
+import { CONSIGNADO_INSS } from "@/src/ProductsPage/services";
 import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import ReceiptLongOutlinedIcon from "@mui/icons-material/ReceiptLongOutlined";
 import TagFacesOutlinedIcon from "@mui/icons-material/TagFacesOutlined";

@@ -1,5 +1,5 @@
 import { Container, Paper, Stack, Typography } from "@mui/material";
-import { services } from "../ServicesPage/services";
+import { services } from "../ProductsPage/services";
 import EastIcon from "@mui/icons-material/East";
 import Link from "next/link";
 import { ArrowButton } from "../common/ArrowButton/ArrowButton";
