@@ -1,6 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
-import { generateMainWhatsappLink } from "../utils/helpers";
+import { generateMainWhatsappLink } from "../../utils/helpers";
 import { ServicesButtons } from "./ServicesButtons";
 
 export interface IHomePageBanner2Props {}

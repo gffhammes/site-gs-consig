@@ -1,6 +1,6 @@
 import { Box, Paper, Stack, Typography } from "@mui/material";
 import { IService } from "./services";
-import { ArrowButton } from "../common/ArrowButton/ArrowButton";
+import { ArrowButton } from "../../common/ArrowButton/ArrowButton";
 import Link from "next/link";
 
 export interface IProductsPageProductCardProps {

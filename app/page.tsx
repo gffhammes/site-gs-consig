@@ -1,10 +1,10 @@
-import { HomePageBanner2 } from "@/src/HomePage/HomePageBanner2";
-import { HomePageBenefits } from "@/src/HomePage/HomePageBenefits/HomePageBenefits";
-import { HomePageEmployees } from "@/src/HomePage/HomePageEmployees/HomePageEmployees";
-import { HomePageReviews } from "@/src/HomePage/HomePageReviews/HomePageReviews";
-import { HomePageServices } from "@/src/HomePage/HomePageServices/HomePageServices";
-import { HomePageStepByStep } from "@/src/HomePage/HomePageStepByStep/HomePageStepByStep";
-import { ServicesButtons } from "@/src/HomePage/ServicesButtons";
+import { HomePageBanner2 } from "@/src/pages/HomePage/HomePageBanner2";
+import { HomePageBenefits } from "@/src/pages/HomePage/HomePageBenefits/HomePageBenefits";
+import { HomePageEmployees } from "@/src/pages/HomePage/HomePageEmployees/HomePageEmployees";
+import { HomePageReviews } from "@/src/pages/HomePage/HomePageReviews/HomePageReviews";
+import { HomePageServices } from "@/src/pages/HomePage/HomePageServices/HomePageServices";
+import { HomePageStepByStep } from "@/src/pages/HomePage/HomePageStepByStep/HomePageStepByStep";
+import { ServicesButtons } from "@/src/pages/HomePage/ServicesButtons";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { CTABanner } from "@/src/common/CTABanner/CTABanner";

@@ -9,9 +9,9 @@ import {
   Typography,
 } from "@mui/material";
 import Link from "next/link";
-import { CustomImage } from "../common/CustomImage";
-import { GoogleReviewsRating } from "../common/GoogleReviews/GoogleReviewsRating";
-import { useBreakpoint } from "../hooks/useBreakpoint";
+import { CustomImage } from "../../common/CustomImage";
+import { GoogleReviewsRating } from "../../common/GoogleReviews/GoogleReviewsRating";
+import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 export const HomePageBanner = () => {
   const { sm } = useBreakpoint();

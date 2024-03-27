@@ -13,6 +13,7 @@ import {
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { IEmployee } from "@/src/types/employees";
 import { generateWhatsappLink } from "@/src/utils/helpers";
+import Link from "next/link";
 
 export interface IEmployeeCardProps extends IEmployee {
   paperSx?: SxProps;
@@ -27,7 +28,7 @@ export const EmployeeCard = ({
 }: IEmployeeCardProps) => {
   const whatsappLink = generateWhatsappLink(
     whatsapp,
-    `Olá, ${name}! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!`
+    `Olá! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!`
   );
 
   return (
@@ -89,7 +90,12 @@ export const EmployeeCard = ({
             </Stack>
           </Stack>
 
-          <Button variant="contained" startIcon={<WhatsAppIcon />}>
+          <Button
+            variant="contained"
+            startIcon={<WhatsAppIcon />}
+            LinkComponent={Link}
+            href={whatsappLink}
+          >
             FALE COMIGO
           </Button>
         </Stack>
