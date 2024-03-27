@@ -2,6 +2,7 @@ import { Container, Paper, Stack, Typography } from "@mui/material";
 import { services } from "../ServicesPage/services";
 import EastIcon from "@mui/icons-material/East";
 import Link from "next/link";
+import { ArrowButton } from "../common/ArrowButton/ArrowButton";
 
 export interface IServicesButtonsProps {}
 
@@ -26,19 +27,7 @@ export const ServicesButtons = (props: IServicesButtonsProps) => {
                 <Typography fontSize={16}>{service.description}</Typography>
               </Stack>
 
-              <Stack
-                direction="row"
-                color="primary.main"
-                gap={1}
-                component={Link}
-                href={`/produtos/${service.slug}`}
-              >
-                <Typography variant="button" color="inherit">
-                  SAIBA MAIS
-                </Typography>
-
-                <EastIcon color="inherit" />
-              </Stack>
+              <ArrowButton href={`/produtos/${service.slug}`} />
             </Stack>
           </Paper>
         ))}

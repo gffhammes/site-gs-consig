@@ -1,13 +1,24 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Stack,
+  SxProps,
+  Typography,
+} from "@mui/material";
 import { InterestRateChart } from "./InterestRateChart";
 import { generateMainWhatsappLink } from "@/src/utils/helpers";
 import EastIcon from "@mui/icons-material/East";
 
-export interface IInterestRateSectionProps {}
+export interface IInterestRateSectionProps {
+  wrapperSx?: SxProps;
+}
 
-export const InterestRateSection = () => {
+export const InterestRateSection = ({
+  wrapperSx,
+}: IInterestRateSectionProps) => {
   return (
-    <Box>
+    <Box sx={{ ...wrapperSx }}>
       <Container>
         <Stack
           direction={{ xs: "column", md: "row" }}

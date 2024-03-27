@@ -12,7 +12,7 @@ export default function ThemeRegistry(props: any) {
 
   const theme = createTheme(
     {
-      palette: { primary: { main: "#228CC8" } },
+      palette: { primary: { main: "#548DC2" } },
       typography: {
         fontFamily: "inherit",
         h1: {

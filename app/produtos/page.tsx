@@ -2,8 +2,11 @@ import { ServicesPageList } from "@/src/ServicesPage/ServicesPageList";
 import { ServicesPageTitle } from "@/src/ServicesPage/ServicesPageTitle";
 import { BanksSection } from "@/src/common/BanksSection/BanksSection";
 import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRateSection";
+import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
 import { Stack } from "@mui/material";
 import { Metadata } from "next";
+import Image from "../../public/imagem10.jpeg";
+import { ProductsPageGrid } from "@/src/ProductsPage/ProductsPageGrid";
 
 export const metadata: Metadata = {
   title: "Produtos | GS Consig",
@@ -12,6 +15,18 @@ export const metadata: Metadata = {
 };
 
 export default function Produtos() {
+  return (
+    <Stack gap={16} sx={{ pb: 16 }}>
+      <PageBannerImage imageSrc={Image.src} />
+
+      <ProductsPageGrid />
+
+      <InterestRateSection wrapperSx={{ backgroundColor: "#f4f4f4", py: 16 }} />
+
+      <BanksSection />
+    </Stack>
+  );
+
   return (
     <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: 4, pb: 16 }}>
       <Stack gap={{ xs: 8, sm: 16 }}>
