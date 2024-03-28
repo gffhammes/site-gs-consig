@@ -1,8 +1,7 @@
-import { HomePageBanner2 } from "@/src/PagesComponents/HomePage/HomePageBanner2";
+import { HomePageBanner } from "@/src/PagesComponents/HomePage/HomePageBanner";
 import { HomePageBenefits } from "@/src/PagesComponents/HomePage/HomePageBenefits/HomePageBenefits";
 import { HomePageEmployees } from "@/src/PagesComponents/HomePage/HomePageEmployees/HomePageEmployees";
 import { HomePageReviews } from "@/src/PagesComponents/HomePage/HomePageReviews/HomePageReviews";
-import { HomePageServices } from "@/src/PagesComponents/HomePage/HomePageServices/HomePageServices";
 import { HomePageStepByStep } from "@/src/PagesComponents/HomePage/HomePageStepByStep/HomePageStepByStep";
 import { ServicesButtons } from "@/src/PagesComponents/HomePage/ServicesButtons";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
@@ -16,7 +15,7 @@ export default async function Home() {
     <main>
       <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
         <Stack>
-          <HomePageBanner2 />
+          <HomePageBanner />
 
           <Stack gap={8}>
             <ServicesButtons />

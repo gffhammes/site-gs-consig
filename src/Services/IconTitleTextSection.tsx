@@ -23,9 +23,9 @@ export const IconTitleTextSection = ({
   target,
 }: IIconTitleTextSectionProps) => {
   return (
-    <Container maxWidth="xs">
+    <Container>
       <Stack gap={8} alignItems="center">
-        <Stack gap={6}>
+        <Stack gap={6} direction="row">
           {items.map((item, index) => (
             <Box
               key={index}
@@ -63,7 +63,6 @@ export const IconTitleTextSection = ({
           href={buttonLink}
           target={target}
           variant="contained"
-          sx={{ width: "fit-content" }}
         >
           SIMULE AGORA
         </Button>

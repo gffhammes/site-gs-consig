@@ -44,73 +44,94 @@ export default function Page({ params }: Props) {
   );
 
   return (
-    <Stack gap={{ xs: 16, md: 20 }} sx={{ pt: 4, pb: 16 }}>
-      <Container maxWidth="md">
-        <Box
-          display="grid"
-          gridTemplateColumns={{ xs: "1fr", sm: "1fr 1fr" }}
-          gap={8}
-        >
-          <Box sx={{ py: "1rem" }}>
-            <ProductH1
-              caption={product.name}
-              title={product.pageH1}
-              subtitle={product.pageSubtitle}
-              buttonLink="#simulador"
-            />
-          </Box>
-
-          <CustomImage
-            src={product.thumbUrl}
-            alt="portabilidade-inss"
-            height="100%"
-            width="100%"
-            objectFit="cover"
-            sx={{
-              display: { xs: "none", sm: "block" },
-              borderRadius: "1rem",
-            }}
-          />
-        </Box>
-      </Container>
-
+    <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
       <Stack>
-        <Stack
-          width="100%"
-          alignItems="flex-end"
-          sx={{
-            background: "linear-gradient(0deg, #f4f4f4 50%, white 50%)",
-            display: { xs: "flex", sm: "none" },
-          }}
-        >
-          <CustomImage
-            src={product.thumbUrl}
-            alt="portabilidade-inss"
-            height="15rem"
-            width="15rem"
-            objectFit="cover"
-            sx={{
-              borderRadius: "1rem 0 0 1rem",
-            }}
-          />
-        </Stack>
+        <Box sx={{ backgroundColor: "#f4f4f4", py: 16 }}>
+          <Container>
+            <Box
+              display="grid"
+              gridTemplateColumns={{ xs: "1fr", sm: "1fr 2fr" }}
+              gap={8}
+            >
+              <Box sx={{ py: "1rem" }}>
+                <ProductH1
+                  caption={product.name}
+                  title={product.pageH1}
+                  subtitle={product.pageSubtitle}
+                  buttonLink="#simulador"
+                />
+              </Box>
 
-        <Box
-          sx={{
-            backgroundColor: "#f4f4f4",
-            py: 16,
-          }}
-        >
-          <IconTitleTextSection
-            buttonLink="#simulador"
-            items={product.iconTextItens}
-          />
+              <Box
+                display="grid"
+                gridTemplateColumns="1fr 2fr 1.5fr"
+                gridTemplateRows="1fr 2fr 1fr 2fr 1fr"
+                gridTemplateAreas={`
+                'nothing1   image1  nothing2'
+                'image2     image1  nothing2'
+                'image2     image1  image3'
+                'nothing3   image1  image3'
+                'nothing3   image1  nothing4'
+              `}
+                sx={{ transform: "translateX(50px)" }}
+              >
+                <CustomImage
+                  src={product.thumbUrl}
+                  alt="portabilidade-inss"
+                  height="100%"
+                  width="100%"
+                  objectFit="cover"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                    borderRadius: "1rem",
+                    gridArea: "image2",
+                    transform: "translateX(30px)",
+                    zIndex: 999,
+                  }}
+                />
+
+                <CustomImage
+                  src={product.thumbUrl}
+                  alt="portabilidade-inss"
+                  height="100%"
+                  width="100%"
+                  objectFit="cover"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                    borderRadius: "1rem",
+                    gridArea: "image1",
+                  }}
+                />
+
+                <CustomImage
+                  src={product.thumbUrl}
+                  alt="portabilidade-inss"
+                  height="100%"
+                  width="100%"
+                  objectFit="cover"
+                  sx={{
+                    display: { xs: "none", sm: "block" },
+                    borderRadius: "1rem",
+                    gridArea: "image3",
+                    transform: "translateX(-50px)",
+                  }}
+                />
+              </Box>
+            </Box>
+          </Container>
         </Box>
       </Stack>
 
-      <StepByStepSection steps={product.steps} />
+      <IconTitleTextSection
+        buttonLink="#simulador"
+        items={product.iconTextItens}
+      />
 
-      <ServiceSimulator product={product.name} />
+      <Stack>
+        <StepByStepSection steps={product.steps} />
+
+        <ServiceSimulator product={product.name} />
+      </Stack>
 
       <Container maxWidth="md">
         <Stack gap={4}>

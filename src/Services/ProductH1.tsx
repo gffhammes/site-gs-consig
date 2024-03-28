@@ -24,9 +24,7 @@ export const ProductH1 = ({
           {caption}
         </Typography>
 
-        <Typography variant="h1" color="primary">
-          {title}
-        </Typography>
+        <Typography variant="h1">{title}</Typography>
       </Stack>
 
       <Typography whiteSpace="pre-wrap">{subtitle}</Typography>
