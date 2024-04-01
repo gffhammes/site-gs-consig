@@ -1,6 +1,5 @@
-import { Avatar, Box, Paper, Rating, Stack, Typography } from "@mui/material";
+import { Avatar, Paper, Rating, Stack, Typography } from "@mui/material";
 import { IReview } from "./HomePageReviews";
-import { useState } from "react";
 import { CustomImage } from "@/src/common/CustomImage";
 
 export interface IReviewCardProps {
@@ -8,12 +7,11 @@ export interface IReviewCardProps {
 }
 
 export const ReviewCard = ({ review }: IReviewCardProps) => {
-  const [showFullText, setShowFullText] = useState(false);
-
-  const handleShowFullText = () => setShowFullText(true);
-
   return (
-    <Paper variant="outlined" sx={{ p: 4, borderRadius: 4, flex: "0 0 27rem" }}>
+    <Paper
+      variant="outlined"
+      sx={{ p: 4, borderRadius: 4, flex: { xs: "0 0 100%", md: "0 0 27rem" } }}
+    >
       <Stack height="100%" gap={4}>
         <Stack gap={2} flexGrow={1}>
           <CustomImage

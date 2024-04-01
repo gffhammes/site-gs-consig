@@ -1,30 +1,43 @@
 import { Container, Paper, Stack, Typography } from "@mui/material";
 import { services } from "../ProductsPage/services";
-import EastIcon from "@mui/icons-material/East";
-import Link from "next/link";
 import { ArrowButton } from "../../common/ArrowButton/ArrowButton";
 
 export interface IServicesButtonsProps {}
 
-export const ServicesButtons = (props: IServicesButtonsProps) => {
+export const ServicesButtons = () => {
   return (
-    <Container sx={{ transform: "translateY(-50%)" }}>
-      <Stack direction="row" width="100%" gap={2}>
+    <Container sx={{ transform: "translateY(-50px)" }}>
+      <Stack
+        direction="row"
+        width="100%"
+        gap={2}
+        flexWrap={{ xs: "wrap", md: "nowrap" }}
+        justifyContent="center"
+      >
         {services.map((service) => (
-          <Paper key={service.name} elevation={5} sx={{ width: "100%", p: 2 }}>
+          <Paper
+            key={service.name}
+            elevation={5}
+            sx={{ width: { xs: "45%", md: "100%" }, p: 2 }}
+          >
             <Stack height="100%" gap={2} alignItems="flex-start">
               <Stack flexGrow={1} gap={1}>
-                <service.Icon fontSize="large" color="primary" />
+                <service.Icon
+                  color="primary"
+                  sx={{ fontSize: { xs: "24px", md: "32px" } }}
+                />
 
                 <Typography
                   variant="h3"
                   textTransform="uppercase"
-                  fontSize={16}
+                  fontSize={{ xs: 14, md: 16 }}
                 >
                   {service.name}
                 </Typography>
 
-                <Typography fontSize={16}>{service.description}</Typography>
+                <Typography fontSize={{ xs: 14, md: 16 }}>
+                  {service.description}
+                </Typography>
               </Stack>
 
               <ArrowButton href={`/produtos/${service.slug}`} />

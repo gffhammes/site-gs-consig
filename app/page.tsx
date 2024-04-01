@@ -27,7 +27,7 @@ export default async function Home() {
         <Stack>
           <HomePageBenefits />
 
-          <CTABanner />
+          {/* <CTABanner /> */}
         </Stack>
 
         <HomePageReviews />
@@ -35,12 +35,12 @@ export default async function Home() {
         <InterestRateSection />
 
         <Stack>
-          <HomePageStepByStep />
+          {/* <HomePageStepByStep /> */}
 
           <ServiceSimulator product="serviço" />
         </Stack>
 
-        <BanksSection />
+        {/* <BanksSection /> */}
       </Stack>
     </main>
   );

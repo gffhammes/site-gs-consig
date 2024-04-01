@@ -48,7 +48,7 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
     <Box sx={{ backgroundImage: "url(/imagem-1.png)" }}>
       <Container>
         <Stack
-          direction="row"
+          direction={{ xs: "column", md: "row" }}
           alignItems="center"
           justifyContent="space-between"
           gap={4}
@@ -57,7 +57,8 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
           <Typography
             variant="h2"
             color="white"
-            fontSize={48}
+            fontSize={{ xs: 32, md: 48 }}
+            textAlign={{ xs: "center", md: "left" }}
             sx={{
               "& > strong": {
                 color: "primary.main",
