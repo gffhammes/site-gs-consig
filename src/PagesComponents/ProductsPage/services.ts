@@ -16,16 +16,12 @@ import StorefrontOutlinedIcon from "@mui/icons-material/StorefrontOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
 import ShareLocationOutlinedIcon from "@mui/icons-material/ShareLocationOutlined";
 import PhonelinkSetupOutlinedIcon from "@mui/icons-material/PhonelinkSetupOutlined";
+import { IStep } from "@/src/common/Stepper/Stepper";
 
 export interface IServiceIconTextItem {
   icon: JSXElementConstructor<IconProps<SvgIconComponent>>;
   title: string;
   text: string;
-}
-
-export interface IServiceStepItem {
-  text: string;
-  image: string;
 }
 
 export interface IServiceFaqItem {
@@ -45,7 +41,7 @@ export interface IService {
   metaTitle: string;
   metaDescription: string;
   iconTextItens: IServiceIconTextItem[];
-  steps: IServiceStepItem[];
+  steps: IStep[];
   faq: IServiceFaqItem[];
 }
 
@@ -82,17 +78,13 @@ export const SERVICO_PORTABILIDADE: IService = {
   ],
   steps: [
     {
-      image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
-      text: "Solicite uma simulação gratuita",
+      title: "Solicite uma simulação gratuita",
     },
     {
-      image: "/size_960_16_9_idosos-aposentadoria1.webp",
-      text: "Compare as condições e taxas",
+      title: "Compare as condições e taxas",
     },
     {
-      image:
-        "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
-      text: "Autorize a portabilidade e economize!",
+      title: "Autorize a portabilidade e economize!",
     },
   ],
   faq: [
@@ -145,17 +137,13 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
   ],
   steps: [
     {
-      image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
-      text: "Solicite uma simulação gratuita",
+      title: "Solicite uma simulação gratuita",
     },
     {
-      image: "/size_960_16_9_idosos-aposentadoria1.webp",
-      text: "Envie a documentação necessária",
+      title: "Envie a documentação necessária",
     },
     {
-      image:
-        "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
-      text: "Receba o dinheiro na sua conta!",
+      title: "Receba o dinheiro na sua conta!",
     },
   ],
   faq: [
@@ -216,17 +204,13 @@ export const CONSIGNADO_INSS: IService = {
   ],
   steps: [
     {
-      image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
-      text: "Solicite uma simulação gratuita",
+      title: "Solicite uma simulação gratuita",
     },
     {
-      image: "/size_960_16_9_idosos-aposentadoria1.webp",
-      text: "Envie a documentação necessária",
+      title: "Envie a documentação necessária",
     },
     {
-      image:
-        "/close-up-of-senior-couple-showing-piggy-bank-to-save-money-elderly-couple-holding-piggy-bank-for-investment-and-future-planning-concept-happy-retired-couple-holding-piggy-bank-together-at-home.jpg",
-      text: "Receba o dinheiro na sua conta!",
+      title: "Receba o dinheiro na sua conta!",
     },
   ],
   faq: [
@@ -281,17 +265,13 @@ export const CARTAO_CONSIGNADO_INSS: IService = {
   ],
   steps: [
     {
-      image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
-      text: "Solicite Seu Cartão em Minutos",
+      title: "Solicite Seu Cartão em Minutos",
     },
     {
-      image:
-        "/homem-senior-feliz-usando-o-touchpad-e-assinando-uma-entrega-do-correio.jpg",
-      text: "Receba em Casa sem Complicações",
+      title: "Receba em Casa sem Complicações",
     },
     {
-      image: "/cartao-beneficio-inss-para-aposentados-e-pensionistas.jpeg",
-      text: "Ative e Comece a Usar",
+      title: "Ative e Comece a Usar",
     },
   ],
   faq: [
@@ -347,17 +327,13 @@ export const CARTAO_BENEFICIO_INSS: IService = {
   ],
   steps: [
     {
-      image: "/celular-para-idoso-boas-opcoes-1024x682.jpg",
-      text: "Solicite Seu Cartão Benefício em Minutos",
+      title: "Solicite Seu Cartão Benefício em Minutos",
     },
     {
-      image:
-        "/homem-senior-feliz-usando-o-touchpad-e-assinando-uma-entrega-do-correio.jpg",
-      text: "Receba em Casa sem Complicações",
+      title: "Receba em Casa sem Complicações",
     },
     {
-      image: "/cartao-beneficio-inss-para-aposentados-e-pensionistas.jpeg",
-      text: "Ative e Comece a Usar",
+      title: "Ative e Comece a Usar",
     },
   ],
   faq: [

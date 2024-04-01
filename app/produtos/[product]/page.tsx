@@ -4,9 +4,8 @@ import { IconTitleTextSection } from "@/src/Services/IconTitleTextSection";
 import { ProductH1 } from "@/src/Services/ProductH1";
 import { CustomImage } from "@/src/common/CustomImage";
 import { StepByStepSection } from "@/src/Services/StepByStepSection";
-import { MAIN_WHATSAPP, generateWhatsappLink } from "@/src/utils/helpers";
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
-import { Metadata, ResolvingMetadata } from "next";
+import { Metadata } from "next";
 import { services } from "@/src/PagesComponents/ProductsPage/services";
 import { redirect } from "next/navigation";
 
@@ -15,10 +14,7 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = services.find((service) => {
     return service.slug === params.product;
   });
@@ -37,11 +33,6 @@ export default function Page({ params }: Props) {
   if (!product) {
     redirect("/produtos");
   }
-
-  const whatsappLink = generateWhatsappLink(
-    MAIN_WHATSAPP,
-    `Olá, vim pelo site e gostaria de uma simulação de ${product.name}`
-  );
 
   return (
     <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
@@ -67,12 +58,12 @@ export default function Page({ params }: Props) {
                 gridTemplateColumns="1fr 2fr 1.5fr"
                 gridTemplateRows="1fr 2fr 1fr 2fr 1fr"
                 gridTemplateAreas={`
-                'nothing1   image1  nothing2'
-                'image2     image1  nothing2'
-                'image2     image1  image3'
-                'nothing3   image1  image3'
-                'nothing3   image1  nothing4'
-              `}
+                  'nothing1   image1  nothing2'
+                  'image2     image1  nothing2'
+                  'image2     image1  image3'
+                  'nothing3   image1  image3'
+                  'nothing3   image1  nothing4'
+                `}
                 sx={{ transform: "translateX(50px)" }}
               >
                 <CustomImage
