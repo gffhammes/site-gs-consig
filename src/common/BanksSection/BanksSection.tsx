@@ -8,7 +8,7 @@ export interface IBanksSectionProps {}
 
 export const BanksSection = () => {
   return (
-    <Container>
+    <Container sx={{ display: { xs: "none", lg: "block" } }}>
       <Stack alignItems="center" direction="row" gap={8}>
         <Typography variant="h2" fontSize={64} color="primary">
           Bancos

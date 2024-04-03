@@ -19,22 +19,37 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
   const gridTemplateAreas = useMemo(() => {
     switch (steps.length) {
       case 3:
-        return `
+        return {
+          xs: `
+            "number1        dot1     text1"
+            "number2        dot2     text2"
+            "number3        dot3     text3"
+          `,
+          md: `
           "text1        number2     text3      "
           "connector1   number2     connector3 "
           "dot1         dot2        dot3       "
           "number1      connector2  number3    "
           "number1      text2       number3    "
-        `;
+        `,
+        };
 
       case 4:
-        return `
-          "text1        number2     text3       number4"
-          "connector1   number2     connector3  number4"
-          "dot1         dot2        dot3        dot4"
-          "number1      connector2  number3     connector4"
-          "number1      text2       number3     text4"  
-        `;
+        return {
+          xs: `
+            "number1  text1"
+            "number2  text2"
+            "number3  text3"
+            "number4  text4"
+          `,
+          md: `
+            "text1        number2     text3       number4"
+            "connector1   number2     connector3  number4"
+            "dot1         dot2        dot3        dot4"
+            "number1      connector2  number3     connector4"
+            "number1      text2       number3     text4"  
+          `,
+        };
     }
   }, [steps.length]);
 
@@ -48,15 +63,22 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
           position: "absolute",
           top: "50%",
           transform: "translateY(-50%)",
+          display: { xs: "none", md: "block" },
         }}
       />
+
       <Box
         display="grid"
-        justifyItems="center"
+        justifyItems={{ xs: "flex-start", md: "center" }}
+        alignItems="center"
         gridTemplateAreas={gridTemplateAreas}
         rowGap={1}
-        gridTemplateRows="1fr min-content min-content min-content 1fr"
-        gridTemplateColumns={`repeat(${steps.length}, 1fr)`}
+        columnGap={{ xs: 2, md: 0 }}
+        gridTemplateRows={{
+          xs: "auto",
+          md: "1fr min-content min-content min-content 1fr",
+        }}
+        gridTemplateColumns={{ xs: "auto", md: `repeat(${steps.length}, 1fr)` }}
         width="100%"
       >
         {steps.map((step, index) => {
@@ -66,7 +88,7 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
             <Fragment key={step.title}>
               <Stack sx={{ gridArea: `text${index + 1}` }}>
                 <Typography
-                  textAlign="center"
+                  textAlign={{ xs: "left", md: "center" }}
                   fontSize={20}
                   color="primary"
                   maxWidth={titleMaxWidth}
@@ -76,7 +98,7 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
 
                 {step.description && (
                   <Typography
-                    textAlign="center"
+                    textAlign={{ xs: "left", md: "center" }}
                     sx={{
                       "& > a": {
                         textDecoration: "underline",
@@ -91,7 +113,10 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
               <Stack
                 alignItems="center"
                 flexDirection={isNumberBelowDot ? "column" : "column-reverse"}
-                sx={{ gridArea: `connector${index + 1}` }}
+                sx={{
+                  gridArea: `connector${index + 1}`,
+                  display: { xs: "none", md: "flex" },
+                }}
               >
                 <Box
                   sx={{
@@ -120,6 +145,7 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
                   borderRadius: "3rem",
                   backgroundColor: "primary.main",
                   gridArea: `dot${index + 1}`,
+                  display: { xs: "none", md: "block" },
                 }}
               />
 
@@ -129,7 +155,10 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
                 sx={{
                   WebkitTextStroke: `2px ${palette.primary.main}`,
                   gridArea: `number${index + 1}`,
-                  alignSelf: isNumberBelowDot ? "flex-start" : "flex-end",
+                  alignSelf: {
+                    xs: "auto",
+                    md: isNumberBelowDot ? "flex-start" : "flex-end",
+                  },
                 }}
               >
                 {(index + 1).toLocaleString("pt-BR", {

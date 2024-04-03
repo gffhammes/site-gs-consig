@@ -14,11 +14,15 @@ export const HomePageReviews = () => {
       <Stack gap={8}>
         <Container>
           <Stack>
-            <Typography variant="overline" color="primary">
+            <Typography
+              textAlign={{ xs: "center", md: "left" }}
+              variant="overline"
+              color="primary"
+            >
               Clientes felizes, avaliações reais:
             </Typography>
 
-            <Typography variant="h2">
+            <Typography textAlign={{ xs: "center", md: "left" }} variant="h2">
               Descubra o que <strong>estão dizendo sobre nós</strong> no Google!
             </Typography>
           </Stack>
@@ -33,7 +37,12 @@ export const HomePageReviews = () => {
         </Container>
 
         <Container>
-          <Stack direction="row" alignItems="center" gap={1}>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent={{ xs: "center", md: "flex-start" }}
+            gap={1}
+          >
             <Button
               variant="contained"
               LinkComponent="a"
