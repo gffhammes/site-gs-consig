@@ -14,7 +14,7 @@ export const CTABanner = () => {
           <Box
             sx={{
               backgroundColor: { xs: "transparent", md: "#202020" },
-              backgroundImage: { xs: "url(/clip-path-group.jpg)", md: "none" },
+              backgroundImage: { xs: "url(/cta-banner.jpg)", md: "none" },
               backgroundPosition: "center center",
               backgroundSize: "cover",
               borderRadius: 8,
@@ -53,7 +53,7 @@ export const CTABanner = () => {
               >
                 <Box>
                   <CustomImage
-                    src="/imagem-4.png"
+                    src="/cta-banner-2.png"
                     alt=""
                     height="17rem"
                     width="24rem"
