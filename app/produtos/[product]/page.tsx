@@ -35,12 +35,14 @@ export default function Page({ params }: Props) {
 
   return (
     <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
-      <ProductPageHero product={product} />
+      <Stack gap={{ xs: 20, md: 20 }}>
+        <ProductPageHero product={product} />
 
-      <IconTitleTextSection
-        buttonLink="#simulador"
-        items={product.iconTextItens}
-      />
+        <IconTitleTextSection
+          buttonLink="#simulador"
+          items={product.iconTextItens}
+        />
+      </Stack>
 
       <Stack>
         <StepByStepSection steps={product.steps} />

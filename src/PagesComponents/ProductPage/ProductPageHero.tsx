@@ -26,61 +26,13 @@ export const ProductPageHero = ({ product }: IProductPageHeroProps) => {
             />
           </Box>
 
-          <Box
-            display="grid"
-            gridTemplateColumns="1fr 2fr 1.5fr"
-            gridTemplateRows="1fr 2fr 1fr 2fr 1fr"
-            gridTemplateAreas={`
-                'nothing1   image1  nothing2'
-                'image2     image1  nothing2'
-                'image2     image1  image3'
-                'nothing3   image1  image3'
-                'nothing3   image1  nothing4'
-              `}
-            height={{ xs: "20rem", md: "100%" }}
-            sx={{
-              transform: { xs: "translateY(50px)", md: "translateX(50px)" },
-            }}
-          >
-            <CustomImage
-              src={product.thumbUrl}
-              alt="portabilidade-inss"
-              height="100%"
-              width="100%"
-              objectFit="cover"
-              sx={{
-                borderRadius: "1rem",
-                gridArea: "image2",
-                transform: "translateX(30px)",
-                zIndex: 999,
-              }}
-            />
-
-            <CustomImage
-              src={product.thumbUrl}
-              alt="portabilidade-inss"
-              height="100%"
-              width="100%"
-              objectFit="cover"
-              sx={{
-                borderRadius: "1rem",
-                gridArea: "image1",
-              }}
-            />
-
-            <CustomImage
-              src={product.thumbUrl}
-              alt="portabilidade-inss"
-              height="100%"
-              width="100%"
-              objectFit="cover"
-              sx={{
-                borderRadius: "1rem",
-                gridArea: "image3",
-                transform: "translateX(-50px)",
-              }}
-            />
-          </Box>
+          <CustomImage
+            src={product.thumbUrl}
+            alt={product.name}
+            width="100%"
+            aspectRatio="1.3 / 1"
+            sx={{ transform: { xs: "translateY(75px)", md: "none" } }}
+          />
         </Box>
       </Container>
     </Box>

@@ -48,7 +48,7 @@ export interface IService {
 export const SERVICO_PORTABILIDADE: IService = {
   name: "portabilidade inss",
   description: "Diminua sua taxa e ganhe dinheiro de volta",
-  thumbUrl: "/portabilidade.jpg",
+  thumbUrl: "/portabilidade-inss.png",
   slug: "portabilidade-inss",
   Icon: PublishedWithChangesIcon,
   mainDescription:
@@ -109,7 +109,7 @@ export const SERVICO_PORTABILIDADE: IService = {
 export const SERVICO_CREDITO_NOVO: IService = {
   name: "crédito novo inss",
   description: "Condições especiais para realizar seus sonhos",
-  thumbUrl: "/viagem-com-idosos-saiba-quais-sao-os-cuidados-essenciais-2.jpg",
+  thumbUrl: "/credito-novo-inss.png",
   slug: "credito-novo-inss",
   Icon: PaidOutlinedIcon,
   mainDescription:
@@ -173,7 +173,7 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
 export const CONSIGNADO_INSS: IService = {
   name: "consignado inss",
   description: "Desconto em folha: Prático e sem estresse.",
-  thumbUrl: "/formularios-de-preenchimento-de-homem-senior_236854-20110.jpg",
+  thumbUrl: "/consignado-inss.png",
   slug: "consignado-inss",
   Icon: ReceiptLongOutlinedIcon,
   mainDescription:
@@ -236,7 +236,7 @@ export const CONSIGNADO_INSS: IService = {
 export const CARTAO_CONSIGNADO_INSS: IService = {
   name: "cartão consignado inss",
   description: "Praticidade e segurança para seu dia-a-dia",
-  thumbUrl: "/Old-man-online-banking.png",
+  thumbUrl: "/cartao-consignado-inss.png",
   slug: "cartao-consignado-inss",
   Icon: AddCardOutlinedIcon,
   mainDescription:
@@ -297,8 +297,7 @@ export const CARTAO_CONSIGNADO_INSS: IService = {
 export const CARTAO_BENEFICIO_INSS: IService = {
   name: "cartão benefício inss",
   description: "Tenha liberdade e descomplique seus benefícios",
-  thumbUrl:
-    "/mulher-idosa-sorrindo-para-a-camera-com-um-telefone-segurando-uma-oferta-de-cartao-de-credito-e-debito-comprando-online_146482-2722.avif",
+  thumbUrl: "/cartao-beneficio-inss.png",
   slug: "cartao-beneficio-inss",
   Icon: CardGiftcardOutlinedIcon,
   mainDescription:
