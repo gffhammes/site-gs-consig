@@ -38,7 +38,7 @@ export const CustomImage = ({
         alt={alt}
         fill
         style={{ objectFit, objectPosition }}
-        unoptimized={false}
+        unoptimized={true}
       />
     </Box>
   );
