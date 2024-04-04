@@ -1,14 +1,6 @@
-import { SvgIconComponent } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Container,
-  IconProps,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Link from "next/link";
-import { HTMLAttributeAnchorTarget, JSXElementConstructor } from "react";
+import { HTMLAttributeAnchorTarget } from "react";
 import { IServiceIconTextItem } from "../PagesComponents/ProductsPage/services";
 
 export interface IIconTitleTextSectionProps {
@@ -25,7 +17,7 @@ export const IconTitleTextSection = ({
   return (
     <Container>
       <Stack gap={8} alignItems="center">
-        <Stack gap={6} direction="row">
+        <Stack gap={6} direction={{ xs: "column", md: "row" }}>
           {items.map((item, index) => (
             <Box
               key={index}

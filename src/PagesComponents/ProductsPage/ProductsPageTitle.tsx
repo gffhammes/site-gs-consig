@@ -2,12 +2,12 @@ import { Box, Typography } from "@mui/material";
 
 export interface IProductsPageTitleProps {}
 
-export const ProductsPageTitle = (props: IProductsPageTitleProps) => {
+export const ProductsPageTitle = () => {
   return (
-    <Box sx={{ p: 4 }}>
+    <Box sx={{ p: { xs: 0, md: 4 } }}>
       <Typography
         component="h1"
-        fontSize={50}
+        fontSize={{ xs: 32, md: 50 }}
         sx={{
           "& > strong": {
             color: "primary.main",

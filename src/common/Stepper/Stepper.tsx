@@ -21,9 +21,9 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
       case 3:
         return {
           xs: `
-            "number1        dot1     text1"
-            "number2        dot2     text2"
-            "number3        dot3     text3"
+            "number1  text1"
+            "number2  text2"
+            "number3  text3"
           `,
           md: `
           "text1        number2     text3      "
@@ -159,6 +159,7 @@ export const Stepper = ({ steps, titleMaxWidth }: IStepperProps) => {
                     xs: "auto",
                     md: isNumberBelowDot ? "flex-start" : "flex-end",
                   },
+                  justifySelf: { xs: "flex-end", md: "auto" },
                 }}
               >
                 {(index + 1).toLocaleString("pt-BR", {

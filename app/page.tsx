@@ -13,7 +13,7 @@ import { Stack } from "@mui/material";
 export default async function Home() {
   return (
     <main>
-      <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: { xs: 0, lg: 16 } }}>
+      <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
         <Stack>
           <HomePageBanner />
 

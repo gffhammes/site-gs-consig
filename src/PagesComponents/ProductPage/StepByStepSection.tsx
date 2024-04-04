@@ -1,7 +1,7 @@
 "use client";
 
 import { Box, Container, Stack, Typography } from "@mui/material";
-import { IStep, Stepper } from "../common/Stepper/Stepper";
+import { IStep, Stepper } from "../../common/Stepper/Stepper";
 
 export interface IStepByStepSectionProps {
   steps: IStep[];
@@ -10,7 +10,7 @@ export interface IStepByStepSectionProps {
 export const StepByStepSection = ({ steps }: IStepByStepSectionProps) => {
   return (
     <Box sx={{ backgroundColor: "#f4f4f4", py: 16 }}>
-      <Container disableGutters>
+      <Container>
         <Stack alignItems="center" width="100%" gap={8}>
           <Typography variant="h2">Como funciona</Typography>
 

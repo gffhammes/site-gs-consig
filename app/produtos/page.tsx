@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Produtos() {
   return (
-    <Stack gap={16} sx={{ pb: 16 }}>
+    <Stack gap={{ xs: 8, md: 16 }} sx={{ pb: 16 }}>
       <PageBannerImage imageSrc={Image.src} />
 
       <ProductsPageGrid />

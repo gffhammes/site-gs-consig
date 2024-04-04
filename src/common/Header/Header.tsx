@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import { CustomImage } from "../CustomImage";
 import Logo from "../../../public/logo-gsconsig-horizontal.png";
 import Link from "next/link";
@@ -8,6 +8,7 @@ import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { NavigationMenu } from "./NavigationMenu";
 import { CircularButton } from "../CircularButton/CircularButton";
 import { generateMainWhatsappLink } from "@/src/utils/helpers";
+import { MobileSidebar } from "./MobileSidebar";
 
 export interface IHeaderProps {}
 
@@ -47,7 +48,14 @@ export const Header = () => {
               />
             </Link>
 
-            <Stack direction="row" alignItems="center" gap={2}>
+            <MobileSidebar />
+
+            <Stack
+              direction="row"
+              alignItems="center"
+              gap={2}
+              display={{ xs: "none", md: "flex" }}
+            >
               <NavigationMenu direction="row" color="white" />
 
               <CircularButton

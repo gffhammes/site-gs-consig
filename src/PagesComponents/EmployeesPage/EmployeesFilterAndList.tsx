@@ -5,7 +5,7 @@ import { EmployeesList } from "./EmployeesList";
 import { EmployessFilters } from "./EmployessFilters";
 import { IEmployee, employees } from "../../types/employees";
 import { toNormalForm } from "../../utils/helpers";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 export interface IEmployeesFilterAndListProps {}
@@ -72,7 +72,7 @@ export const EmployeesFilterAndList = () => {
   }, [filters.products, filters.search]);
 
   return (
-    <Stack gap={16}>
+    <Stack gap={{ xs: 8, md: 16 }}>
       <Container disableGutters={!sm} maxWidth="lg">
         <Stack gap={4}>
           <Container disableGutters={sm}>

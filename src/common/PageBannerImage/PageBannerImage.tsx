@@ -12,6 +12,7 @@ export const PageBannerImage = ({ imageSrc }: IPageBannerImageProps) => {
       width="100%"
       alt="Banner"
       objectFit="cover"
+      objectPosition="center right"
     />
   );
 };

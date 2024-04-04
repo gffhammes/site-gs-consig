@@ -18,6 +18,7 @@ export const MobileSidebar = () => {
         color="primary"
         onClick={handleOpen}
         aria-label="open navigation menu"
+        sx={{ display: { xs: "block", md: "none" } }}
       >
         <MenuIcon />
       </IconButton>
@@ -26,7 +27,7 @@ export const MobileSidebar = () => {
         anchor="right"
         open={open}
         onClose={handleClose}
-        sx={{ zIndex: 10000 }}
+        sx={{ zIndex: 10000, display: { xs: "block", md: "none" } }}
         PaperProps={{ sx: { width: "15rem" } }}
       >
         <Stack
