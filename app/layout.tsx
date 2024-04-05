@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Nunito_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import ThemeRegistry from "./ThemeRegistry";
 import { Header } from "@/src/common/Header/Header";
@@ -8,7 +8,7 @@ import { Footer } from "@/src/common/Footer/Footer";
 import { WhatsAppFloatingButton } from "@/src/common/WhatsAppFloatingButton";
 import { GoogleAnalytics } from "@next/third-parties/google";
 
-const nunito = Nunito_Sans({ subsets: ["latin"] });
+const roboto = Roboto({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
   title: "GS Consig",
@@ -32,7 +32,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className={nunito.className}>
+      <body className={roboto.className}>
         <ThemeRegistry options={{ key: "mui" }}>
           <SplashScreen />
 

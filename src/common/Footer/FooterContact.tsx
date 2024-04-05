@@ -28,10 +28,11 @@ export const FooterContact = () => {
             target="_blank"
             width="fit-content"
             gap={1}
+            color="white"
           >
             <contact.Icon />
 
-            <Typography>{contact.text}</Typography>
+            <Typography color="inherit">{contact.text}</Typography>
           </Stack>
         );
       }}

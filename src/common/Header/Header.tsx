@@ -1,60 +1,73 @@
 "use client";
 
-import { Box, Container, Stack, useScrollTrigger } from "@mui/material";
+import { Box, Container, Stack } from "@mui/material";
 import { CustomImage } from "../CustomImage";
 import Logo from "../../../public/logo-gsconsig-horizontal.png";
-import { MobileSidebar } from "./MobileSidebar";
 import Link from "next/link";
 import { useBreakpoint } from "@/src/hooks/useBreakpoint";
 import { NavigationMenu } from "./NavigationMenu";
+import { CircularButton } from "../CircularButton/CircularButton";
+import { generateMainWhatsappLink } from "@/src/utils/helpers";
+import { MobileSidebar } from "./MobileSidebar";
 
 export interface IHeaderProps {}
 
 export const Header = () => {
   const { md } = useBreakpoint();
-
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
+  const whatsappLink = generateMainWhatsappLink();
 
   return (
     <Box
-      sx={{
-        position: "sticky",
-        top: 0,
-        width: "100%",
-        backgroundColor: "rgba(255, 255, 255, 0.8)",
-        borderBottom: trigger ? "1px solid #E5EAF2" : "1px solid white",
-        backdropFilter: "blur(8px)",
-        transition: ".5s ease all",
-        zIndex: 9999,
-        py: 1,
-        overflowX: "hidden",
-        overflowY: "visible",
-      }}
+      sx={{ width: "100%", position: "fixed", top: 0, zIndex: 9999 }}
+      component="header"
     >
-      <Container>
-        <Stack
-          direction="row"
-          alignItems="center"
-          justifyContent="space-between"
+      <Container sx={{ pt: 2 }}>
+        <Box
+          sx={{
+            backgroundColor: "rgb(80 80 80 / 50%)",
+            borderRadius: 999,
+            backdropFilter: "blur(10px)",
+          }}
         >
-          <Link href="/">
-            <CustomImage
-              src={Logo.src}
-              alt="Logo GS Consig"
-              width={md ? "14rem" : "10rem"}
-              height={md ? "4rem" : "2rem"}
-              objectPosition="left"
-              sx={{
-                transition: ".3s ease all",
-              }}
-            />
-          </Link>
+          <Stack
+            direction="row"
+            alignItems="center"
+            justifyContent="space-between"
+            sx={{ py: 1, px: 2 }}
+          >
+            <Link href="/">
+              <CustomImage
+                src={Logo.src}
+                alt="Logo GS Consig"
+                width={md ? "14rem" : "10rem"}
+                height={md ? "3rem" : "2rem"}
+                objectPosition="left"
+                sx={{
+                  transition: ".3s ease all",
+                }}
+              />
+            </Link>
 
-          {md ? <NavigationMenu direction="row" /> : <MobileSidebar />}
-        </Stack>
+            <MobileSidebar />
+
+            <Stack
+              direction="row"
+              alignItems="center"
+              gap={2}
+              display={{ xs: "none", md: "flex" }}
+            >
+              <NavigationMenu direction="row" color="white" />
+
+              <CircularButton
+                variant="contained"
+                LinkComponent="a"
+                href={whatsappLink}
+              >
+                Entre em contato
+              </CircularButton>
+            </Stack>
+          </Stack>
+        </Box>
       </Container>
     </Box>
   );

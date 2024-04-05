@@ -12,7 +12,7 @@ export default function ThemeRegistry(props: any) {
 
   const theme = createTheme(
     {
-      palette: { primary: { main: "#228CC8" } },
+      palette: { primary: { main: "#548DC2" } },
       typography: {
         fontFamily: "inherit",
         h1: {
@@ -29,7 +29,7 @@ export default function ThemeRegistry(props: any) {
           },
         },
         h2: {
-          fontSize: 24,
+          fontSize: 32,
           fontWeight: 500,
           lineHeight: 1,
         },
@@ -47,6 +47,7 @@ export default function ThemeRegistry(props: any) {
           fontWeight: "bold",
         },
       },
+      components: { MuiButton: { defaultProps: { sx: { borderRadius: 3 } } } },
     },
     ptBR
   );

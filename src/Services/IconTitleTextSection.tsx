@@ -1,17 +1,10 @@
-import { SvgIconComponent } from "@mui/icons-material";
-import {
-  Box,
-  Button,
-  Container,
-  IconProps,
-  Stack,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import Link from "next/link";
-import { HTMLAttributeAnchorTarget, JSXElementConstructor } from "react";
+import { HTMLAttributeAnchorTarget } from "react";
+import { IServiceIconTextItem } from "../PagesComponents/ProductsPage/services";
 
 export interface IIconTitleTextSectionProps {
-  items: IIconTitleText[];
+  items: IServiceIconTextItem[];
   buttonLink: string;
   target?: HTMLAttributeAnchorTarget;
 }
@@ -22,9 +15,9 @@ export const IconTitleTextSection = ({
   target,
 }: IIconTitleTextSectionProps) => {
   return (
-    <Container maxWidth="xs">
+    <Container>
       <Stack gap={8} alignItems="center">
-        <Stack gap={6}>
+        <Stack gap={6} direction={{ xs: "column", md: "row" }}>
           {items.map((item, index) => (
             <Box
               key={index}
@@ -62,7 +55,6 @@ export const IconTitleTextSection = ({
           href={buttonLink}
           target={target}
           variant="contained"
-          sx={{ width: "fit-content" }}
         >
           SIMULE AGORA
         </Button>
@@ -70,9 +62,3 @@ export const IconTitleTextSection = ({
     </Container>
   );
 };
-
-export interface IIconTitleText {
-  icon: JSXElementConstructor<IconProps<SvgIconComponent>>;
-  title: string;
-  text: string;
-}

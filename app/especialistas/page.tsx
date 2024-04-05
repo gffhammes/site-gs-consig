@@ -1,6 +1,8 @@
-import { EmployeesFilterAndList } from "@/src/EmployeesPage/EmployeesFilterAndList";
+import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
+import { EmployeesFilterAndList } from "@/src/PagesComponents/EmployeesPage/EmployeesFilterAndList";
 import { Stack } from "@mui/material";
 import { Metadata } from "next";
+import Image from "../../public/banner-especialistas.jpg";
 
 export const metadata: Metadata = {
   title: "Especialistas | GS Consig",
@@ -10,7 +12,9 @@ export const metadata: Metadata = {
 
 export default function Especialistas() {
   return (
-    <Stack gap={{ xs: 2, md: 2 }} sx={{ pt: 4, pb: 16 }}>
+    <Stack gap={{ xs: 8, md: 16 }} sx={{ pb: 16 }}>
+      <PageBannerImage imageSrc={Image.src} />
+
       <EmployeesFilterAndList />
     </Stack>
   );

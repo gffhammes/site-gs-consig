@@ -1,26 +1,47 @@
-import { Box, Button, Container, Stack, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Container,
+  Stack,
+  SxProps,
+  Typography,
+} from "@mui/material";
 import { InterestRateChart } from "./InterestRateChart";
 import { generateMainWhatsappLink } from "@/src/utils/helpers";
+import EastIcon from "@mui/icons-material/East";
 
-export interface IInterestRateSectionProps {}
+export interface IInterestRateSectionProps {
+  wrapperSx?: SxProps;
+}
 
-export const InterestRateSection = () => {
+export const InterestRateSection = ({
+  wrapperSx,
+}: IInterestRateSectionProps) => {
   return (
-    <Box>
+    <Box sx={{ ...wrapperSx }}>
       <Container>
         <Stack
-          direction={{ xs: "column", md: "row" }}
+          direction={{ xs: "column-reverse", md: "row" }}
           gap={8}
           alignItems="center"
           justifyContent="center"
         >
-          <Stack gap={4}>
+          <InterestRateChart />
+
+          <Stack gap={4} alignItems={{ xs: "center", md: "flex-start" }}>
             <Stack gap={2}>
-              <Typography variant="h2" color="primary" maxWidth="14ch">
+              <Typography
+                variant="h2"
+                color="primary"
+                textAlign={{ xs: "center", md: "left" }}
+              >
                 As melhores taxas do mercado
               </Typography>
 
-              <Typography maxWidth="26rem">
+              <Typography
+                maxWidth="26rem"
+                textAlign={{ xs: "center", md: "left" }}
+              >
                 Nossa equipe de especialistas está sempre em busca dos melhores
                 produtos para te oferecer as menores taxas
               </Typography>
@@ -28,16 +49,13 @@ export const InterestRateSection = () => {
 
             <Button
               variant="contained"
-              sx={{ width: "fit-content" }}
+              endIcon={<EastIcon />}
               LinkComponent="a"
               href={generateMainWhatsappLink()}
-              target="_blank"
             >
-              Simular agora
+              SIMULAR AGORA
             </Button>
           </Stack>
-
-          <InterestRateChart />
         </Stack>
       </Container>
     </Box>

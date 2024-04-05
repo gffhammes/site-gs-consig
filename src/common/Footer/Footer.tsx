@@ -8,15 +8,15 @@ export interface IFooterProps {}
 
 export const Footer = () => {
   return (
-    <Box component="footer" sx={{ backgroundColor: "#F4F4F4", py: 10 }}>
+    <Box component="footer" sx={{ backgroundColor: "#1e1e1e", py: 10 }}>
       <Container>
-        <Stack gap={4}>
+        <Stack gap={6}>
           <Box
             display="grid"
             gridTemplateColumns={{
               xs: "1fr",
               sm: "1fr 1fr",
-              md: "auto auto auto",
+              md: "1fr auto auto",
             }}
             justifyContent={{ xs: "center", sm: "flex-start" }}
             gridTemplateAreas={{
@@ -30,7 +30,7 @@ export const Footer = () => {
               "contact  siteMap"
             `,
               md: `
-              "logo contact siteMap"
+              "logo siteMap contact"
             `,
             }}
             gap={{ xs: 8, md: 20 }}
@@ -39,12 +39,12 @@ export const Footer = () => {
           >
             <FooterLogoAndSocial />
 
-            <FooterContact />
-
             <FooterSiteMap />
+
+            <FooterContact />
           </Box>
 
-          <Divider />
+          <Divider sx={{ borderColor: "rgba(255, 255, 255, 0.2)" }} />
 
           <FooterText />
         </Stack>
