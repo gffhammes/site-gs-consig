@@ -1,6 +1,7 @@
 import { Container, Paper, Stack, Typography } from "@mui/material";
 import { services } from "../ProductsPage/services";
 import { ArrowButton } from "../../common/ArrowButton/ArrowButton";
+import Link from "next/link";
 
 export interface IServicesButtonsProps {}
 
@@ -19,6 +20,8 @@ export const ServicesButtons = () => {
             key={service.name}
             elevation={5}
             sx={{ width: { xs: "45%", md: "100%" }, p: 2 }}
+            component={Link}
+            href={`/produtos/${service.slug}`}
           >
             <Stack height="100%" gap={2} alignItems="flex-start">
               <Stack flexGrow={1} gap={1}>
@@ -40,7 +43,7 @@ export const ServicesButtons = () => {
                 </Typography>
               </Stack>
 
-              <ArrowButton href={`/produtos/${service.slug}`} />
+              <ArrowButton />
             </Stack>
           </Paper>
         ))}
