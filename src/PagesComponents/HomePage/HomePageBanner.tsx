@@ -9,7 +9,7 @@ export const HomePageBanner = () => {
     <Box
       sx={{
         height: { xs: "50vh", md: "100vh" },
-        backgroundImage: "url(/imagem-6.png)",
+        backgroundImage: "url(/imagem-6.webp)",
         backgroundSize: "cover",
         backgroundPosition: "left center",
       }}

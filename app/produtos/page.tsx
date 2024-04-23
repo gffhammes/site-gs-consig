@@ -3,7 +3,7 @@ import { InterestRateSection } from "@/src/common/InterestRateSection/InterestRa
 import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
 import { Stack } from "@mui/material";
 import { Metadata } from "next";
-import Image from "../../public/banner-produtos.jpg";
+import Image from "../../public/banner-produtos.webp";
 import { ProductsPageGrid } from "@/src/PagesComponents/ProductsPage/ProductsPageGrid";
 
 export const metadata: Metadata = {

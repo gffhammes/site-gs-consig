@@ -47,7 +47,7 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
   return (
     <Box
       sx={{
-        backgroundImage: "url(/imagem-1.png)",
+        backgroundImage: "url(/imagem-1.webp)",
         backgroundSize: "cover",
         backgroundPosition: "bottom",
       }}

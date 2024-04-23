@@ -48,7 +48,7 @@ export interface IService {
 export const SERVICO_PORTABILIDADE: IService = {
   name: "portabilidade inss",
   description: "Diminua sua taxa e ganhe dinheiro de volta",
-  thumbUrl: "/portabilidade-inss.png",
+  thumbUrl: "/portabilidade-inss.webp",
   slug: "portabilidade-inss",
   Icon: PublishedWithChangesIcon,
   mainDescription:
@@ -109,7 +109,7 @@ export const SERVICO_PORTABILIDADE: IService = {
 export const SERVICO_CREDITO_NOVO: IService = {
   name: "crédito novo inss",
   description: "Condições especiais para realizar seus sonhos",
-  thumbUrl: "/credito-novo-inss.png",
+  thumbUrl: "/credito-novo-inss.webp",
   slug: "credito-novo-inss",
   Icon: PaidOutlinedIcon,
   mainDescription:
@@ -173,7 +173,7 @@ Com taxas competitivas, prazos flexíveis e um processo rápido e descomplicado,
 export const CONSIGNADO_INSS: IService = {
   name: "consignado inss",
   description: "Desconto em folha: Prático e sem estresse.",
-  thumbUrl: "/consignado-inss.png",
+  thumbUrl: "/consignado-inss.webp",
   slug: "consignado-inss",
   Icon: ReceiptLongOutlinedIcon,
   mainDescription:
@@ -236,7 +236,7 @@ export const CONSIGNADO_INSS: IService = {
 export const CARTAO_CONSIGNADO_INSS: IService = {
   name: "cartão consignado inss",
   description: "Praticidade e segurança para seu dia-a-dia",
-  thumbUrl: "/cartao-consignado-inss.png",
+  thumbUrl: "/cartao-consignado-inss.webp",
   slug: "cartao-consignado-inss",
   Icon: AddCardOutlinedIcon,
   mainDescription:
@@ -297,7 +297,7 @@ export const CARTAO_CONSIGNADO_INSS: IService = {
 export const CARTAO_BENEFICIO_INSS: IService = {
   name: "cartão benefício inss",
   description: "Tenha liberdade e descomplique seus benefícios",
-  thumbUrl: "/cartao-beneficio-inss.png",
+  thumbUrl: "/cartao-beneficio-inss.webp",
   slug: "cartao-beneficio-inss",
   Icon: CardGiftcardOutlinedIcon,
   mainDescription:

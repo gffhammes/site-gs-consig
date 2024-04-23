@@ -2,7 +2,7 @@ import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
 import { EmployeesFilterAndList } from "@/src/PagesComponents/EmployeesPage/EmployeesFilterAndList";
 import { Stack } from "@mui/material";
 import { Metadata } from "next";
-import Image from "../../public/banner-especialistas.jpg";
+import Image from "../../public/banner-especialistas.webp";
 
 export const metadata: Metadata = {
   title: "Especialistas | GS Consig",
