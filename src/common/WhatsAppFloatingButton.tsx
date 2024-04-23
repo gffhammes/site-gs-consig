@@ -16,6 +16,7 @@ export const WhatsAppFloatingButton = () => {
         borderRadius: 100,
         backgroundColor: "#0CC144",
         color: "white",
+        zIndex: 999,
       }}
       component="a"
       href={whatsappLink}
