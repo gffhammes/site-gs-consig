@@ -104,6 +104,12 @@ export const employees: IEmployee[] = [
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "11962251489",
   },
+  {
+    avatar: `${avatarBasePath}/AT01.webp`,
+    name: "Consultora Paolla Maivorme",
+    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    whatsapp: "9999999999",
+  },
 ];
 
 export const allEmployeesAvailableProducts: string[] = [];
