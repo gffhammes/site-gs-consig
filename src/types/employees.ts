@@ -51,12 +51,6 @@ export const employees: IEmployee[] = [
     whatsapp: "11938042516",
   },
   {
-    avatar: `${avatarBasePath}/AT08.webp`,
-    name: "Consultora Luciana Lunkes",
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47992503966",
-  },
-  {
     avatar: `${avatarBasePath}/AT09.webp`,
     name: "Consultor Tainã D Avila",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
