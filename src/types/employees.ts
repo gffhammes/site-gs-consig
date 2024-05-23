@@ -88,15 +88,45 @@ export const employees: IEmployee[] = [
   },
   {
     avatar: `${avatarBasePath}/AT14.webp`,
-    name: "Consultor Isaque da Silva",
+    name: "Consultor Lucian Oliveira",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "11938043490",
+    whatsapp: "47992503966",
   },
   {
     avatar: `${avatarBasePath}/AT15.webp`,
     name: "Consultora Fernanda Guidine",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "11938043472",
+  },
+  {
+    avatar: `${avatarBasePath}/AT16.webp`,
+    name: "Consultora Paulo Galvão",
+    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    whatsapp: "11938041995",
+  },
+  {
+    avatar: `${avatarBasePath}/AT18.webp`,
+    name: "Consultora Paolla Maivorme",
+    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    whatsapp: "47996520793",
+  },
+  {
+    avatar: `${avatarBasePath}/AT19.webp`,
+    name: "Consultora Maria Eduarda",
+    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    whatsapp: "47984890666",
+  },
+  {
+    avatar: `${avatarBasePath}/AT20.webp`,
+    name: "Consultora Paulo Cavalcante",
+    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    whatsapp: "11930040417",
+  },
+  {
+    avatar: `${avatarBasePath}/AT21.webp`,
+    name: "Consultora Naian de Oliveira",
+    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    whatsapp: "11949165470",
   },
   {
     avatar: `${avatarBasePath}/AT22.webp`,
