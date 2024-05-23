@@ -42,19 +42,13 @@ export const employees: IEmployee[] = [
     avatar: `${avatarBasePath}/AT06.webp`,
     name: "Consultor Gustavo Rosati",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997398552",
+    whatsapp: "47996520303",
   },
   {
     avatar: `${avatarBasePath}/AT07.webp`,
     name: "Consultor Gabriel Corrente",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "11938042516",
-  },
-  {
-    avatar: `${avatarBasePath}/AT08.webp`,
-    name: "Consultora Luciana Lunkes",
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47992503966",
   },
   {
     avatar: `${avatarBasePath}/AT09.webp`,
