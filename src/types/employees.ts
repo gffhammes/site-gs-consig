@@ -94,7 +94,7 @@ export const employees: IEmployee[] = [
   },
   {
     avatar: `${avatarBasePath}/AT16.webp`,
-    name: "Consultora Paulo Galvão",
+    name: "Consultor Paulo Galvão",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "11938041995",
   },
@@ -112,7 +112,7 @@ export const employees: IEmployee[] = [
   },
   {
     avatar: `${avatarBasePath}/AT20.webp`,
-    name: "Consultora Paulo Cavalcante",
+    name: "Consultor Paulo Cavalcante",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "11930040417",
   },
