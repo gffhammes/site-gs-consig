@@ -24,13 +24,12 @@ export const EmployeeCard = ({
   name,
   products,
   whatsapp,
-  paperSx,
+  paperSx,genre
 }: IEmployeeCardProps) => {
   const whatsappLink = generateWhatsappLink(
     whatsapp,
-    `Olá! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!`
+    `Olá! Vim pelo site e gostaria de falar com ${genre==='M'?'o':'a'} ${name}`
   );
-
   return (
     <Stack sx={paperSx} alignItems="center" height="100%">
       <Avatar
