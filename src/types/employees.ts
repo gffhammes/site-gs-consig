@@ -31,13 +31,6 @@ export const employees: IEmployee[] = [
     whatsapp: "47997670085",
   },
   {
-    avatar: `${avatarBasePath}/AT05.webp`,
-    name: "Consultora Bruna Farias",
-    genre: 'F',
-    products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "47997670085",
-  },
-  {
     avatar: `${avatarBasePath}/AT06.webp`,
     name: "Consultor Gustavo Rosati",
     genre: 'M',
@@ -68,20 +61,6 @@ export const employees: IEmployee[] = [
   {
     avatar: `${avatarBasePath}/AT11.webp`,
     name: "Consultor João Omizolo",
-    genre: 'M',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT12.webp`,
-    name: "Consultor Everton Batista",
-    genre: 'M',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT13.webp`,
-    name: "Consultor Luiz Fernando",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "47997670085",
