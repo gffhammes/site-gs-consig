@@ -42,6 +42,7 @@ export const HomePageEmployees = () => {
                 name={employee.name}
                 products={employee.products}
                 whatsapp={employee.whatsapp}
+                genre={employee.genre}
                 paperSx={{
                   flexBasis: {
                     xs: "21rem",
