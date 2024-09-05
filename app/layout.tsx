@@ -6,7 +6,7 @@ import { Header } from "@/src/common/Header/Header";
 import { SplashScreen } from "@/src/common/SplashScreen";
 import { Footer } from "@/src/common/Footer/Footer";
 import { WhatsAppFloatingButton } from "@/src/common/WhatsAppFloatingButton";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import Script from "next/script";
 
 const roboto = Roboto({ subsets: ["latin"], weight: "500" });
@@ -32,6 +32,8 @@ export default function RootLayout({
           content="MiwgkR2Wdy0GS0qpeZE11KUmGPhWXH5EFwlXb8L4kxg"
         />
       </head>
+
+      <GoogleTagManager gtmId="AW-16685295513" />
 
       <body className={roboto.className}>
         <ThemeRegistry options={{ key: "mui" }}>
