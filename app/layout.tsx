@@ -33,7 +33,7 @@ export default function RootLayout({
         />
       </head>
 
-      <GoogleTagManager gtmId="AW-16685295513" />
+      <GoogleTagManager gtmId="GTM-TCHCD4TL" />
 
       <body className={roboto.className}>
         <ThemeRegistry options={{ key: "mui" }}>
