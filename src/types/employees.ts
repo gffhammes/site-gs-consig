@@ -24,96 +24,62 @@ export const employees: IEmployee[] = [
     whatsapp: "47997670085",
   },
   {
+    avatar: `${avatarBasePath}/AT03.webp`,
+    name: "Consultora Fernanda Andressa",
+    genre: 'F',
+    products: ["SAQUE FGTS"],
+    whatsapp: "47997670085"
+  },
+  {
     avatar: `${avatarBasePath}/AT04.webp`,
     name: "Consultora Alexandra Oliveira",
     genre: 'F',
     products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "47997670085",
+    whatsapp: "47997670085"
   },
   {
     avatar: `${avatarBasePath}/AT06.webp`,
     name: "Consultor Gustavo Rosati",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
+    whatsapp: "47997670085"
   },
-  {
-    avatar: `${avatarBasePath}/AT07.webp`,
-    name: "Consultor Gabriel Corrente",
-    genre: 'M',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
+
   {
     avatar: `${avatarBasePath}/AT09.webp`,
     name: "Consultor Tainã D Avila",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
+    whatsapp: "47997670085"
   },
   {
     avatar: `${avatarBasePath}/AT10.webp`,
     name: "Consultor Jonathan Caixão",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
+    whatsapp: "47997670085"
   },
   {
     avatar: `${avatarBasePath}/AT11.webp`,
     name: "Consultor João Omizolo",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
+    whatsapp: "47997670085"
   },
   {
     avatar: `${avatarBasePath}/AT14.webp`,
     name: "Consultor Lucian Oliveira",
     genre: 'M',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT15.webp`,
-    name: "Consultora Fernanda Guidine",
-    genre: 'F',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT16.webp`,
-    name: "Consultor Paulo Galvão",
-    genre: 'M',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
+    products: ["PORTABILIDADE", "REFINANCIAMENTO"],
+    whatsapp: "47997670085"
   },
   {
     avatar: `${avatarBasePath}/AT18.webp`,
     name: "Consultora Paolla Maivorme",
     genre: 'F',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT19.webp`,
-    name: "Consultora Maria Eduarda",
-    genre: 'F',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT21.webp`,
-    name: "Consultora Naian de Oliveira",
-    genre: 'F',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
-  {
-    avatar: `${avatarBasePath}/AT22.webp`,
-    name: "Consultor Luiz Ilmar",
-    genre: 'M',
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "47997670085",
-  },
+    products: ["PORTABILIDADE", "REFINANCIAMENTO"],
+    whatsapp: "47997670085"
+  }
 ];
 
 export const allEmployeesAvailableProducts: string[] = [];
