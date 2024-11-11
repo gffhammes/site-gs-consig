@@ -3,7 +3,10 @@
 import {
   Box,
   Button,
+  Checkbox,
   Container,
+  FormControl,
+  FormControlLabel,
   Paper,
   Stack,
   Typography,
@@ -13,6 +16,7 @@ import { MAIN_WHATSAPP, generateWhatsappLink } from "../utils/helpers";
 import { FormikTextField } from "../common/form/FormikTextField";
 import { CPFInput } from "../common/form/CPFInput";
 import { PhoneInput } from "../common/form/PhoneInput";
+import { CustomCheckbox } from "../common/form/CustomCheckbox";
 
 export interface IServiceSimulatorProps {
   product: string;
@@ -39,6 +43,10 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
 
     if (values.nome === "") {
       errors.nome = "Campo obrigatório";
+    }
+
+    if (values.agree === false) {
+      errors.agree = "Obrigatório";
     }
 
     return errors;
@@ -93,6 +101,7 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
                   nome: "",
                   cpf: "",
                   contato: "",
+                  agree: false,
                 }}
                 validate={validate}
                 onSubmit={(values) => {
@@ -108,13 +117,14 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
                     <CPFInput name="cpf" label="Seu CPF" />
 
                     <PhoneInput name="contato" label="Seu telefone (com DDD)" />
+
+                    <CustomCheckbox
+                      label="Aceito os Termos de uso"
+                      name="agree"
+                    />
                   </Stack>
                 </Form>
               </Formik>
-
-              <Typography variant="caption">
-                Não armazenamos nenhum dado
-              </Typography>
 
               <Box>
                 <Button
@@ -138,4 +148,5 @@ export interface IServiceSimulatorValues {
   nome: string;
   cpf: string;
   contato: string;
+  agree: boolean;
 }
