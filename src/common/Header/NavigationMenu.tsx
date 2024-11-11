@@ -45,10 +45,14 @@ export const pages: IPage[] = [
     route: "/especialistas",
     title: "Especialistas",
   },
-  // {
-  //   route: "/blog",
-  //   title: "Blog",
-  // },
+  {
+  route: "/politicadeprivacidade",
+  title: "Politicas de Privacidade",
+  },
+  {
+  route: "/termos",
+  title: "Termos de Uso",
+  },
   // {
   //   route: "/contato",
   //   title: "Contato",
