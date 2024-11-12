@@ -7,8 +7,11 @@ import {
   Paper,
   Stack,
   Typography,
+  Link,
+  Checkbox,
+  FormControlLabel,
 } from "@mui/material";
-import { Form, Formik, FormikErrors } from "formik";
+import { Form, Formik, FormikErrors, Field } from "formik";
 import { MAIN_WHATSAPP, generateWhatsappLink } from "../utils/helpers";
 import { FormikTextField } from "../common/form/FormikTextField";
 import { CPFInput } from "../common/form/CPFInput";
@@ -39,6 +42,10 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
 
     if (values.nome === "") {
       errors.nome = "Campo obrigatório";
+    }
+
+    if (!values.termos) {
+      errors.termos = "Você deve aceitar os Termos de Uso";
     }
 
     return errors;
@@ -74,7 +81,7 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
             Preencha o formulário
             <br /> e faça uma{" "}
             <strong>
-              simulaçao
+              simulação
               <br /> sem compromisso
             </strong>
           </Typography>
@@ -93,6 +100,7 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
                   nome: "",
                   cpf: "",
                   contato: "",
+                  termos: false,
                 }}
                 validate={validate}
                 onSubmit={(values) => {
@@ -104,17 +112,31 @@ export const ServiceSimulator = ({ product }: IServiceSimulatorProps) => {
                 <Form id="simulador" noValidate>
                   <Stack gap={2}>
                     <FormikTextField name="nome" label="Seu nome" required />
-
                     <CPFInput name="cpf" label="Seu CPF" />
-
                     <PhoneInput name="contato" label="Seu telefone (com DDD)" />
+
+                    <Field name="termos">
+                      {({ field }: any) => (
+                        <FormControlLabel
+                          control={<Checkbox {...field} />}
+                          label={
+                            <Typography variant="caption">
+                              Eu aceito os{" "}
+                              <Link
+                                href="/termos"
+                                underline="hover"
+                                target="_blank"
+                              >
+                                Termos de Uso
+                              </Link>
+                            </Typography>
+                          }
+                        />
+                      )}
+                    </Field>
                   </Stack>
                 </Form>
               </Formik>
-
-              <Typography variant="caption">
-                Não armazenamos nenhum dado
-              </Typography>
 
               <Box>
                 <Button
@@ -138,4 +160,5 @@ export interface IServiceSimulatorValues {
   nome: string;
   cpf: string;
   contato: string;
+  termos: boolean;
 }
