@@ -30,7 +30,7 @@ export const MAIN_WHATSAPP = "8000065065";
 export const generateMainWhatsappLink = () => {
   return generateWhatsappLink(
     MAIN_WHATSAPP,
-    `Olá! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!!`
+    `Olá! Vim pelo site e gostaria de mais informações sobre os serviços da GS CONSIG!`
   );
 };
 
