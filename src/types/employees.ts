@@ -14,28 +14,28 @@ export const employees: IEmployee[] = [
     genre: 'M',
     name: "Consultor Kaue Pereira",
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065",
+    whatsapp: "11930080551",
   },
   {
     avatar: `${avatarBasePath}/AT02.webp`,
     name: "Consultora Virgínia Gratão",
     genre: 'F',
     products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065",
+    whatsapp: "11930080551",
   },
   {
     avatar: `${avatarBasePath}/AT04.webp`,
     name: "Consultora Alexandra Oliveira",
     genre: 'F',
     products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   },
   {
     avatar: `${avatarBasePath}/AT06.webp`,
     name: "Consultor Gustavo Rosati",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   },
 
   {
@@ -43,35 +43,35 @@ export const employees: IEmployee[] = [
     name: "Consultor Tainã D Avila",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   },
   {
     avatar: `${avatarBasePath}/AT10.webp`,
     name: "Consultor Jonathan Caixão",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   },
   {
     avatar: `${avatarBasePath}/AT11.webp`,
     name: "Consultor João Omizolo",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   },
   {
     avatar: `${avatarBasePath}/AT14.webp`,
     name: "Consultor Lucian Oliveira",
     genre: 'M',
     products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   },
   {
     avatar: `${avatarBasePath}/AT18.webp`,
     name: "Consultora Paolla Maivorme",
     genre: 'F',
     products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080551"
   }
 ];
 
