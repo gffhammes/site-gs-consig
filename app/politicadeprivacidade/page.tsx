@@ -1,6 +1,7 @@
 import { domainMessages } from "@/src/common/Footer/FooterText";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { headers } from "next/headers";
+import Link from "next/link";
 
 export default async function Home() {
   const headersList = headers();
@@ -23,8 +24,8 @@ export default async function Home() {
           <Typography>
             A sua privacidade é importante para nós. É política do {companyName}{" "}
             respeitar a sua privacidade em relação a qualquer informação sua que
-            possamos coletar no site <a href={host}>{companyName}</a>, e outros
-            sites que possuímos e operamos.
+            possamos coletar no site <Link href="/">{companyName}</Link>, e
+            outros sites que possuímos e operamos.
           </Typography>
 
           <Typography>
