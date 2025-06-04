@@ -1,6 +1,15 @@
+import { domainMessages } from "@/src/common/Footer/FooterText";
 import { Box, Container, Stack, Typography } from "@mui/material";
+import { headers } from "next/headers";
 
 export default async function Home() {
+  const headersList = headers();
+  const host = headersList.get("host") || "";
+  const domain = host.replace(/^www\./, "");
+
+  const match = domainMessages.find((item) => domain.includes(item.domain));
+  const companyName = match?.companyName || domainMessages[0].companyName;
+
   return (
     <main>
       <Stack gap={{ xs: 16, md: 20 }} sx={{ pb: 16 }}>
@@ -12,11 +21,10 @@ export default async function Home() {
           </Typography>
 
           <Typography>
-            A sua privacidade é importante para nós. É política do GS Consig
+            A sua privacidade é importante para nós. É política do {companyName}{" "}
             respeitar a sua privacidade em relação a qualquer informação sua que
-            possamos coletar no site{" "}
-            <a href="https://www.gsconsig.com.br">GS Consig</a>, e outros sites
-            que possuímos e operamos.
+            possamos coletar no site <a href={host}>{companyName}</a>, e outros
+            sites que possuímos e operamos.
           </Typography>
 
           <Typography>
@@ -65,7 +73,7 @@ export default async function Home() {
 
           <Typography>
             O usuário se compromete a fazer uso adequado dos conteúdos e da
-            informação que o GS Consig oferece no site e com caráter
+            informação que o {companyName} oferece no site e com caráter
             enunciativo, mas não limitativo:
           </Typography>
 
@@ -93,7 +101,7 @@ export default async function Home() {
             <li>
               <Typography>
                 C) Não causar danos aos sistemas físicos (hardwares) e lógicos
-                (softwares) do GS Consig, de seus fornecedores ou terceiros,
+                (softwares) do {companyName}, de seus fornecedores ou terceiros,
                 para introduzir ou disseminar vírus informáticos ou quaisquer
                 outros sistemas de hardware ou software que sejam capazes de
                 causar danos anteriormente mencionados.

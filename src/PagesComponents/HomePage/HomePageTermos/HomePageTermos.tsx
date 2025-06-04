@@ -1,8 +1,17 @@
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { PageBannerImage } from "@/src/common/PageBannerImage/PageBannerImage";
 import BannerImage from "@/public/banner-especialistas.webp"; // Substitua pelo caminho correto da imagem
+import { domainMessages } from "@/src/common/Footer/FooterText";
+import { headers } from "next/headers";
 
 export const HomePageTermos = () => {
+  const headersList = headers();
+  const host = headersList.get("host") || "";
+  const domain = host.replace(/^www\./, "");
+
+  const match = domainMessages.find((item) => domain.includes(item.domain));
+  const companyName = match?.companyName || domainMessages[0].companyName;
+
   return (
     <Box>
       {/* Adicionar o Banner no Topo */}
@@ -12,15 +21,15 @@ export const HomePageTermos = () => {
         <Container>
           <Stack gap={4}>
             <Typography variant="h1" textAlign="center" gutterBottom>
-              Termos de Uso e Serviço da GS Consig
+              Termos de Uso e Serviço da {companyName}
             </Typography>
 
             <Typography variant="body1" paragraph>
-              Seja Bem-Vindo ao site da GS Consig. Antes de explorar tudo o que
-              temos a oferecer, é importante que você entenda e concorde com
-              algumas regras básicas que regem o uso do nosso site
-              www.gsconsig.com.br, e qualquer outro serviço digital que nós
-              oferecemos, como lojas e plataformas de e-commerce.
+              Seja Bem-Vindo ao site da {companyName}. Antes de explorar tudo o
+              que temos a oferecer, é importante que você entenda e concorde com
+              algumas regras básicas que regem o uso do nosso site {host}, e
+              qualquer outro serviço digital que nós oferecemos, como lojas e
+              plataformas de e-commerce.
             </Typography>
 
             <Typography variant="body1" paragraph>
@@ -35,7 +44,7 @@ export const HomePageTermos = () => {
               1. Aceitando os Termos
             </Typography>
             <Typography variant="body1" paragraph>
-              Ao navegar e usar o site da GS Consig, você concorda
+              Ao navegar e usar o site da {companyName}, você concorda
               automaticamente com nossas regras e condições. Estamos sempre
               procurando melhorar, então esses termos podem mudar de vez em
               quando. Se fizermos alterações significativas, vamos postar as
@@ -60,21 +69,21 @@ export const HomePageTermos = () => {
               3. Sua Privacidade
             </Typography>
             <Typography variant="body1" paragraph>
-              Na GS Consig, a privacidade é um valor essencial. Ao interagir com
-              nosso site, você aceita nossa Política de Privacidade, que detalha
-              nossa abordagem responsável e conforme às leis para o manejo dos
-              seus dados pessoais. Nosso compromisso é com a transparência e a
-              segurança: explicamos como coletamos, usamos e protegemos suas
-              informações, garantindo sua privacidade e oferecendo controle
-              sobre seus dados.
+              Na {companyName}, a privacidade é um valor essencial. Ao interagir
+              com nosso site, você aceita nossa Política de Privacidade, que
+              detalha nossa abordagem responsável e conforme às leis para o
+              manejo dos seus dados pessoais. Nosso compromisso é com a
+              transparência e a segurança: explicamos como coletamos, usamos e
+              protegemos suas informações, garantindo sua privacidade e
+              oferecendo controle sobre seus dados.
             </Typography>
 
             <Typography variant="h3" gutterBottom>
               4. Direitos de Conteúdo
             </Typography>
             <Typography variant="body1" paragraph>
-              O conteúdo disponível no site da GS Consig, incluindo, mas não se
-              limitando a, textos, imagens, ilustrações, designs, ícones,
+              O conteúdo disponível no site da {companyName}, incluindo, mas não
+              se limitando a, textos, imagens, ilustrações, designs, ícones,
               fotografias, programas de computador, videoclipes e áudios,
               constitui propriedade intelectual protegida tanto pela legislação
               nacional quanto por tratados internacionais sobre direitos
@@ -87,10 +96,10 @@ export const HomePageTermos = () => {
             <Typography variant="body1" paragraph>
               Utilizamos cookies para melhorar sua experiência, coletando
               informações anônimas durante sua visita, como suas preferências de
-              idioma, duração da visita, páginas acessadas, e outras estatísticas
-              de uso. Esses dados nos ajudam a personalizar seu conteúdo,
-              otimizar a navegação, melhorar continuamente o site em design e
-              funcionalidade, e garantir sua segurança online.
+              idioma, duração da visita, páginas acessadas, e outras
+              estatísticas de uso. Esses dados nos ajudam a personalizar seu
+              conteúdo, otimizar a navegação, melhorar continuamente o site em
+              design e funcionalidade, e garantir sua segurança online.
             </Typography>
 
             <Typography variant="h3" gutterBottom>
