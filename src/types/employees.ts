@@ -10,25 +10,18 @@ const avatarBasePath = "/fotos-consultores";
 
 export const employees: IEmployee[] = [
   {
-    avatar: `${avatarBasePath}/AT01.webp`,
-    genre: 'M',
-    name: "Consultor Kaue Pereira",
-    products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
+    avatar: `${avatarBasePath}/AT06.webp`,
+    genre: 'F',
+    name: "Consultora Tuani Dib",
+    products: ["SIAPE","CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO", "PORTABILIDADE", "REFINANCIAMENTO"],
     whatsapp: "8000065065",
   },
   {
-    avatar: `${avatarBasePath}/AT02.webp`,
-    name: "Consultora Virgínia Gratão",
+    avatar: `${avatarBasePath}/AT07.webp`,
+    name: "Consultor Yuri Gustavo",
     genre: 'F',
-    products: ["PORTABILIDADE", "REFINANCIAMENTO"],
+    products: ["PORTABILIDADE", "REFINANCIAMENTO", "CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
     whatsapp: "8000065065",
-  },
-  {
-    avatar: `${avatarBasePath}/AT04.webp`,
-    name: "Consultora Alexandra Oliveira",
-    genre: 'F',
-    products: ["PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065"
   },
   {
     avatar: `${avatarBasePath}/AT09.webp`,
@@ -42,13 +35,6 @@ export const employees: IEmployee[] = [
     name: "Consultor Jonathan Caixão",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
-  },
-  {
-    avatar: `${avatarBasePath}/AT14.webp`,
-    name: "Consultor Lucian Oliveira",
-    genre: 'M',
-    products: ["PORTABILIDADE", "REFINANCIAMENTO"],
     whatsapp: "8000065065"
   }
 ];
