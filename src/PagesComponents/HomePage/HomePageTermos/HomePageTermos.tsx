@@ -4,8 +4,8 @@ import BannerImage from "@/public/banner-especialistas.webp"; // Substitua pelo 
 import { domainMessages } from "@/src/common/Footer/FooterText";
 import { headers } from "next/headers";
 
-export const HomePageTermos = () => {
-  const headersList = headers();
+export const HomePageTermos = async () => {
+  const headersList = await headers();
   const host = headersList.get("host") || "";
   const domain = host.replace(/^www\./, "");
 

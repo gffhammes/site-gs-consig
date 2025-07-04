@@ -3,8 +3,8 @@ import { headers } from "next/headers";
 
 export interface IFooterTextProps {}
 
-export const FooterText = () => {
-  const headersList = headers();
+export const FooterText = async () => {
+  const headersList = await headers();
   const host = headersList.get("host") || "";
   const domain = host.replace(/^www\./, "");
 

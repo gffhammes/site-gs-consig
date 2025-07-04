@@ -5,18 +5,12 @@ import { StepByStepSection } from "@/src/PagesComponents/ProductPage/StepByStepS
 import { ServiceSimulator } from "@/src/Services/ServiceSimulator";
 import { Metadata } from "next";
 import { services } from "@/src/PagesComponents/ProductsPage/services";
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import { ProductPageHero } from "@/src/PagesComponents/ProductPage/ProductPageHero";
 
-type Props = {
-  params: { product: string };
-  searchParams: { [key: string]: string | string[] | undefined };
-};
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const product = services.find((service) => {
-    return service.slug === params.product;
-  });
+// Remove tipagem explícita dos parâmetros para deixar o Next.js inferir corretamente
+export async function generateMetadata(props: any): Promise<Metadata> {
+  const product = services.find((service) => service.slug === props.params.product);
 
   return {
     title: product?.metaTitle,
@@ -24,13 +18,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function Page({ params }: Props) {
-  const product = services.find((service) => {
-    return service.slug === params.product;
-  });
+export default function Page(props: any) {
+  const product = services.find((service) => service.slug === props.params.product);
 
   if (!product) {
-    redirect("/produtos");
+    notFound();
   }
 
   return (
