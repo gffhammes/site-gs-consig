@@ -4,7 +4,7 @@ import { headers } from "next/headers";
 import Link from "next/link";
 
 export default async function Home() {
-  const headersList = headers();
+  const headersList = await headers();
   const host = headersList.get("host") || "";
   const domain = host.replace(/^www\./, "");
 
