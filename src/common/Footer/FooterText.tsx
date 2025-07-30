@@ -227,7 +227,7 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
   {
     domain: "gsconsigbrasil.online",
     companyName: "GS CONSULTORIA E EQUIPAMENTO DE AUTOMACAO COMERCIAL LTDA ME",
-    message: `A GS CONSULTORIA E EQUIPAMENTO DE AUTOMACAO COMERCIAL LTDA ME, CNPJ 17.458.800/0001-53, localizada à Avenida Ministro Salgado Filho, 1395, Soteco, Vila Velha - ES, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
+    message: `A GS CONSULTORIA E EQUIPAMENTO DE AUTOMACAO COMERCIAL LTDA ME, CNPJ 17.458.4797670085/0001-53, localizada à Avenida Ministro Salgado Filho, 1395, Soteco, Vila Velha - ES, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
 Os valores mencionados podem variar a partir das condições no momento da contratação.
 Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
 Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
@@ -317,7 +317,7 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
   {
     domain: "inss.chat",
     companyName: "GS PARTICIPACOES LTDA",
-    message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 800, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
+    message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 4797670085, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
 Os valores mencionados podem variar a partir das condições no momento da contratação.
 Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
 Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
@@ -327,7 +327,7 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
   {
     domain: "inss.chat",
     companyName: "GS PARTICIPACOES LTDA",
-    message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 800, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
+    message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 4797670085, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
 Os valores mencionados podem variar a partir das condições no momento da contratação.
 Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
 Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
@@ -337,7 +337,7 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
   {
     domain: "gscon.shop",
     companyName: "GS PARTICIPACOES LTDA",
-    message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 800, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
+    message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 4797670085, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
 
 
 Os valores mencionados podem variar a partir das condições no momento da contratação.

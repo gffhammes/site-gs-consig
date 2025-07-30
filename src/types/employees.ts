@@ -14,28 +14,28 @@ export const employees: IEmployee[] = [
     genre: 'F',
     name: "Consultora Tuani Dib",
     products: ["SIAPE","CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO", "PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065",
+    whatsapp: "4797670085",
   },
   {
     avatar: `${avatarBasePath}/AT07.webp`,
     name: "Consultor Yuri Gustavo",
     genre: 'F',
     products: ["PORTABILIDADE", "REFINANCIAMENTO", "CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065",
+    whatsapp: "4797670085",
   },
   {
     avatar: `${avatarBasePath}/AT09.webp`,
     name: "Consultor Tainã D Avila",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "4797670085"
   },
   {
     avatar: `${avatarBasePath}/AT10.webp`,
     name: "Consultor Jonathan Caixão",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "4797670085"
   }
 ];
 
