@@ -54,7 +54,7 @@ const contactItems: IContactItem[] = [
   },
   {
     Icon: LocalPhoneIcon,
-    text: "47 9767 0085"
+    text: "47 9767 0085",
     href: "47 9767 0085"
   },
 ];
