@@ -100,19 +100,6 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
 `,
   },
   {
-    domain: "fgts.chat",
-    companyName: "EASY PAY LTDA",
-    message: `A EASY PAY LTDA, CNPJ 43.506.622/0001-07, localizada à Rua Guaparim, nº 130, Apto 604 Bloco 4, Bairro Tabuleiro (Monte Alegre), CEP 88348-077 – Camboriú/SC, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
-
-Os valores mencionados podem variar a partir das condições no momento da contratação.
-
-Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
-
-Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
-📧 E-mail: contato@fgts.chat
-📞 Telefone: (11) 93804-2021`,
-  },
-  {
     domain: "gsconsig.click",
     companyName: "DJALMA RAMOS DA SILVA JUNIOR 85864695564",
     message: `A DJALMA RAMOS DA SILVA JUNIOR 85864695564, CNPJ 42.578.957/0001-60,  localizada à Rodovia BR-101, Av. Marginal Oeste, Km 131 CEP 88349-175 - Monte Alegre, Camboriú - SC, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
