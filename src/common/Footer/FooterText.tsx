@@ -275,46 +275,6 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
 📞 Telefone: (11) 94405-2157`,
   },
   {
-    domain: "gsconsigcredito.shop",
-    companyName: "GS CONSULTORIA EMPRESARIAL E TRIBUTARIA LTDA",
-    message: `A GS CONSULTORIA EMPRESARIAL E TRIBUTARIA LTDA, CNPJ 08.811.405/0001-11, localizada à Avenida Principal, 500, Centro, São Paulo - SP, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
-Os valores mencionados podem variar a partir das condições no momento da contratação.
-Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
-Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
-📧 E-mail: contato@gsconsigcredito.shop
-📞 Telefone: (11) 93804-3281`,
-  },
-  {
-    domain: "gsconsigdigital.shop",
-    companyName: "GS CONSULTORIA IMOBILIARIA LTDA",
-    message: `A GS CONSULTORIA IMOBILIARIA LTDA, CNPJ 26.827.706/0001-15, localizada à Avenida Principal, 600, Centro, Recife - PE, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
-Os valores mencionados podem variar a partir das condições no momento da contratação.
-Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
-Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
-📧 E-mail: contato@gsconsigdigital.shop
-📞 Telefone: (11) 93804-0138`,
-  },
-  {
-    domain: "gsconsignado.com.br",
-    companyName: "GS PARTICIPACOES LTDA",
-    message: `A GS PARTICIPACOES LTDA, CNPJ 24.412.332/0001-41, localizada à Rua T 31, 830, Quadra02 Lote 06/08 Sala 05, Setor Sol Nascente, Goiânia - GO, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
-Os valores mencionados podem variar a partir das condições no momento da contratação.
-Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
-Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
-📧 E-mail: contato@gsconsignado.com.br
-📞 Telefone: (11) 93804-2188`,
-  },
-  {
-    domain: "gsconsignados.com.br",
-    companyName: "GS PARTICIPACOES LTDA",
-    message: `A GS PARTICIPACOES LTDA, CNPJ 39.443.872/0001-60, localizada à Avenida Principal, 700, Centro, São Paulo - SP, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
-Os valores mencionados podem variar a partir das condições no momento da contratação.
-Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
-Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
-📧 E-mail: contato@gsconsignados.com.br
-📞 Telefone: (11) 93804-3456`,
-  },
-  {
     domain: "inss.chat",
     companyName: "GS PARTICIPACOES LTDA",
     message: `A GS PARTICIPACOES LTDA, CNPJ 12.440.022/0001-51, localizada à Avenida Principal, 800, Centro, Rio de Janeiro - RJ, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
