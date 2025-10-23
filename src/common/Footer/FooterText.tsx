@@ -48,19 +48,6 @@ Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao u
 📞 Telefone: (11) 93175-0294`,
   },
   {
-    domain: "gsconsig.store",
-    companyName: "JORDANA HERICA DE VASCONCELOS QUEIROZ",
-    message: `A JORDANA HERICA DE VASCONCELOS QUEIROZ, CNPJ 29.944.305/0001-33, localizada à Rodovia BR-101, Av. Marginal Oeste, Km 131 CEP 88349-175 - Monte Alegre, Camboriú - SC, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
-
-Os valores mencionados podem variar a partir das condições no momento da contratação.
-
-Valorizamos a privacidade dos nossos visitantes. Não armazenamos nem coletamos nenhum dado pessoal dos usuários através deste site. Qualquer informação fornecida por você através de formulários ou interações com o site não será retida ou utilizada para qualquer outro fim além da comunicação direta entre você e nós.
-
-Se tiver alguma dúvida ou preocupação sobre a privacidade dos seus dados ao utilizar este site, sinta-se à vontade para nos contatar.
-📧 E-mail: contato@gsconsig.store
-📞 Telefone: (11) 93016-0010`,
-  },
-  {
     domain: "gsconsig.site",
     companyName: "JOHNATA RAPHAEL MATOS DOS ANJOS",
     message: `A JOHNATA RAPHAEL MATOS DOS ANJOS, CNPJ 47.256.266/0001-63,  localizada à Rodovia BR-101, Av. Marginal Oeste, Km 131 CEP 88349-175 - Monte Alegre, Camboriú - SC, atua como correspondente bancário de instituições financeiras, atividade regulada pelo Banco Central do Brasil, nos termos da Resolução nº 4.935, de 29 de Julho de 2021.
