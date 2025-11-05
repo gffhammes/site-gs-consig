@@ -54,7 +54,7 @@ const contactItems: IContactItem[] = [
   },
   {
     Icon: LocalPhoneIcon,
-    text: "0800 006 5065",
-    href: "tel: 0800 006 5065",
+    text: "47 9767 0085",
+    href: "47 9767 0085"
   },
 ];
