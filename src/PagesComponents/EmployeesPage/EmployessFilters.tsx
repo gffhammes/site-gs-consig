@@ -33,7 +33,7 @@ export const EmployessFilters = ({
         <CustomCarousel
           options={{
             skipSnaps: true,
-            align: 0,
+            align: "start",
           }}
           carouselSx={{ mx: { xs: 2, sm: 0 } }}
           slideGap={1}
