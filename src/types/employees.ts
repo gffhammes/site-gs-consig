@@ -10,32 +10,47 @@ const avatarBasePath = "/fotos-consultores";
 
 export const employees: IEmployee[] = [
   {
+    avatar: `${avatarBasePath}/AT04.webp`,
+    genre: 'F',
+    name: "Consultora Millana Neves",
+    products: ["SIAPE","CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO", "PORTABILIDADE", "REFINANCIAMENTO"],
+    whatsapp: "11930080401",
+  },
+  {
+    avatar: `${avatarBasePath}/AT05.webp`,
+    genre: 'F',
+    name: "Consultor Jean Chaves",
+    products: ["SIAPE","CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO", "PORTABILIDADE", "REFINANCIAMENTO"],
+    whatsapp: "11930080401",
+  },
+  
+  {
     avatar: `${avatarBasePath}/AT06.webp`,
     genre: 'F',
     name: "Consultora Tuani Dib",
     products: ["SIAPE","CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO", "PORTABILIDADE", "REFINANCIAMENTO"],
-    whatsapp: "8000065065",
+    whatsapp: "11930080401",
   },
   {
     avatar: `${avatarBasePath}/AT07.webp`,
     name: "Consultor Yuri Gustavo",
     genre: 'F',
     products: ["PORTABILIDADE", "REFINANCIAMENTO", "CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065",
+    whatsapp: "11930080401",
   },
   {
     avatar: `${avatarBasePath}/AT09.webp`,
     name: "Consultor Tainã D Avila",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080401"
   },
   {
     avatar: `${avatarBasePath}/AT10.webp`,
     name: "Consultor Jonathan Caixão",
     genre: 'M',
     products: ["CARTÃO CONSIGNADO", "CARTÃO BENEFICIO", "CREDITO NOVO"],
-    whatsapp: "8000065065"
+    whatsapp: "11930080401"
   }
 ];
 

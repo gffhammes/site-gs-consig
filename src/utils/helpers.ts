@@ -25,7 +25,7 @@ export const generateWhatsappLink = (phoneNumber: string, message: string) => {
   return finalUrl;
 };
 
-export const MAIN_WHATSAPP = "8000065065";
+export const MAIN_WHATSAPP = "11930080401";
 
 export const generateMainWhatsappLink = () => {
   return generateWhatsappLink(
